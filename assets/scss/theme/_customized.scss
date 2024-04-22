@@ -1,0 +1,43 @@
+@import "../../bootstrap/scss/functions";
+@import "../../bootstrap/scss/variables";
+@import "../../bootstrap/scss/utilities";
+
+
+// $utilities:() !default;
+
+$utilities: map-merge(
+  
+  (
+    "cursor": (
+      property: cursor,      
+      responsive: true,
+      values: auto pointer grab,
+    )
+  ), $utilities
+);
+
+
+// $sitecolor: #f00;
+// $primary: $sitecolor;
+// $theme-colors: (
+//   "primary": $primary,
+// );
+
+// $utilities: (
+//     "color": (
+//         property: color,
+//         class: text,
+//         values: map-merge(
+//           $theme-colors,
+//           (
+//             "primary": $primary,
+//             // "red": $primary,
+//             // "body": $body-color,
+//             // "muted": $text-muted,
+//             // "black-50": rgba($black, .5),
+//             // "white-50": rgba($white, .5),
+//             "reset": inherit,
+//           )
+//         )
+//       ),
+//  );

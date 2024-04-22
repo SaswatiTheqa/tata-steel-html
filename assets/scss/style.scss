@@ -1,0 +1,31 @@
+
+@import 'theme/customized';
+@import "../bootstrap/scss/bootstrap";
+
+
+
+
+@import 'base/variables';
+@import 'base/extend';
+@import 'base/mixin';
+@import 'base/fonts';
+
+@import 'components/reset'; 
+@import 'components/button';
+@import 'components/form';
+@import 'components/slider';
+
+@import 'layout/common';
+@import 'layout/header';
+@import 'layout/menu';
+@import 'layout/footer';
+
+
+
+
+
+@import 'home'; 
+
+
+
+// sass --watch assets/scss/style.scss assets/css/style.css

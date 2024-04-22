@@ -1,0 +1,60 @@
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+    &+ label{
+        position: relative;
+        padding-left: 28px;
+        cursor: pointer;
+        line-height: 20px;
+        display: inline-block;
+        color: #000;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            // width: 18px;
+            // height: 18px;
+            @include round(18px);
+            border: 1px solid #000;
+            // border-radius: 100%;
+            background: #fff;
+        }
+        &:after{
+            // content: "\f00c";
+            // font-family: "Font Awesome 6 Free";
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 6px;
+            width: 7px; 
+            height: 4px;
+            border: 1px solid  ;
+            border-color: transparent transparent #fff #fff ;
+            background: transparent;
+            
+            transform: rotate(-45deg);
+           
+            -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease;
+        }
+    }
+}
+
+[type="radio"]:not(:checked) + label{
+    &:after {
+        opacity: 0;
+        // -webkit-transform: scale(0);
+        // transform: scale(0);
+    }
+    
+}
+[type="radio"]:checked + label{
+    &:after {
+        opacity: 1;
+        // -webkit-transform: scale(1);
+        // transform: scale(1);
+    }
+    &::before{ background: $primary_color;  border-color: $primary_color;}
+}

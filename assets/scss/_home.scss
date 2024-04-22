@@ -1,0 +1,10 @@
+.banner{ border-radius: 8px; overflow: hidden; position: relative;
+    &::before{background: transparent linear-gradient(314deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box;
+        border-radius: 8px 0 0 8px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 50%; }
+    .banner-text{ position: relative; z-index: 1;}
+    .banner-img{ position: relative; z-index: 5; box-shadow: inset 5px 0px 6px #00000033, -5px 0px 8px #00000026;
+        //    img{border-radius: 25% 0% 0% 25% / 62% 25% 25% 38%; border: 10px solid #F49223; border-width: 0 0px 0 5px;}
+    }
+}
+
+

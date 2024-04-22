@@ -1,0 +1,31 @@
+.footer-main{ background: $body_color; color: $white_color; padding: 38px 0 26px;
+    a{color: $white_color;
+      &:hover{ color: $secondary_color;}
+   }
+   .footer-top{ border-bottom: 1px solid #F0F0F066; padding-bottom: 8px; }
+   .menu{
+      li{
+         a{ margin-right: 24px; text-decoration: none;
+            &:hover{  color: $secondary_color; }
+         }
+      }
+   }
+   .copyright{ padding-left: 20px;
+      .icon-copyright{ position: absolute; left: 0; top: 4px; width: 16px;} 
+
+   }
+}
+.privacy{
+   .menu{
+      li{
+         a{color: $white_smoke;
+            &:hover{ color: $secondary_color;}
+         }
+      }
+   } 
+}
+.social-links{ font-size: 26px;
+   li{margin-right: 20px;
+      &:last-child{ margin-right: 0px;}
+   }
+}

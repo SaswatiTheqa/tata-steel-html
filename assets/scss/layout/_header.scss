@@ -1,0 +1,30 @@
+.main-header{  box-shadow: 0px 3px 6px #0000000F;  padding: 0px 0 0px;
+    .logo a img{ max-height: 40px;}
+    .navbar{ margin-left: 50px;}
+    .lang-drop{ margin-right: 34px;
+        &.dropdown{ 
+            .dropdown-menu{ top: 27px !important;  padding: 20px 25px 12px; column-gap: normal;  column-count: 2;
+                li{ margin-bottom: 8px}
+            }
+         } 
+        .btn{ @include flex-center(); }
+        .drop-left-icon{ margin-right: 6px;}
+    }
+}
+
+.lang-drop{ 
+    [type="radio"]:checked,
+    [type="radio"]:not(:checked) {
+        &+ label{
+            padding: 5px 10px  5px 38px ; 
+            border-radius: 4px;
+            &::before{ top:5px; left: 10px;}
+            &::after{ top: 10px; left: 15px;}
+        }
+    }
+    [type="radio"]:checked{
+        &+ label{
+            background: $apricot;
+        }
+    }
+}

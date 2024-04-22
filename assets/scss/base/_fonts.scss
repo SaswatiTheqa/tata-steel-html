@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+$siteFont :"PT Sans", sans-serif;
+
+
+
+$font-size-body: (
+  null : (1.6rem, 1.63),
+  lg   : (1.6rem, 1.63),
+);
+$font-size-h1: (
+  null : (2.6rem , 1.31),
+  lg   : (4.2rem, 1.145),
+);
+$font-size-h2: (
+  null : (1.8rem , 1.31),
+  lg   : (2.6rem, 1.145),
+);
+$font-size-h3: (
+  null : (1.6rem , 1.15),
+  lg   : (1.8rem, 1.45),
+);
+
+$font-size-sm: (
+  null : (1.4rem , 1.15),
+  lg   : (1.4rem, 1.143),
+);
+

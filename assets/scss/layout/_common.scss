@@ -1,0 +1,27 @@
+
+.text-white-smoke{ color: $white_smoke !important;}
+
+
+// dropdown
+.dropdown{ font-size: 16px;
+  &-toggle{
+    &:after{
+      
+        background: url(../images/icon/arrow-down.svg) no-repeat;  background-size: contain; border: 0px; width: 8px; height: 4px; margin-left: 5px; 
+    }
+    &.show{
+      &:after{
+        transform: rotate(180deg);
+     }
+    }
+  }
+  &-menu{ 
+    box-shadow: 1px 6px 6px #00000029;
+    border-radius: 0px 0px 6px 6px;
+    border: none;
+  }
+}
+
+
+
+
