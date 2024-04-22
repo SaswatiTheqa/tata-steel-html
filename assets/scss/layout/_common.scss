@@ -1,6 +1,28 @@
 
 .text-white-smoke{ color: $white_smoke !important;}
+.text-secondary{ color: $secondary_color !important; }
 
+// bg
+.bg-columbiaBlue {background-color: $columbiaBlue;}
+.bg-apricot {background-color: $apricot;}
+
+.section{ padding: 45px 0; }
+
+h1 , .h1{ font-size: clamp(34px, 4vw, 54px); }
+h2 , .h2{ font-size: clamp(34px, 4vw, 44px); }
+h3 , .h3{ font-size: clamp(26px, 4vw, 37px); }
+h4 , .h4{ font-size: clamp(34px, 4vw, 31px); }
+h5 , .h5{ font-size: clamp(34px, 4vw, 26px); }
+h6 , .h6{ font-size: clamp(16px, 4vw, 22px); }
+
+h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
+   color: $body_color; text-transform: capitalize;
+}
+
+.font-18{ font-size: 18px; color: $body_color;}
+
+
+.mb-45{ margin-bottom: 45px;}
 
 // dropdown
 .dropdown{ font-size: 16px;

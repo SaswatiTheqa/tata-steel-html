@@ -1,5 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-$siteFont :"PT Sans", sans-serif;
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Regular.woff2') format('woff2'),
+      url('../fonts/MyriadPro-Regular.woff') format('woff'),
+      url('../fonts/MyriadPro-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Semibold.woff2') format('woff2'),
+      url('../fonts/MyriadPro-Semibold.woff') format('woff'),
+      url('../fonts/MyriadPro-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('../fonts/MyriadPro-Bold.woff2') format('woff2'),
+      url('../fonts/MyriadPro-Bold.woff') format('woff'),
+      url('../fonts/MyriadPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+
+$siteFont :"Myriad Pro", sans-serif;
 
 
 

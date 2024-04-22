@@ -1,15 +1,15 @@
 $(document).ready(function () {
     // ===========   slider-students-feeling slider
-    var swiper1 = new Swiper(".slider-banner .swiper-container", {
+    var swiper1 = new Swiper(".banner-section-home .swiper-container", {
         slidesPerView: 1,
         spaceBetween: 30,
         // centeredSlides: true,
         navigation: {
-            nextEl: '.slider-banner .swiper-button-next',
-            prevEl: '.slider-banner .swiper-button-prev'
+            nextEl: '.banner-section-home .swiper-button-next',
+            prevEl: '.banner-section-home .swiper-button-prev'
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".banner-section-home .swiper-pagination",
           clickable: true,
         },
       
@@ -49,29 +49,6 @@ $(document).ready(function () {
         }, 500);
     });
 
-
-
-    
-      $(".tool-menu.navbar-toggler").on("click", function () {
-          $(this).toggleClass('open')
-          $(".tool-menu.navbar-toggler .text").text($(".tool-menu.navbar-toggler .text").text() == 'Menu' ? 'Close' : 'Menu');
-      });
-
-
-
-      
-    //   provinceGo
-    const provinceGo = () => {
-        const selectVal = document.getElementById('provinceSelect').value;
-        if(selectVal !== ''){
-            window.location.href = selectVal+ '.html';
-        }
-    };
-    document.querySelector('#provinceGo').addEventListener('click', provinceGo);
-
-
-    
-    
 
 
 });

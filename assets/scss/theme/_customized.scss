@@ -16,6 +16,31 @@ $utilities: map-merge(
   ), $utilities
 );
 
+// font-weight start
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-semibold:        600;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+$utilities: (
+  "font-weight": (
+        property: font-weight,
+        class: fw,
+        values: (
+          light: $font-weight-light,
+          lighter: $font-weight-lighter,
+          normal: $font-weight-normal,
+          bold: $font-weight-bold,
+          semibold: $font-weight-semibold,
+          bolder: $font-weight-bolder
+        )
+      ),
+);
+
+// font-weight start
+
+
 
 // $sitecolor: #f00;
 // $primary: $sitecolor;

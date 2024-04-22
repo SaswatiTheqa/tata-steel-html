@@ -1,3 +1,5 @@
+// Custom radio button start
+
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
     position: absolute;
@@ -8,18 +10,15 @@
         cursor: pointer;
         line-height: 20px;
         display: inline-block;
-        color: #000;
+        color: $black_color;
         &::before{
             content: '';
             position: absolute;
             left: 0;
             top: 0;
-            // width: 18px;
-            // height: 18px;
             @include round(18px);
-            border: 1px solid #000;
-            // border-radius: 100%;
-            background: #fff;
+            border: 1px solid $black_color;
+            background: $white_color;
         }
         &:after{
             // content: "\f00c";
@@ -31,7 +30,7 @@
             width: 7px; 
             height: 4px;
             border: 1px solid  ;
-            border-color: transparent transparent #fff #fff ;
+            border-color: transparent transparent $white_color $white_color ;
             background: transparent;
             
             transform: rotate(-45deg);
@@ -45,16 +44,16 @@
 [type="radio"]:not(:checked) + label{
     &:after {
         opacity: 0;
-        // -webkit-transform: scale(0);
-        // transform: scale(0);
     }
     
 }
 [type="radio"]:checked + label{
     &:after {
         opacity: 1;
-        // -webkit-transform: scale(1);
-        // transform: scale(1);
     }
     &::before{ background: $primary_color;  border-color: $primary_color;}
 }
+
+// Custom radio button end
+
+

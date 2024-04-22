@@ -1,18 +1,28 @@
-.main-header{  box-shadow: 0px 3px 6px #0000000F;  padding: 0px 0 0px;
+.header-main{  
+    .header-desk{ padding: 0px 0 0px; box-shadow: 0px 3px 6px #0000000F;
+        @include breakpoint('lg', max) {  box-shadow: 0px 3px 6px #00000029;
+            padding: 15px 0;
+        }
+    }
+    
     .logo a img{ max-height: 40px;}
     .navbar{ margin-left: 50px;}
     .lang-drop{ margin-right: 34px;
         &.dropdown{ 
-            .dropdown-menu{ top: 27px !important;  padding: 20px 25px 12px; column-gap: normal;  column-count: 2;
-                li{ margin-bottom: 8px}
-            }
+            .dropdown-menu{ top: 27px !important;  }
          } 
-        .btn{ @include flex-center(); }
-        .drop-left-icon{ margin-right: 6px;}
     }
+    & + *{ margin-top: 30px;}
 }
 
 .lang-drop{ 
+    &.dropdown{ 
+        .dropdown-menu{ padding: 20px 25px 12px; column-gap: normal;  column-count: 2;
+            li{ margin-bottom: 8px}
+        }
+     } 
+    .btn{ @include flex-center(); }
+    .drop-left-icon{ margin-right: 6px;}
     [type="radio"]:checked,
     [type="radio"]:not(:checked) {
         &+ label{
@@ -27,4 +37,8 @@
             background: $apricot;
         }
     }
+}
+
+.header-mob{ background-color: $columbiaBlue; min-height: 48px;
+
 }
