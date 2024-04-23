@@ -2,8 +2,9 @@
     .navbar-nav{
         .nav-item{ position: relative;
             @include breakpoint('xl', max) { text-align: right;}
-            .nav-link{ text-transform: uppercase; position: relative; padding: 40px 12px 37px; color: $black_color; font-size: 1rem; line-height: 1 !important;
-                font-weight: $fontBold;   transition: all 0.3s;
+            .nav-link{ text-transform: uppercase; position: relative; padding: 40px 12px 37px; color: $black_color; font-size: 1rem; 
+                line-height: 1 !important; font-weight: 600;
+                transition: all 0.3s;
                 @include breakpoint('xl', max) { 
                     display: inline-block;
                 }

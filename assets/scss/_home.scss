@@ -8,8 +8,6 @@
             img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
         }
     }
-}
-.banner-section-home{ 
   .swiper-button-prev , .swiper-button-next{ opacity: 0; }
   &:hover{ 
     .swiper-button-prev , .swiper-button-next{ opacity: 1;
@@ -20,18 +18,107 @@
 }
 
 
-.icon-box-wraper{ text-align: center;  width: 100%; max-width: 200px; padding: 20px 0;
+.icon-box-wraper{ text-align: center; width: calc(50% - 0.5rem); max-width: 180px; padding: 20px 0;
     .icon-box-img{ width: 120px; position: relative; margin: 0 auto;  text-align: center; padding: 12px 5px 0;
         &::before{background-color: #FDCFAE4D; width: 100%; height: 90px; border-radius: 14px; content: ""; position: absolute; left: 0; right: 0; top:0; }
         figure{ position: relative; z-index: 1; max-width: 100px; }
+        img:hover{ filter: invert(100%); }
     }
     .icon-box-text{ margin-top: 16px;  
        .font-18{ line-height: 20px; }
     }
 }
 
-.testimoni-video{
-    .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto;
-        img{ max-width: 21px;}
-     }
+
+
+.section-benefits{ padding-top: 60px; padding-bottom: 60px;  position: relative;
+    @include breakpoint('xl', max) { padding-top: 30px; padding-bottom: 30px;   }
+    .benefits-text-holder { padding-left: 60px; 
+        @include breakpoint('xl', max) { padding-left: 30px;  }
+        @include breakpoint('md', max) {padding-left: 15px;  }
+    }
+    .font-18 { line-height: 1}
+    .media-icon{  @include round(50px , 6px); @include flex-center(); margin-right: 8px;
+       img{  width: 38px;}
+    }
+    .benefits-list{gap: 20px 40px; margin-top: 50px;
+        // li{ }
+    }
+    // .benefits-product-img{ position: absolute; right: 0; top:0;}
+    &::before{ @include afterbefore(); border-radius: 14px; left: 0.75rem; right: auto; width: 84.7%;
+        background: transparent linear-gradient(252deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+        @include breakpoint('md', max) { width: auto; right: 0; top: 20%;
+            background: transparent linear-gradient(180deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+        }
+    }
+    .benefits-text-holder , .benefits-product-img{ z-index: 1; position: relative;}
+}
+
+.section-market{
+     .text-wrap-max-w{ max-width: 500px; }
+     .h2{  
+        @include breakpoint('xl', min) { max-width: 90%; }
+      }
+     .para-wrap{ margin:32px 0 40px }
+}
+
+
+.testimonial-section{
+    .cards{ border-radius: 8px;
+        &-img{ 
+            &:after{ @include afterbefore(); background-color: rgba(0, 0, 0, 0.3); border-radius: 8px; } 
+            .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; z-index: 1;
+                img{ max-width: 21px;}
+            }
+            figure{ height: 100%; 
+                img{ border-radius: 8px; height: 100%}
+            }
+       }
+    }
+}
+
+
+
+.news-event-section{}
+.cards.events-cards{ background-color: transparent; transition: all 0.5s; box-shadow: none; border: 0px; border-radius: 8px;
+    .cards-img{ overflow: hidden; border-radius: 8px 8px 0 0; 
+        figure{ position: relative; padding-top: 64%;
+            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
+        }
+    }
+    .cards-body{ padding: 20px 70px 20px 16px;
+        .heading-3{line-height: 1.45; 
+            a{ text-decoration: none; color: $black_color;}
+        }
+        p{letter-spacing: 0.07px; font-size: 14px; font-weight: 600; color: #5C5C5C; margin-bottom: 4px;}
+        .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; 
+            &:hover{background-color: $flame; color: #fff; }
+        }
+    }
+    &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;}
+}
+
+
+
+
+.service-section{
+   .box-wrapper{ height: 100%; color: #fff; overflow: hidden;  position: relative; padding: 44px 43px;
+      @include breakpoint('md', max) {  padding: 20px; min-height: 320px;}  
+      &-left{ 
+        .box-wrapper-img-bg-logo{ right: -19px; bottom: -9px;}
+        .box-wrapper-img-character{ right: 9%;  bottom: -16px;}
+      }
+      &-right{
+        .box-wrapper-img-bg-logo{ left: -5px; bottom: -11px;}
+        .box-wrapper-img-character{ left: 12%;  bottom: -17px;}
+        .text-wrap-max-w{ margin-left: auto; }
+      }
+      &-img-character ,  &-img-bg-logo{ position: absolute; }
+      &-img-character { z-index: 1;}
+      &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;}
+      @include breakpoint('xl', min) {
+         .text-wrap-max-w{ max-width: 75%; }
+      }
+   }
+
 }

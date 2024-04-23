@@ -1,19 +1,28 @@
+@include breakpoint('xl', min) { 
+  .sm-container{ max-width: 1120px;}
+  .xl-container{ max-width: 1330px;}
+  .md-container{ max-width: 1155px;}
+} 
+
 
 .text-white-smoke{ color: $white_smoke !important;}
 .text-secondary{ color: $secondary_color !important; }
+.text-apricot{color: $apricot !important;}
 
 // bg
 .bg-columbiaBlue {background-color: $columbiaBlue;}
 .bg-apricot {background-color: $apricot;}
+.bg-white-smoke{background-color: $white_smoke;}
+
 
 .section{ padding: 45px 0; }
 
-h1 , .h1{ font-size: clamp(34px, 4vw, 54px); }
-h2 , .h2{ font-size: clamp(34px, 4vw, 44px); }
-h3 , .h3{ font-size: clamp(26px, 4vw, 37px); }
-h4 , .h4{ font-size: clamp(34px, 4vw, 31px); }
-h5 , .h5{ font-size: clamp(34px, 4vw, 26px); }
-h6 , .h6{ font-size: clamp(16px, 4vw, 22px); }
+h1 , .h1{ font-size: clamp(34px, 3vw + 0.5rem , 54px); }
+h2 , .h2{ font-size: clamp(30px, 3vw, 44px); }
+h3 , .h3{ font-size: clamp(26px, 2vw, 37px); }
+h4 , .h4{ font-size: clamp(22px, 2vw, 31px); }
+h5 , .h5{ font-size: clamp(18px, 1vw, 26px); }
+h6 , .h6{ font-size: clamp(16px, 2vw, 22px); }
 
 h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
    color: $body_color; text-transform: capitalize;
@@ -21,8 +30,14 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 
 .font-18{ font-size: 18px; color: $body_color;}
 
+.line-height-1{ line-height: 1;}
 
 .mb-45{ margin-bottom: 45px;}
+.mb-60{ margin-bottom: 60px;}
+.border-radius-14{ border-radius: 14px; }
+
+.bg-gradient-primary{background: transparent linear-gradient(252deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;}
+.bg-gradient-secondary{background: transparent linear-gradient(252deg, #FDCFAE 0%, #F49223 46%, #F49223 46%, #E45B27 100%) 0% 0% no-repeat padding-box;}
 
 // dropdown
 .dropdown{ font-size: 16px;
@@ -45,5 +60,9 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 }
 
 
+.media{
+  .media-body{}
+}
 
+.w-80{width: 80%;}
 

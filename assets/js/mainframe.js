@@ -18,27 +18,27 @@ $(document).ready(function () {
 
     // ===========   insta-feed slider
 
-      var swiper1 = new Swiper(".testimoni-video .swiper-container", {
-        slidesPerView: 4.02,
-        spaceBetween: 30,
+      var swiper1 = new Swiper(".testimonial-section .swiper-container", {
+        slidesPerView: 4.6,
+        spaceBetween: 24,
         // centeredSlides: true,
         // slidesPerView: "auto",
         navigation: {
-            nextEl: '.testimoni-video .swiper-button-next',
-            prevEl: '.testimoni-video .swiper-button-prev'
+            nextEl: '.testimonial-section .swiper-button-next',
+            prevEl: '.testimonial-section .swiper-button-prev'
         },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-        // breakpoints: {
-        //           0: { slidesPerView: 1.2, spaceBetween: 20, },
-        //           440: { slidesPerView: 1.6, spaceBetween: 20, },
-        //           575: { slidesPerView: 2.1, spaceBetween: 20, },
-        //           767: { slidesPerView: 2.3, spaceBetween: 30, },
-        //           1024: { slidesPerView: 3.2, spaceBetween: 30, },
-        //           1366: { slidesPerView: 3.02, spaceBetween: 30, },
-        //       }
+        breakpoints: {
+                  0: { slidesPerView: 1.2, spaceBetween: 20, },
+                  440: { slidesPerView: 1.6, spaceBetween: 20, },
+                  575: { slidesPerView: 2.1, spaceBetween: 20, },
+                  767: { slidesPerView: 2.3, spaceBetween: 30, },
+                  1024: { slidesPerView: 3.2, spaceBetween: 30, },
+                  1366: { slidesPerView: 3.02, spaceBetween: 30, },
+              }
         
       });
     

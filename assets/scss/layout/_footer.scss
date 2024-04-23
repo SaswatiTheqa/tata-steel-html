@@ -29,3 +29,6 @@
       &:last-child{ margin-right: 0px;}
    }
 }
+
+.phone-call{ position: fixed;  @include round(60px); @include flex-center();   background: transparent linear-gradient(226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box;
+}
