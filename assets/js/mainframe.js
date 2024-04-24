@@ -20,10 +20,10 @@ $(document).ready(function () {
     // ===========   insta-feed slider
 
       var swiper1 = new Swiper(".testimonial-section .swiper-container", {
-        slidesPerView: 4.6,
+        // slidesPerView: 4.6,
         spaceBetween: 24,
         // centeredSlides: true,
-        // slidesPerView: "auto",
+        slidesPerView: "auto",
         navigation: {
             nextEl: '.testimonial-section .swiper-button-next',
             prevEl: '.testimonial-section .swiper-button-prev'
@@ -33,12 +33,12 @@ $(document).ready(function () {
           clickable: true,
         },
         breakpoints: {
-                  0: { slidesPerView: 1.2, spaceBetween: 20, },
-                  440: { slidesPerView: 1.6, spaceBetween: 20, },
-                  575: { slidesPerView: 2.1, spaceBetween: 20, },
-                  767: { slidesPerView: 2.3, spaceBetween: 30, },
-                  1024: { slidesPerView: 3.2, spaceBetween: 30, },
-                  1366: { slidesPerView: 3.02, spaceBetween: 30, },
+                  0: { spaceBetween: 10, },
+                  440: { spaceBetween: 16, },
+                  
+                  767: { spaceBetween: 16, },
+                  1199: { spaceBetween: 24, },
+                 
               }
         
       });

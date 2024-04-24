@@ -1,8 +1,12 @@
 .banner{ border-radius: 14px;  position: relative;
     &::before{background: transparent linear-gradient(314deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box;
-        border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 45%; z-index: 1; 
+        border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 48%; z-index: 1; 
         @include breakpoint('lg', max) { display: none; }
     }
+    &::after{ @include afterbefore(); background: url(../images/Line.png) no-repeat; height: 100%; width: 110px; z-index: 2; left: 40.7%; right: auto;
+        background-size: contain; transform: rotateX(178deg);
+    }
+
     &-text-wrap{ position: relative; z-index: 1; 
         @include breakpoint('lg', max) {
            background: transparent linear-gradient(347deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box; border-radius: 0 0 14px 14px;
@@ -14,12 +18,15 @@
         @include breakpoint('xl', max) { padding: 30px 20px;}
         @include breakpoint('lg', max) { padding: 60px 20px 70px;}
     }
-    &-img-wrap{ position: relative; z-index: 0; border-radius: 0 14px 14px; box-shadow: inset 5px 0px 6px #00000033, -5px 0px 8px #00000026;
+    &-img-wrap{ position: relative;  border-radius: 0 14px 14px; box-shadow: inset 5px 0px 6px #00000033, -5px 0px 8px #00000026;
         @include breakpoint('lg', max) {border-radius: 14px 14px 0 0;}
         figure{ position: relative; padding-top: 69%;
-            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
+            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%;
+                border-top-left-radius:68px 527px;
+             }  
         }
     }
+    
 
     // swiper
     &:hover{ 
@@ -46,7 +53,11 @@
             @include breakpoint('lg', max) { height: 76px; }
         }
         figure{ position: relative; z-index: 1; max-width: 100px; }
-        img:hover{ filter: invert(100%); }
+        img:hover{ 
+            // filter: invert(100%); 
+            filter: brightness(108%) saturate(85%) hue-rotate(359deg) invert(1);
+            
+        }
         @include breakpoint('lg', max) { width: 100px; padding: 10px 8px 0;}
     }
     .icon-box-text{ margin-top: 16px;  
@@ -98,27 +109,43 @@
 
 
 .testimonial-section{
-    .cards{ border-radius: 8px;
+    .cards{ 
         &-img{ 
             &:after{ @include afterbefore(); background-color: rgba(0, 0, 0, 0.3); border-radius: 8px; } 
             .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; z-index: 1;
-                img{ max-width: 20px;}
+                img{ max-width: 20px;margin-left: 4px;}
+                @include breakpoint('lg', max) {@include round(42px);
+                    img{ max-width: 16px; }
+                }
+                
             }
-            figure{ height: 100%; 
-                img{ border-radius: 8px; height: 100%}
+            figure{ height: 100%; padding-top: 63%;
+                img{ border-radius: 8px;  object-fit: cover; object-position: center;}
             }
        }
+    }
+    .slider-w-sm{ width: 15.5%;
+        @include breakpoint('lg', max) {width: 18.5%;}
+        @include breakpoint('md', max) {width: 22.5%;}
+        @include breakpoint('md', max) {width: 25.5%;}
+        @include breakpoint('sm', max) { width: calc( 50% - 16px); }
+    
+    }
+    .slider-w-lg{ width: 39.5%;
+        @include breakpoint('lg', max) {width: 45.5%;}
+        @include breakpoint('md', max) {width: 48.5%;}
+        @include breakpoint('sm', max) {width: 100%;}
     }
 }
 
 //  ==================================  news-event
 
+
+
 .news-event-section{}
-.cards.events-cards{ background-color: transparent; transition: all 0.5s; box-shadow: none; border: 0px; border-radius: 8px;
-    .cards-img{ overflow: hidden; border-radius: 8px 8px 0 0; 
-        figure{ position: relative; padding-top: 64%;
-            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
-        }
+.cards{ border: 0px;
+    .cards-img{border-radius: 8px 8px 0 0; 
+        figure{padding-top: 64%; }
     }
     .cards-body{ padding: 20px 70px 20px 16px;
         @include breakpoint('lg', max) { padding-right: 55px;} 
@@ -142,7 +169,7 @@
       @include breakpoint('xl', max) { padding: 20px;}  
     //   @include breakpoint('md', max) { padding: 20px;}  
       @include breakpoint('sm', max) { padding-bottom: 0px; }
-    
+      .box-wrapper-img-wrap{ position: absolute; max-width: 46%; }
       &-left{ 
         .box-wrapper-img-bg-logo{ bottom: -9px; right: -19px; 
             @include breakpoint('sm', max) {  }
@@ -151,11 +178,14 @@
             
             @include breakpoint('sm', max) { text-align: right; } 
         }
+        .box-wrapper-img-wrap{ right: -4%; bottom: -5%; }
       }
       &-right{
         .box-wrapper-img-bg-logo{ left: -6px; bottom: -11px;}
         .box-wrapper-img-character{ left: 12%;  bottom: -17px;}
         .text-wrap-max-w{ margin-left: auto; }
+
+        .box-wrapper-img-wrap{ left: -4%; bottom: -5%; }
       }
       &-img-character{position: absolute; 
         img{ max-height: 276px;
