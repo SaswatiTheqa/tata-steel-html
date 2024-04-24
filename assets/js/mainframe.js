@@ -3,6 +3,7 @@ $(document).ready(function () {
     var swiper1 = new Swiper(".banner-section-home .swiper-container", {
         slidesPerView: 1,
         spaceBetween: 30,
+        effect: 'fade',
         // centeredSlides: true,
         navigation: {
             nextEl: '.banner-section-home .swiper-button-next',

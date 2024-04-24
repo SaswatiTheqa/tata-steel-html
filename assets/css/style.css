@@ -10025,6 +10025,12 @@ a:hover {
     max-width: 1155px;
   }
 }
+@media (max-width: 575px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .text-white-smoke {
   color: #F2F2F2 !important;
 }
@@ -10035,6 +10041,10 @@ a:hover {
 
 .text-apricot {
   color: #FDCFAE !important;
+}
+
+.text-site-primary {
+  color: #106DB3 !important;
 }
 
 .bg-columbiaBlue {
@@ -10087,6 +10097,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #092A49;
 }
 
+.font-14 {
+  font-size: 14px;
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
 .line-height-1 {
   line-height: 1;
 }
@@ -10097,6 +10115,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 .border-radius-14 {
@@ -10146,9 +10168,30 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   width: 80%;
 }
 
+.header-main {
+  background-color: #fff;
+}
+@media (max-width: 991px) {
+  .header-main {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+  }
+}
+.header-main + * {
+  margin-top: 30px;
+}
+@media (max-width: 991px) {
+  .header-main + * {
+    margin-top: 130px;
+  }
+}
 .header-main .header-desk {
   padding: 0px 0 0px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.0588235294);
+  position: relative;
+  z-index: 999;
 }
 @media (max-width: 991px) {
   .header-main .header-desk {
@@ -10158,6 +10201,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .header-main .logo {
   width: 131px;
+}
+@media (max-width: 1199px) {
+  .header-main .logo {
+    width: 120px;
+  }
 }
 .header-main .logo a img {
   max-height: 40px;
@@ -10186,9 +10234,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .header-main .lang-drop.dropdown .dropdown-menu {
   top: 27px !important;
-}
-.header-main + * {
-  margin-top: 30px;
 }
 
 .lang-drop.dropdown .dropdown-menu {
@@ -10228,9 +10273,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .header-mob {
   background-color: #BDD9E8;
-  min-height: 48px;
-  align-items: center;
-  display: flex;
+  padding: 9.5px 0px;
 }
 
 .main-menu .navbar-nav .nav-item {
@@ -10310,25 +10353,35 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 @media (max-width: 991px) {
   .offcanvas-collapse {
     position: fixed;
-    top: 110px;
+    top: 109px;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    padding: 16px;
     overflow-y: auto;
+    height: calc(100% - 109px);
     visibility: hidden;
-    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
     z-index: 1001;
+    transition: visibility 0.3s ease-in-out;
     background: #BDD9E8;
+  }
+  .offcanvas-collapse.show {
+    visibility: visible;
+    transition: visibility 0.3s ease-in-out;
+  }
+  .offcanvas-collapse .navbar-nav {
+    margin-top: 20px;
+  }
+  .offcanvas-collapse .nav-address-wrap {
+    max-width: 720px;
+    padding: 0px 20px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-  }
-  .offcanvas-collapse.show {
-    visibility: visible;
-    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    left: 0;
   }
 }
 .main-header.sticky .main-menu .navbar-nav .nav-item.dropdown:hover .nav-link {
@@ -10339,6 +10392,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-size: 16px;
   color: black;
   display: flex;
+}
+.hamburger-menu:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .hamburger-menu:hover {
   color: black;
@@ -10362,6 +10418,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   display: none;
 }
 
+.mobile-header-address-sec .address a {
+  text-decoration: none;
+}
 .mobile-header-address-sec .social-links a {
   color: #106DB3;
 }
@@ -10740,6 +10799,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .cards.events-cards .cards-body {
   padding: 20px 70px 20px 16px;
+}
+@media (max-width: 991px) {
+  .cards.events-cards .cards-body {
+    padding-right: 55px;
+  }
 }
 .cards.events-cards .cards-body .heading-3 {
   line-height: 1.45;

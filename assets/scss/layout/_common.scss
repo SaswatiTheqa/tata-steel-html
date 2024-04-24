@@ -3,12 +3,16 @@
   .xl-container{ max-width: 1330px;}
   .md-container{ max-width: 1155px;}
 } 
+@include breakpoint('sm', max) { 
+.container{ padding-left: 20px; padding-right: 20px; }
 
+}
 
 .text-white-smoke{ color: $white_smoke !important;}
 .text-secondary{ color: $secondary_color !important; }
 
 .text-apricot{color: $apricot !important;}
+.text-site-primary{ color: $primary_color !important;}
 
 // bg
 .bg-columbiaBlue {background-color: $columbiaBlue;}
@@ -30,11 +34,15 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 }
 
 .font-18{ font-size: clamp(16px, 1vw + 0.2rem , 18px);  color: $body_color;}
+.font-14{ font-size: 14px; }
+.font-16{ font-size: 16px; }
+
 
 .line-height-1{ line-height: 1;}
 
 .mb-45{ margin-bottom: 45px;}
 .mb-60{ margin-bottom: 60px;}
+.mb-10{ margin-bottom: 10px;}
 .border-radius-14{ border-radius: 14px; }
 
 

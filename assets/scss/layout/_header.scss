@@ -1,20 +1,29 @@
-.header-main{  
-    .header-desk{ padding: 0px 0 0px; box-shadow: 0px 3px 6px #0000000F;
+.header-main{  background-color: #fff; 
+    @include breakpoint('lg', max) { position: fixed; width: 100%; top:0; z-index: 999; }
+    // header after section gap
+    & + *{ margin-top: 30px;
+        @include breakpoint('lg', max) {  margin-top: 130px; }
+    }
+
+
+    .header-desk{ padding: 0px 0 0px; box-shadow: 0px 3px 6px #0000000F; position: relative; z-index: 999;
         @include breakpoint('lg', max) {  box-shadow: 0px 3px 6px #00000029;
             padding: 16px 0;
         }
     }
+    // logo
     
     .logo{ width: 131px;
+        @include breakpoint('xl', max) {width: 120px;}
         a img{ max-height: 40px;
             @include breakpoint('lg', max) { max-height: 30px;}
         }
-        &.tata-kosh-logo{width: 70px;
-    
-        }
+        &.tata-kosh-logo{width: 70px;}
     }
     
     .navbar{ margin-left: 50px;}
+
+    // language dropdown 
     .lang-drop{ margin-right: 34px; 
         @include breakpoint('xl', max) { margin-right: 0px; 
            .btn{padding: 0; }
@@ -23,9 +32,10 @@
             .dropdown-menu{ top: 27px !important;  }
          } 
     }
-    & + *{ margin-top: 30px;}
+  
 }
 
+// language dropdown 
 .lang-drop{ 
     &.dropdown{ 
         .dropdown-menu{ padding: 20px 25px 12px; column-gap: normal;  column-count: 2;
@@ -50,4 +60,4 @@
     }
 }
 
-.header-mob{ background-color: $columbiaBlue; min-height: 48px; align-items: center; display: flex;}
+.header-mob{ background-color: $columbiaBlue; padding: 9.5px 0px;}
