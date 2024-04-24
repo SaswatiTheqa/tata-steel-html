@@ -1,13 +1,17 @@
 .main-menu{
     .navbar-nav{
         .nav-item{ position: relative;
-            @include breakpoint('xl', max) { text-align: right;}
+            
             .nav-link{ text-transform: uppercase; position: relative; padding: 40px 12px 37px; color: $black_color; font-size: 1rem; 
-                line-height: 1 !important; font-weight: 600;
-                transition: all 0.3s;
+                line-height: 1 !important; font-weight: 600; transition: all 0.3s;
+          
+
                 @include breakpoint('xl', max) { 
                     display: inline-block;
                 }
+                @include breakpoint('lg', max) {
+                    padding: 16px 0px;
+                 }
                 &:hover{ color: $secondary_color;
                     &::after{ transform: rotate(180deg); }
                 }                
@@ -21,18 +25,23 @@
                 }
             }
             .dropdown-menu{  margin-top: 0px; padding: 0;
-               @include breakpoint('xl', min) { width: 200px;  display: block !important; 
+               @include breakpoint('xl', min) { 
+                width: 200px;  
+                display: block !important; 
                 opacity: 0; visibility: hidden; top: 100%; }
+                @include breakpoint('lg', max) { background-color: transparent; box-shadow: none;}
                 
                 li{ 
-                    @include breakpoint('xl', max) { text-align: right;}
+                   
                     a{ padding: 12px 17px; line-height: 1; text-transform: capitalize;}
                     .dropdown-item{white-space: normal; }
                 }
             }
             &.dropdown{
                 &:hover{
-                    .dropdown-menu{ opacity: 1; visibility: visible;  }
+                    .dropdown-menu{ opacity: 1; visibility: visible;  
+                        
+                    }
                 }
                 li{
                     a.dropdown-item{ 
@@ -50,15 +59,23 @@
 }
 
 
-@include breakpoint('xl', max) {
-    .offcanvas-collapse{ position: fixed; top: 0; bottom: 0; left: -100%; width: 100%; height: 100%;  padding-right: 30px; padding-left: 30px; padding-bottom: 100px;
-    padding-top: 30px; overflow-y: auto; visibility: hidden; transition: transform .3s ease-in-out, visibility .3s ease-in-out;  z-index: 1001;  background: #fffdf8;
+@include breakpoint('lg', max) {
+    .offcanvas-collapse{ 
+        position: fixed; top: 110px; bottom: 0; left: 0; width: 100%;   padding: 16px; overflow-y: auto; 
+        visibility: hidden; transition: transform .3s ease-in-out, visibility .3s ease-in-out;  z-index: 1001;  
+        background: $columbiaBlue;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
         &.show {
             visibility: visible;
+            transition: transform .3s ease-in-out, visibility .3s ease-in-out;
             // transform: translatex(-100%);
             left: 0;
         }
-    }   
+    } 
+
 }
 
 .main-header.sticky{
@@ -66,5 +83,25 @@
         .navbar-nav .nav-item.dropdown:hover {
             .nav-link{ box-shadow: none;} 
         } 
+    }
+}
+
+.hamburger-menu{ font-size: 16px; color: black; display: flex;
+    &:hover{color: black;}
+    .icons{  height: 20px; width: 32px; display: block; text-align: right;
+        .icon-close{  display: none;}
+        .icon-bar{display: inline-block; }
+    }
+    &[aria-expanded="true"]{
+        .icons{ 
+            .icon-close{ display: inline-block; }
+            .icon-bar{ display: none; }
+        }
+    } 
+}
+
+.mobile-header-address-sec{
+    .social-links{
+        a{ color: $primary_color ;}
     }
 }

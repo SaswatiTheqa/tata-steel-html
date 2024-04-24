@@ -1,10 +1,13 @@
-.btn{ padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px; text-transform: uppercase; min-height: 46px; color: $body_color; line-height: 1; text-align: left;
+.btn{ 
+    &.sitebtn{padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px;  min-height: 46px; color: $body_color; 
+        line-height: 0.9; text-align: left; text-transform: uppercase;}
     &.btn-arrow{ padding-right: 38px; 
         &::after{ @include afterbefore(); content: "\f054"; font-family: "Font Awesome 6 Free"; font-size: 14px; line-height: 1; width: 7px; height: 14px; left: auto; right: 20px; 
             // background: url(../images/icon/icon-arrow-forward.svg) no-repeat;
           }
     }
-    &.btn-left-icon{ padding: 7px; display: flex; align-items: center; justify-content: start;
+    &.min-h-48{min-height: 48px;line-height: 1.013;}
+    &.btn-left-icon{ padding: 7px; display: flex; align-items: center; justify-content: start; 
         .icon-holder{ margin-right: 10px; max-width: 24px;
             img{ max-height: 24px; min-width: 16px; }
         }
@@ -32,7 +35,6 @@
     &.text-site-primary{color:  $primary_color !important;
         &:hover{color:  $secondary_color !important   }
     }
-
     &.round-btn{ @include round(62px); padding: 0; @include flex-center(); min-height: auto; }
 }
 

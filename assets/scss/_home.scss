@@ -1,57 +1,91 @@
 .banner{ border-radius: 14px;  position: relative;
     &::before{background: transparent linear-gradient(314deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box;
-        border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 45%; z-index: 1; }
-    &-text-wrap{ position: relative; z-index: 1; }
-    &-text{ padding: 20px 32px 20px 60px; }
+        border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 45%; z-index: 1; 
+        @include breakpoint('lg', max) { display: none; }
+    }
+    &-text-wrap{ position: relative; z-index: 1; 
+        @include breakpoint('lg', max) {
+           background: transparent linear-gradient(347deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box; border-radius: 0 0 14px 14px;
+        }
+    }
+    &-text{ padding: 20px 45px 20px 60px; 
+        
+        .h6{ line-height: 1.28;}
+        @include breakpoint('xl', max) { padding: 30px 20px;}
+        @include breakpoint('lg', max) { padding: 60px 20px 70px;}
+    }
     &-img-wrap{ position: relative; z-index: 0; border-radius: 0 14px 14px; box-shadow: inset 5px 0px 6px #00000033, -5px 0px 8px #00000026;
+        @include breakpoint('lg', max) {border-radius: 14px 14px 0 0;}
         figure{ position: relative; padding-top: 69%;
             img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%; }  
         }
     }
-  .swiper-button-prev , .swiper-button-next{ opacity: 0; }
-  &:hover{ 
-    .swiper-button-prev , .swiper-button-next{ opacity: 1;
-        &.swiper-button-disabled{ opacity: 0;}
+
+    // swiper
+    &:hover{ 
+        .swiper-button-prev , .swiper-button-next{ opacity: 1;
+            &.swiper-button-disabled{ opacity: 0;}
+        }
     }
-  }
+    .swiper-button-prev , .swiper-button-next{ opacity: 0; 
+        @include breakpoint('lg', max) {
+            display: none;
+        }
+    }
+    .swiper-pagination{ bottom: 24px; text-align: left; padding-left: 14px;
+        &.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 6px; }
+       
+    }
     
 }
 
 
 .icon-box-wraper{ text-align: center; width: calc(50% - 0.5rem); max-width: 180px; padding: 20px 0;
     .icon-box-img{ width: 120px; position: relative; margin: 0 auto;  text-align: center; padding: 12px 5px 0;
-        &::before{background-color: #FDCFAE4D; width: 100%; height: 90px; border-radius: 14px; content: ""; position: absolute; left: 0; right: 0; top:0; }
+        &::before{ position: absolute; left: 0; right: 0; top:0; background-color: #FDCFAE4D; width: 100%; height: 90px; border-radius: 14px; content: "";  
+            @include breakpoint('lg', max) { height: 76px; }
+        }
         figure{ position: relative; z-index: 1; max-width: 100px; }
         img:hover{ filter: invert(100%); }
+        @include breakpoint('lg', max) { width: 100px; padding: 10px 8px 0;}
     }
     .icon-box-text{ margin-top: 16px;  
        .font-18{ line-height: 20px; }
     }
+     @include breakpoint('md', max) { max-width: 160px; }
 }
 
 
-
+// section-benefits
 .section-benefits{ padding-top: 60px; padding-bottom: 60px;  position: relative;
     @include breakpoint('xl', max) { padding-top: 30px; padding-bottom: 30px;   }
+    .benefits-text-holder , .benefits-product-img{ z-index: 1; position: relative;}
     .benefits-text-holder { padding-left: 60px; 
         @include breakpoint('xl', max) { padding-left: 30px;  }
-        @include breakpoint('md', max) {padding-left: 15px;  }
+        @include breakpoint('md', max) { padding: 35% 20px 30px; margin-top: -30%;
+           border-radius: 14px; background: transparent linear-gradient(180deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+           z-index: 0;
+        }
     }
     .font-18 { line-height: 1}
-    .media-icon{  @include round(50px , 6px); @include flex-center(); margin-right: 8px;
-       img{  width: 38px;}
+    .media-icon{ @include round(50px , 6px); @include flex-center(); margin-right: 8px;
+       img{ width: 38px;
+          @include breakpoint('lg', max) { width: 30px; }
+       }
+       @include breakpoint('lg', max) { @include round(40px , 6px); }
     }
     .benefits-list{gap: 20px 40px; margin-top: 50px;
-        // li{ }
+        @include breakpoint('lg', max) { gap: 20px 20px;  margin-top: 30px;}
+       
     }
     // .benefits-product-img{ position: absolute; right: 0; top:0;}
     &::before{ @include afterbefore(); border-radius: 14px; left: 0.75rem; right: auto; width: 84.7%;
         background: transparent linear-gradient(252deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
-        @include breakpoint('md', max) { width: auto; right: 0; top: 20%;
-            background: transparent linear-gradient(180deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+        @include breakpoint('md', max) {
+            display: none;
         }
     }
-    .benefits-text-holder , .benefits-product-img{ z-index: 1; position: relative;}
+   
 }
 
 .section-market{
@@ -68,7 +102,7 @@
         &-img{ 
             &:after{ @include afterbefore(); background-color: rgba(0, 0, 0, 0.3); border-radius: 8px; } 
             .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; z-index: 1;
-                img{ max-width: 21px;}
+                img{ max-width: 20px;}
             }
             figure{ height: 100%; 
                 img{ border-radius: 8px; height: 100%}
@@ -77,7 +111,7 @@
     }
 }
 
-
+//  ==================================  news-event
 
 .news-event-section{}
 .cards.events-cards{ background-color: transparent; transition: all 0.5s; box-shadow: none; border: 0px; border-radius: 8px;
@@ -100,24 +134,55 @@
 
 
 
-
+//  ==================================  service-section
 .service-section{
-   .box-wrapper{ height: 100%; color: #fff; overflow: hidden;  position: relative; padding: 44px 43px;
-      @include breakpoint('md', max) {  padding: 20px; min-height: 320px;}  
+   .box-wrapper{ position: relative; height: 100%; overflow: hidden; padding: 44px 43px; color: #fff; min-height: 320px; display: flex; align-items: center;
+      @include breakpoint('xxl', max) { padding: 44px 20px;} 
+      @include breakpoint('xl', max) { padding: 20px;}  
+    //   @include breakpoint('md', max) { padding: 20px;}  
+      @include breakpoint('sm', max) { padding-bottom: 0px; }
+    
       &-left{ 
-        .box-wrapper-img-bg-logo{ right: -19px; bottom: -9px;}
-        .box-wrapper-img-character{ right: 9%;  bottom: -16px;}
+        .box-wrapper-img-bg-logo{ bottom: -9px; right: -19px; 
+            @include breakpoint('sm', max) {  }
+        }
+        .box-wrapper-img-character{ bottom: -16px; right: 9%; 
+            
+            @include breakpoint('sm', max) { text-align: right; } 
+        }
       }
       &-right{
-        .box-wrapper-img-bg-logo{ left: -5px; bottom: -11px;}
+        .box-wrapper-img-bg-logo{ left: -6px; bottom: -11px;}
         .box-wrapper-img-character{ left: 12%;  bottom: -17px;}
         .text-wrap-max-w{ margin-left: auto; }
       }
-      &-img-character ,  &-img-bg-logo{ position: absolute; }
+      &-img-character{position: absolute; 
+        img{ max-height: 276px;
+            @include breakpoint('xl', max) { max-width: 150px; }
+        }
+        
+         @include breakpoint('sm', max) { position: relative; }
+
+      }
+    
       &-img-character { z-index: 1;}
-      &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;}
+      &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+        @include breakpoint('sm', max) {
+            background: transparent linear-gradient(-45deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
+        }
+      }
+
+      &.bg-gradient-secondary{ 
+         @include breakpoint('sm', max) {
+            background: transparent linear-gradient(0deg, #FDCFAE 0%, #F49223 46%, #F49223 46%, #E45B27 100%) 0% 0% no-repeat padding-box;
+        }
+      }
+
       @include breakpoint('xl', min) {
-         .text-wrap-max-w{ max-width: 75%; }
+         .text-wrap-max-w{ max-width: 231px; }
+      }
+      .button-holder{
+        @include breakpoint('sm', max) { margin-bottom: 20px;}
       }
    }
 
