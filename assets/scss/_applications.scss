@@ -1,0 +1,74 @@
+.product-box{  min-height: 263px; display: flex;  padding: 20px 24px 30% 60px;
+    .pro-box-bg{background: #FDCFAE40; position: absolute; left: 60px; right: 0; top:20px; bottom: 20px; border-radius: 10px; width: auto;  }
+    .product-body , .product-img{ z-index: 1; }
+    .sitebtn{ position: absolute; bottom: 43px;}
+    .product-img{position: absolute; bottom: 0; width: 50%; left: 0;
+        
+    }
+    .product-img { width: calc(50% - 14px); }
+    .product-body{ margin-left: 50%; }  
+}
+.product-row{
+    & > *:nth-child(even){ 
+        .pro-box-bg{background: #BDD9E84D; }
+        .btn.btn-arrow.btn-arrow-bg::after{background: $columbiaBlue; }
+    }
+}
+
+@include breakpoint('lg', min) { 
+  .modal-w-900{ max-width: 900px;}
+}
+
+.custom-modal{
+    .modal-body{ padding: 45px;}
+   .btn-close{ position: absolute;  opacity: 1; background-image: none; padding: 0; top:12px; right:13px; width: auto; height: auto; z-index: 2; }
+   .app-left-panel{ padding-right: 45px; }
+   .app-details{ 
+      .media-body{ margin-left: 20px; }
+   }
+
+  .details-bottom-sec{  border-top: 2px solid  $white_smoke; padding-top: 15px; }
+  .app-img-wrap{ position: relative; height: 100%;
+    &::before{ opacity: 0.8; border-radius: 10px; background: transparent linear-gradient(142deg, #F49223 0%, #106DB3 100%) 0% 0% no-repeat padding-box; @include afterbefore();}
+    img{ max-height: 400px;}
+   }
+    .product-size-list{ gap: 13px; }
+
+
+//    .scrollable-sec{max-height: 270px; overflow-y: auto;}
+   
+}
+
+
+
+.faq-section{
+
+    .accordion-item:first-of-type , .accordion-item:last-of-type{ border-radius: 0px;}
+
+      .accordion{counter-reset: section; 
+        .accordion-item{  background-color: transparent; border: none;
+            box-shadow: inset 0px -2px 0px #092A49;
+           
+            .accordion-button{ box-shadow: none;  border-radius: 0px;  font-size: 26px; margin-bottom: 0px; line-height: 1; min-height: 72px;
+                position: relative; padding:14px 20px 14px 84px; background-color: #092A49; color: #fff; font-weight: 700;
+                 &:after { content: ""; background: url(../images/icon/Icon-feather-minus.svg) no-repeat center;  
+                display: flex; align-items: center; top:0; bottom: 0; margin: auto;
+                 position: absolute; left: 30px; width: 20px; height: 20px; 
+                   }
+              &.collapsed{background-color: transparent;  border-radius: 0px; color: #092A49; 
+                  &:after { content: ""; background-image: url(../images/icon/Icon-feather-plus.svg) ; }
+              }
+                    
+            }
+             .accordion-body{   padding: 30px 50px 50px 84px; margin-bottom: 0; line-height: 1.3; }
+              
+        
+       
+        }
+       }
+
+    
+}
+
+
+.max-w-300{ max-width: 270px;}

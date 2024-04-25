@@ -13,16 +13,15 @@
         }
     }
     &-text{ padding: 20px 45px 20px 60px; 
-        
         .h6{ line-height: 1.28;}
         @include breakpoint('xl', max) { padding: 30px 20px;}
         @include breakpoint('lg', max) { padding: 60px 20px 70px;}
     }
-    &-img-wrap{ position: relative;  border-radius: 0 14px 14px; box-shadow: inset 5px 0px 6px #00000033, -5px 0px 8px #00000026;
+    &-img-wrap{ position: relative;  border-radius: 0 14px 14px; z-index: 1;
         @include breakpoint('lg', max) {border-radius: 14px 14px 0 0;}
         figure{ position: relative; padding-top: 69%;
             img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%;
-                border-top-left-radius:68px 527px;
+                border-top-left-radius:68px 100%;
              }  
         }
     }
@@ -113,9 +112,14 @@
         &-img{ 
             &:after{ @include afterbefore(); background-color: rgba(0, 0, 0, 0.3); border-radius: 8px; } 
             .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; z-index: 1;
-                img{ max-width: 20px;margin-left: 4px;}
-                @include breakpoint('lg', max) {@include round(42px);
-                    img{ max-width: 16px; }
+                    img , svg{ max-width: 20px;margin-left: 4px;}
+                    @include breakpoint('lg', max) {@include round(42px);
+                        img{ max-width: 16px; }
+                    }
+                &:hover{
+                    svg{ 
+                        path {stroke: $apricot; }
+                    }
                 }
                 
             }
@@ -123,6 +127,7 @@
                 img{ border-radius: 8px;  object-fit: cover; object-position: center;}
             }
        }
+       
     }
     .slider-w-sm{ width: 15.5%;
         @include breakpoint('lg', max) {width: 18.5%;}
@@ -136,6 +141,13 @@
         @include breakpoint('md', max) {width: 48.5%;}
         @include breakpoint('sm', max) {width: 100%;}
     }
+
+    // swiper
+    // &:hover{ 
+    //     .swiper-button-prev , .swiper-button-next{ opacity: 1;
+    //         &.swiper-button-disabled{ opacity: 0;}
+    //     }
+    // }
 }
 
 //  ==================================  news-event
@@ -145,7 +157,10 @@
 .news-event-section{}
 .cards{ border: 0px;
     .cards-img{border-radius: 8px 8px 0 0; 
-        figure{padding-top: 64%; }
+        figure{padding-top: 64%;
+            @include breakpoint('lg', max) {padding-top: 80%;}
+            @include breakpoint('md', max) {padding-top: 64%;}
+         }
     }
     .cards-body{ padding: 20px 70px 20px 16px;
         @include breakpoint('lg', max) { padding-right: 55px;} 

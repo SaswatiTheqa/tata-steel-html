@@ -57,3 +57,12 @@
 // Custom radio button end
 
 
+.form-select{ color: $davys_gray; border-color: $davys_gray; border-width: 2px; height: 48px;
+    // option{     line-height: 22.5;}
+}
+
+.form-control{ border: 2px solid black; border-radius: 6px; padding: 0.65rem 0.75rem; }
+.form-group .form-label{  font-size: 22px; font-weight: 600; line-height: 1;
+  
+}
+.mandatory{ color: #E45B27;}
