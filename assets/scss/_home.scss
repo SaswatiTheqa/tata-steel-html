@@ -156,23 +156,36 @@
 
 .news-event-section{}
 .cards{ border: 0px;
-    .cards-img{border-radius: 8px 8px 0 0; 
+    &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;}
+    &-img{border-radius: 8px 8px 0 0; 
         figure{padding-top: 64%;
             @include breakpoint('lg', max) {padding-top: 80%;}
             @include breakpoint('md', max) {padding-top: 64%;}
          }
     }
-    .cards-body{ padding: 20px 70px 20px 16px;
+    &-body{ padding: 20px 70px 0px 16px;
         @include breakpoint('lg', max) { padding-right: 55px;} 
         .heading-3{line-height: 1.45; 
             a{ text-decoration: none; color: $black_color;}
         }
-        p{letter-spacing: 0.07px; font-size: 14px; font-weight: 600; color: #5C5C5C; margin-bottom: 4px;}
-        .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; 
-            &:hover{background-color: $flame; color: #fff; }
-        }
     }
-    &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;}
+    &-footer{ padding: 0px 70px 16px 20px;
+        p{letter-spacing: 0.07px; font-size: 14px; font-weight: 600; color: #5C5C5C; margin-bottom: 4px;}
+    }
+    .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; 
+        &:hover{background-color: $flame; color: #fff; }
+    }
+}
+
+.event-list{ 
+    .cards{
+        &-body{ padding: 20px 20px ;}
+        &-img{
+          figure{ padding-top: 62.3%;}
+        }
+       
+    }
+
 }
 
 

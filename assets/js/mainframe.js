@@ -62,3 +62,39 @@ $(document).ready(function () {
 $(document).ready(function() {
   $(".select2").select2();
 });
+
+
+$(document).ready(function () {
+  // enquiry-radio-list
+  $('.enquiry-radio-list input[type="radio"]').
+  click(
+      function () {
+          const inputValue = 
+          $(this).attr("value");
+          const targetBox = 
+          $("." + inputValue);
+          $(".radio-open-box").
+          not(targetBox).hide();
+          $(targetBox).show();
+      }
+  );
+});
+
+
+var items = $(".event-list .col-12");
+    var numItems = items.length;
+    var perPage = 3;
+
+    items.slice(perPage).hide();
+
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "&laquo;",
+        nextText: "&raquo;",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });

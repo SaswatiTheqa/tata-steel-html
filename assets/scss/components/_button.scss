@@ -8,6 +8,10 @@
         &.btn-arrow-bg{ padding: 0 52px 0 0; min-height: 32px;
             &::after{ @include round(32px); @include flex-center(); background-color: $apricot; right: 0; }
         }   
+        &.back-btn{  padding-right: 20px; padding-left: 27px;
+            &::after{ content: "\f053"; right: auto; left: 10px; }
+    
+        }
     }
     
    
@@ -24,6 +28,9 @@
             }
         }
     }
+
+    
+
     &.min-h-48{min-height: 48px;line-height: 1.013;}
     &.bg-columbiaBlue{
         &:hover{ background-color: $primary_color; color: #fff;}
@@ -47,6 +54,7 @@
     &.round-btn{ @include round(62px); padding: 0; @include flex-center(); min-height: auto; }
 }
 
+.max-w-148{ max-width: 148px;}
 .max-w-168{ max-width: 168px;}
 .max-w-174{ max-width: 174px;}
 .max-w-214{ max-width: 214px;}

@@ -34,21 +34,17 @@
    }
     .product-size-list{ gap: 13px; }
 
-
 //    .scrollable-sec{max-height: 270px; overflow-y: auto;}
-   
+
 }
 
 
+// ========================== faq
 
 .faq-section{
-
     .accordion-item:first-of-type , .accordion-item:last-of-type{ border-radius: 0px;}
-
       .accordion{counter-reset: section; 
-        .accordion-item{  background-color: transparent; border: none;
-            box-shadow: inset 0px -2px 0px #092A49;
-           
+          .accordion-item{  background-color: transparent; border: none; box-shadow: inset 0px -2px 0px #092A49;
             .accordion-button{ box-shadow: none;  border-radius: 0px;  font-size: 26px; margin-bottom: 0px; line-height: 1; min-height: 72px;
                 position: relative; padding:14px 20px 14px 84px; background-color: #092A49; color: #fff; font-weight: 700;
                  &:after { content: ""; background: url(../images/icon/Icon-feather-minus.svg) no-repeat center;  
@@ -57,17 +53,11 @@
                    }
               &.collapsed{background-color: transparent;  border-radius: 0px; color: #092A49; 
                   &:after { content: ""; background-image: url(../images/icon/Icon-feather-plus.svg) ; }
-              }
-                    
+              }   
             }
-             .accordion-body{   padding: 30px 50px 50px 84px; margin-bottom: 0; line-height: 1.3; }
-              
-        
-       
-        }
-       }
-
-    
+            .accordion-body{   padding: 30px 50px 50px 84px; margin-bottom: 0; line-height: 1.3; }
+         }
+      }
 }
 
 

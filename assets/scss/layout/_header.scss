@@ -50,20 +50,22 @@
      } 
     .btn{ @include flex-center(); }
     .drop-left-icon{ margin-right: 6px;}
-    [type="radio"]:checked,
-    [type="radio"]:not(:checked) {
-        &+ label{
-            padding: 5px 10px  5px 38px ; 
-            border-radius: 4px;
-            &::before{ top:5px; left: 10px;}
-            &::after{ top: 10px; left: 15px;}
+    .check-style{
+        [type="radio"]:checked,
+        [type="radio"]:not(:checked) {
+            &+ label{
+                padding: 5px 10px  5px 38px ; 
+                border-radius: 4px;
+                &::before{ top:5px; left: 10px;}
+                &::after{ top: 10px; left: 15px;}
+            }
         }
-    }
-    [type="radio"]:checked{
-        &+ label{
-            background: $apricot;
+        [type="radio"]:checked{
+            &+ label{
+                background: $apricot;
+            }
         }
-    }
+   }
 }
 
 .header-mob{ background-color: $columbiaBlue; padding: 9.5px 0px;}
