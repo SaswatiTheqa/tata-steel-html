@@ -52,6 +52,50 @@ $(document).ready(function () {
 
 
 
+
+// phone call 
+var myID = document.getElementById("phone-call");
+
+var myScrollFunc = function() {
+  var y = window.scrollY;
+  var windowHeight = window.innerHeight;
+  var documentHeight = document.body.clientHeight;
+  // Calculate the bottom position
+  var bottomPosition = documentHeight - windowHeight - y;
+  // You can adjust the value (10 in this case) for a different sensitivity
+  if (bottomPosition < 15) {
+    myID.className = "phone-call-wrap show";
+  } else {
+    myID.className = "phone-call-wrap";
+  }
+};
+
+window.addEventListener("scroll", myScrollFunc);
+
+
+
+
+    var items = $(".event-list .event-item");
+    var numItems = items.length;
+    var perPage = 6;
+    items.slice(perPage).hide();
+
+    $('#pagination-container').pagination({
+        items: numItems,
+        itemsOnPage: perPage,
+        prevText: "<i class='fa-solid fa-chevron-left'></i>",
+        nextText: "<i class='fa-solid fa-chevron-right'></i>",
+        onPageClick: function (pageNumber) {
+            var showFrom = perPage * (pageNumber - 1);
+            var showTo = showFrom + perPage;
+            items.hide().slice(showFrom, showTo).show();
+        }
+    });
+
+
+
+
+
   // select2
   if ($('.select2').length > 0) {
      $(".select2").select2();
@@ -92,20 +136,3 @@ $('[data-fancybox]').fancybox({
   clickContent    : false
 });
 
-var items = $(".event-list .col-12");
-    var numItems = items.length;
-    var perPage = 3;
-
-    items.slice(perPage).hide();
-
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "&laquo;",
-        nextText: "&raquo;",
-        onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });

@@ -9,10 +9,7 @@
         }
         &::after{ display: none;}
         &::before{background: transparent linear-gradient(237deg, #106DB3 0%, #08375A 100%) 0% 0% no-repeat padding-box; width: 55%; }
-        .banner-text {  padding: 20px 45px 50px 50px;
-            .banner-text-max-w{ max-width: 400px; }
-            .banner-text-max-w-345{max-width: 345px;}
-        }
+        .banner-text {  padding: 20px 45px 50px 50px;}
     }  
     .breadcrumb-item{ color: $columbiaBlue;
         a{color: $columbiaBlue;} 
@@ -63,35 +60,45 @@
 
 
 
-// .simple-pagination ul {
-// 	margin: 0 0 20px;
-// 	padding: 0;
-// 	list-style: none;
-// 	text-align: center;
-// }
+.simple-pagination 
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+        li {
+            + li {margin-left: 24px;}
+            a , span{
+                color: #fff;
+                @include round(42px); padding: 0; @include flex-center();
+                font-size: $font20;
+                text-decoration: none;
+                border: 1px solid $davys_gray;
+                background-color: $davys_gray;
+                box-shadow: 0px 0px 10px 0px #EEE;
+            }
+            a:hover{
+                border: 1px solid $davys_gray;
+                background-color: $davys_gray;
+                color: #fff;
+             }
+        }
+  
+        .current {
+            color: #FFF;
+            background-color: $primary_color;
+            border-color: $primary_color;
+        }
+        .prev, .next{  font-size: 14px;
+            &.current {
+                border: 1px solid $columbiaBlue;
+                background-color: $columbiaBlue;
+                color: $body_color;
+               
+            }
+        }
 
-// .simple-pagination li {
-// 	display: inline-block;
-// 	margin-right: 5px;
-// }
-
-// .simple-pagination li a,
-// .simple-pagination li span {
-// 	color: #666;
-// 	padding: 5px 10px;
-// 	text-decoration: none;
-// 	border: 1px solid #EEE;
-// 	background-color: #FFF;
-// 	box-shadow: 0px 0px 10px 0px #EEE;
-// }
-
-// .simple-pagination .current {
-// 	color: #FFF;
-// 	background-color: #FF7182;
-// 	border-color: #FF7182;
-// }
-
-// .simple-pagination .prev.current,
-// .simple-pagination .next.current {
-// 	background: #e04e60;
-// }
+}

@@ -32,16 +32,18 @@
 
 
 
-.phone-call-wrap{ position: absolute;  right: 0px; cursor: pointer;
-   bottom: 0px; 
+.phone-call-wrap{ cursor: pointer; position: fixed; right: 6%; z-index: 99;  
+   bottom: 30px; 
    .phone-no{ padding-left: 20px; transition: 0.5s all; padding-right: 65px; border-radius: 40px;  margin-right: 5px; height: 52px; display: flex; align-items: center; background: #fff;
-      opacity: 0; 
+      opacity: 0; visibility: hidden; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); 
       .font-12{ font-size: 12px;}
    }
-   .phone-call{   @include round(60px); @include flex-center(); border: 5px solid #fff;  background: transparent linear-gradient(226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box;
-      box-shadow: 5px 0px 4px #00000033;  position: absolute; right: 0; bottom: 0;
+   .phone-call{  box-shadow: 5px 0px 4px #00000033;  @include round(60px); @include flex-center(); border: 5px solid #fff;  background: transparent linear-gradient(226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box;
+      position: absolute; right: 0; bottom: 0;
    }
-   &:hover{
-      .phone-no{ opacity: 1;  }
+   &:hover ,  &.show{ 
+      .phone-call{background: transparent linear-gradient(-226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box; }
+      .phone-no{ opacity: 1; visibility: visible; }
    }
+ 
 }
