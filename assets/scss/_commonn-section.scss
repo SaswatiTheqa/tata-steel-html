@@ -11,6 +11,7 @@
         &::before{background: transparent linear-gradient(237deg, #106DB3 0%, #08375A 100%) 0% 0% no-repeat padding-box; width: 55%; }
         .banner-text {  padding: 20px 45px 50px 50px;
             .banner-text-max-w{ max-width: 400px; }
+            .banner-text-max-w-345{max-width: 345px;}
         }
     }  
     .breadcrumb-item{ color: $columbiaBlue;

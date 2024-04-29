@@ -27,10 +27,9 @@
     // language dropdown 
     .lang-drop{ margin-right: 34px; 
         .dropdown-toggle{padding: 32px 12px 32px; line-height: 1; 
-           &:hover{
-             .drop-left-icon{
-                
-             }
+           &.show{ 
+             object{ filter:  invert(100%);}
+
            }
         }
         @include breakpoint('xl', max) { margin-right: 24px; 
@@ -56,13 +55,12 @@
             &+ label{
                 padding: 5px 10px  5px 38px ; 
                 border-radius: 4px;
-                &::before{ top:5px; left: 10px;}
-                &::after{ top: 10px; left: 15px;}
+                .check-icon{ top:6px; left: 10px;}
             }
         }
         [type="radio"]:checked{
             &+ label{
-                background: $apricot;
+                background: $apricotLight;
             }
         }
    }

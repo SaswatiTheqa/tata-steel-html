@@ -52,19 +52,11 @@ $(document).ready(function () {
 
 
 
-});
+  // select2
+  if ($('.select2').length > 0) {
+     $(".select2").select2();
+  }
 
-
-
-
-
-
-$(document).ready(function() {
-  $(".select2").select2();
-});
-
-
-$(document).ready(function () {
   // enquiry-radio-list
   $('.enquiry-radio-list input[type="radio"]').
   click(
@@ -78,8 +70,27 @@ $(document).ready(function () {
           $(targetBox).show();
       }
   );
+
+
+
 });
 
+$('[data-fancybox]').fancybox({
+  // Options will go here
+  buttons : [
+    'close'
+  ],
+  wheel : false,
+  transitionEffect: "slide",
+   // thumbs          : false,
+  // hash            : false,
+  loop            : true,
+  // keyboard        : true,
+  toolbar         : false,
+  // animationEffect : false,
+  // arrows          : true,
+  clickContent    : false
+});
 
 var items = $(".event-list .col-12");
     var numItems = items.length;

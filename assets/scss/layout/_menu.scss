@@ -1,21 +1,20 @@
 .main-menu{
     .navbar-nav{
         .nav-item{ position: relative;
-            .nav-link{ text-transform: uppercase; position: relative; padding: 40px 12px 37px; color: $black_color; font-size: 1rem; 
+            .nav-link{ position: relative; padding: 40px 12px 37px; text-transform: uppercase;  color: $black_color; font-size: 1rem; 
                 line-height: 1 !important; font-weight: 600; transition: all 0.3s;
                 @include breakpoint('xl', min) { font-size: 1rem;}
                 @include breakpoint('xl', max) { 
-                    display: inline-block;
-                    padding: 40px 8px 37px;
-                    
+                    display: inline-block; padding: 40px 8px 37px;  
                 }
                 @include breakpoint ('lg', min)  { 
                     font-size: 15px;
                 }
                 @include breakpoint('lg', max) { padding: 16px 0px;}
-                &:hover{ color: $secondary_color;
+                &.active{ color: $secondary_color; } 
+                &.show{
                     &::after{ transform: rotate(180deg); }
-                }                
+                }               
             }
 
             &:last-child{
@@ -25,25 +24,15 @@
                     }
                 }
             }
-            .dropdown-menu{  margin-top: 0px; padding: 0;
-               @include breakpoint('xl', min) { 
-                width: 200px;  
-                display: block !important; 
-                opacity: 0; visibility: hidden; top: 100%; }
+            .dropdown-menu{  margin-top: 0px; padding: 0; overflow: hidden;
+                @include breakpoint('lg', min) { width: 200px;  }
                 @include breakpoint('lg', max) { background-color: transparent; box-shadow: none;}
-                
                 li{ 
-                   
                     a{ padding: 12px 17px; line-height: 1; text-transform: capitalize;}
-                    .dropdown-item{white-space: normal; }
+                    .dropdown-item{white-space: normal; color: $black_color; }
                 }
             }
             &.dropdown{
-                &:hover{
-                    .dropdown-menu{ opacity: 1; visibility: visible;  
-                        
-                    }
-                }
                 li{
                     a.dropdown-item{ 
                         &:hover ,  &:active , &:focus { background-color: rgba(189, 217, 232, 0.3); color: $black_color; }
@@ -68,14 +57,10 @@
         // transition: 0.3s all;
         background: $columbiaBlue;
         
-        
         &.show {
             visibility: visible;
             transition: visibility .3s ease-in-out;
-            
             // transition: 0.3s all;
-            
-            
         }
         .navbar-nav{ margin-top: 20px;}
         .nav-address-wrap{ max-width: 720px;  padding: 0px 20px; width: 100%; height: 100%; margin: 0 auto;

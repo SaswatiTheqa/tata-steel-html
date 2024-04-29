@@ -12,8 +12,9 @@
            background: transparent linear-gradient(347deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box; border-radius: 0 0 14px 14px;
         }
     }
-    &-text{ padding: 20px 45px 20px 60px; 
+    &-text{ padding: 20px 60px 20px 60px; 
         .h6{ line-height: 1.28;}
+        
         @include breakpoint('xl', max) { padding: 30px 20px;}
         @include breakpoint('lg', max) { padding: 60px 20px 70px;}
     }
@@ -48,7 +49,7 @@
 
 .icon-box-wraper{ text-align: center; width: calc(50% - 0.5rem); max-width: 180px; padding: 20px 0;
     .icon-box-img{ width: 120px; position: relative; margin: 0 auto;  text-align: center; padding: 12px 5px 0;
-        &::before{ position: absolute; left: 0; right: 0; top:0; background-color: #FDCFAE4D; width: 100%; height: 90px; border-radius: 14px; content: "";  
+        &::before{ position: absolute; left: 0; right: 0; top:0; background-color: $apricotLight; width: 100%; height: 90px; border-radius: 14px; content: "";  
             @include breakpoint('lg', max) { height: 76px; }
         }
         figure{ position: relative; z-index: 1; max-width: 100px; }
@@ -70,6 +71,7 @@
 .section-benefits{ padding-top: 60px; padding-bottom: 60px;  position: relative;
     @include breakpoint('xl', max) { padding-top: 30px; padding-bottom: 30px;   }
     .benefits-text-holder , .benefits-product-img{ z-index: 1; position: relative;}
+    .benefits-product-img{ padding-left: 89px; }
     .benefits-text-holder { padding-left: 60px; 
         @include breakpoint('xl', max) { padding-left: 30px;  }
         @include breakpoint('md', max) { padding: 35% 20px 30px; margin-top: -30%;
@@ -84,12 +86,12 @@
        }
        @include breakpoint('lg', max) { @include round(40px , 6px); }
     }
-    .benefits-list{gap: 20px 40px; margin-top: 50px;
+    .benefits-list{gap: 20px 30px; margin-top: 50px; margin-right: -24px;
         @include breakpoint('lg', max) { gap: 20px 20px;  margin-top: 30px;}
        
     }
     // .benefits-product-img{ position: absolute; right: 0; top:0;}
-    &::before{ @include afterbefore(); border-radius: 14px; left: 0.75rem; right: auto; width: 84.7%;
+    &::before{ @include afterbefore(); border-radius: 14px; left: 0.75rem; right: auto; width: 83.33333333%;
         background: transparent linear-gradient(252deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
         @include breakpoint('md', max) {
             display: none;
@@ -156,7 +158,8 @@
 
 .news-event-section{}
 .cards{ border: 0px;
-    &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;}
+    &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;
+    }
     &-img{border-radius: 8px 8px 0 0; 
         figure{padding-top: 64%;
             @include breakpoint('lg', max) {padding-top: 80%;}
@@ -172,20 +175,22 @@
     &-footer{ padding: 0px 70px 16px 20px;
         p{letter-spacing: 0.07px; font-size: 14px; font-weight: 600; color: #5C5C5C; margin-bottom: 4px;}
     }
-    .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; 
-        &:hover{background-color: $flame; color: #fff; }
+    .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; font-size: 14px;
+    }
+}
+.events-cards{
+    &:hover{
+        .round-btn{background-color: $flame; color: #fff; }
     }
 }
 
 .event-list{ 
     .cards{
-        &-body{ padding: 20px 20px ;}
+        &-body{ padding: 20px 20px;}
         &-img{
           figure{ padding-top: 62.3%;}
         }
-       
     }
-
 }
 
 
@@ -195,54 +200,46 @@
    .box-wrapper{ position: relative; height: 100%; overflow: hidden; padding: 44px 43px; color: #fff; min-height: 320px; display: flex; align-items: center;
       @include breakpoint('xxl', max) { padding: 44px 20px;} 
       @include breakpoint('xl', max) { padding: 20px;}  
-    //   @include breakpoint('md', max) { padding: 20px;}  
-      @include breakpoint('sm', max) { padding-bottom: 0px; }
-      .box-wrapper-img-wrap{ position: absolute; max-width: 46%; }
+      @include breakpoint('sm', max) { padding: 0; }
+      .box-wrapper-img-wrap{ position: absolute; max-width: 46%; 
+        @include breakpoint('xl', max) { max-width: 40%; }
+        @include breakpoint('sm', max) { position: relative}
+      }
+      .text-wrap-max-w{ 
+        @include breakpoint('sm', max) {padding: 25px 20px 15px; }
+      }
       &-left{ 
-        .box-wrapper-img-bg-logo{ bottom: -9px; right: -19px; 
-            @include breakpoint('sm', max) {  }
+        .box-wrapper-img-wrap{ max-width: 47%; right: -4%; bottom: -5%; 
+            @include breakpoint('xl', max) { max-width: 41%; }
+            @include breakpoint('sm', max) { margin-left: auto;}
         }
-        .box-wrapper-img-character{ bottom: -16px; right: 9%; 
-            
-            @include breakpoint('sm', max) { text-align: right; } 
-        }
-        .box-wrapper-img-wrap{ right: -4%; bottom: -5%; }
+        @include breakpoint('xl', min) {
+            .text-wrap-max-w{ max-width: 303px; }
+         }
       }
       &-right{
-        .box-wrapper-img-bg-logo{ left: -6px; bottom: -11px;}
-        .box-wrapper-img-character{ left: 12%;  bottom: -17px;}
         .text-wrap-max-w{ margin-left: auto; }
-
         .box-wrapper-img-wrap{ left: -4%; bottom: -5%; }
+        @include breakpoint('xl', min) {
+            .text-wrap-max-w{ max-width: 294px; }
+         }
       }
-      &-img-character{position: absolute; 
-        img{ max-height: 276px;
-            @include breakpoint('xl', max) { max-width: 150px; }
-        }
-        
-         @include breakpoint('sm', max) { position: relative; }
 
-      }
-    
-      &-img-character { z-index: 1;}
+
+
+      
       &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
         @include breakpoint('sm', max) {
             background: transparent linear-gradient(-45deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
         }
       }
-
       &.bg-gradient-secondary{ 
          @include breakpoint('sm', max) {
             background: transparent linear-gradient(0deg, #FDCFAE 0%, #F49223 46%, #F49223 46%, #E45B27 100%) 0% 0% no-repeat padding-box;
         }
       }
 
-      @include breakpoint('xl', min) {
-         .text-wrap-max-w{ max-width: 231px; }
-      }
-      .button-holder{
-        @include breakpoint('sm', max) { margin-bottom: 20px;}
-      }
+      
    }
 
 }

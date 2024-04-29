@@ -12,47 +12,24 @@
             line-height: 20px;
             display: inline-block;
             color: $black_color;
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                @include round(18px);
-                border: 1px solid $black_color;
-                background: $white_color;
-            }
-            &:after{
-                // content: "\f00c";
-                // font-family: "Font Awesome 6 Free";
-                content: "";
-                position: absolute;
-                top: 5px;
-                left: 6px;
-                width: 7px; 
-                height: 4px;
-                border: 1px solid  ;
-                border-color: transparent transparent $white_color $white_color ;
-                background: transparent;
-                
-                transform: rotate(-45deg);
-            
-                -webkit-transition: all 0.2s ease;
-                transition: all 0.2s ease;
+            .check-icon{ position: absolute; left: 0; top: 0; @include round(18px);border: 1px solid $black_color;
+             background: $white_color; font-size: 10px; color: $white_color; @include flex-center();
+            //  .fa-check{ display: none;}
             }
         }
     }
 
     [type="radio"]:not(:checked) + label{
-        &:after {
-            opacity: 0;
+        .check-icon{ 
+            .fa-check{ display: none;}
         }
         
     }
     [type="radio"]:checked + label{
-        &:after {
-            opacity: 1;
+        .check-icon{ background: $primary_color;  border-color: $primary_color;
+            
+            .fa-check{ display: block;}
         }
-        &::before{ background: $primary_color;  border-color: $primary_color;}
     }
 }
 
@@ -89,7 +66,7 @@
 
 // form-control
 .form-control{ border: 2px solid black; border-radius: 6px; padding: 0.65rem 0.75rem; }
-.form-group .form-label{ font-size: 22px; font-weight: 600; line-height: 1;}
+.form-group .form-label{ font-size: clamp(16px, 1vw + 0.6rem, 22px); font-weight: 600; line-height: 1;}
 .mandatory{ color: #E45B27;}
 
 

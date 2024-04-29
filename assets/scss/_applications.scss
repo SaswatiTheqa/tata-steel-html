@@ -19,8 +19,13 @@
   .modal-w-900{ max-width: 900px;}
 }
 
+.modal-backdrop{ background: #092A49 ; 
+  &.show{ opacity: 0.6;}
+}
+
 .custom-modal{
     .modal-body{ padding: 45px;}
+    .modal-content{ border: none; box-shadow: 0px 3px 6px #00000033; border-radius: 8px;}
    .btn-close{ position: absolute;  opacity: 1; background-image: none; padding: 0; top:12px; right:13px; width: auto; height: auto; z-index: 2; }
    .app-left-panel{ padding-right: 45px; }
    .app-details{ 
@@ -62,3 +67,12 @@
 
 
 .max-w-300{ max-width: 270px;}
+
+
+.contact-section{
+
+  .ratio{ max-width: 600px;
+    &::before{ padding-top: 66.7%; }
+  }
+
+}
