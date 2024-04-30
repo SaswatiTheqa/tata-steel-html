@@ -125,40 +125,62 @@ window.addEventListener("scroll", myScrollFunc);
 
 
 });
-if ($('[data-fancybox]').length > 0) {
-  $('[data-fancybox]').fancybox({
-    // Options will go here
-    buttons : [
-      'close'
-    ],
-    wheel : false,
-    transitionEffect: "slide",
-    // thumbs          : false,
-    // hash            : false,
-    loop            : true,
-    // keyboard        : true,
-    toolbar         : false,
-    // animationEffect : false,
-    // arrows          : true,
-    clickContent    : false
-  });
-}
-
-
-
-// $(function () {
-//   $(".col-md-4").slice(0, 3).show();
-//   $("body").on("click touchstart", ".load-more", function (e) {
-//     e.preventDefault();
-//     $(".col-md-4:hidden").slice(0, 3).slideDown();
-//     if ($(".col-md-4:hidden").length == 0) {
-//       $(".load-more").css("visibility", "hidden");
-//     }
-//     $("html,body").animate(
-//       {
-//         scrollTop: $(this).offset().top
-//       },
-//       1000
-//     );
+// if ($('[data-fancybox]').length > 0) {
+//   $('[data-fancybox]').fancybox({
+//     // Options will go here
+//     buttons : [
+//       'close'
+//     ],
+//     wheel : false,
+//     transitionEffect: "slide",
+//     // thumbs          : false,
+//     // hash            : false,
+//     loop            : true,
+//     // keyboard        : true,
+//     toolbar         : false,
+//     // animationEffect : false,
+//     // arrows          : true,
+//     clickContent    : false
 //   });
-// });
+// }
+
+
+
+
+// $(document).ready(function(){
+//   $(".product-item").slice(0,6).show();
+//   $("#seeMore").click(function(e){
+//     e.preventDefault();
+//     $(".product-item:hidden").slice(0,6).fadeIn("slow");
+//   });
+// })
+
+
+
+$(document).ready(function(){
+  // Function to load more products
+  function loadMoreProducts() {
+    // Show loading indicator
+    $('#loading').show();
+
+    // Simulate loading delay (remove this in actual implementation)
+    setTimeout(function() {
+      $(".product-item:hidden").slice(0, 6).fadeIn("slow");
+      $('#loading').hide(); // Hide loading indicator
+      if($(".product-item:hidden").length === 0) {
+        $(window).off('scroll'); // Remove scroll event listener if all products are loaded
+      }
+    }, 1000); // Simulated delay of 1 second (adjust as needed)
+  }
+
+  // Show initial set of products
+  $(".product-item").slice(0, 6).show();
+
+  
+  // Check if user has scrolled to the bottom of the page
+  $(window).scroll(function() {
+    if($(window).scrollTop() + $(window).height() >= $('.product-row').height() - 200) {
+      loadMoreProducts();
+    }
+  });
+});

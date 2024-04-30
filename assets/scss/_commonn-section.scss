@@ -1,3 +1,4 @@
+// ========================== banner-section-inner
 .banner-section-inner{
     .banner{ height: 260px; overflow: hidden;
         .banner-img-wrap{
@@ -17,8 +18,14 @@
         &.active{ color: $columbiaBlue; }
     }
 }
+// ========================== comn-para
+.comn-para{
+    .text-wrap {
+       p:last-child{ margin-bottom: 0;}
+    }
+}
 
-
+// ========================== question-section
 .question-section{
     .media{ padding: 60px 150px 60px 60px; 
        .media-img{ margin-right: 30px;
@@ -29,7 +36,7 @@
     }
 }
 
-
+// ========================== feedback-section
 .feedback-section{
     .media{ padding: 60px 50px 60px 60px; 
         .media-img{ margin-right: 30px;
@@ -40,7 +47,7 @@
      }
 }
 
-
+// ==========================  tabs
 .nav-tabs { border-bottom: none;
     .nav-link{ font-size: $fonth6; color: $body_color; padding: 18px  30px; line-height: 1;
       &.active{ background-color: $white_smoke; font-weight: 600; color: $body_color; border-color: $white_smoke $white_smoke transparent;
@@ -59,7 +66,7 @@
 }
 
 
-// pagination 
+// ==========================  pagination 
 .simple-pagination 
     ul {
         margin: 0;
@@ -102,3 +109,4 @@
         }
 
 }
+

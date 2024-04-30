@@ -10236,6 +10236,10 @@ a:hover {
   }
 }
 
+.mainContent {
+  padding-bottom: 45px;
+}
+
 h1, .h1 {
   font-size: clamp(34px, 3vw + 0.5rem, 54px);
 }
@@ -11426,6 +11430,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #BDD9E8;
 }
 
+.comn-para .text-wrap p:last-child {
+  margin-bottom: 0;
+}
+
 .question-section .media {
   padding: 60px 150px 60px 60px;
 }
@@ -11673,6 +11681,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .custom-modal .product-size-list {
   gap: 13px;
+}
+
+.product-item {
+  display: none;
 }
 
 .enquiry-img-wrap {
