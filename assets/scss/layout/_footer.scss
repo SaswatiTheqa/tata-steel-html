@@ -7,6 +7,11 @@
       li{
          a{ margin-right: 24px; text-decoration: none;
             &:hover{  color: $secondary_color; }
+            @include breakpoint('lg', max) {margin-right: 16px;}
+            @include breakpoint('sm', max) {margin-right: 12px;}
+         }
+         &:last-child{
+            a{ margin-right: 0;}
          }
       }
    }
