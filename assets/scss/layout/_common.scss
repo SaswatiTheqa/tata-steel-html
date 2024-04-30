@@ -1,17 +1,3 @@
-// @include breakpoint('xl', min) { 
-//   .container-cus-sm{max-width: 1122px;}
-//   .container-cus-lg{max-width: 1244px;}
-
-
-
-
-//   .sm-container{ max-width: 1120px;}
-//   .md-container{ max-width: 1155px;}
-//   .container-55{ max-width: 1180px;}
-//   .container-1244{max-width: 1244px;}
-
-// } 
-
 @include breakpoint('sm', max) { 
 .container{ padding-left: 20px; padding-right: 20px; }
 
@@ -35,15 +21,16 @@
   @include breakpoint('md', max) {adding: 30px 0; } 
 }
 
-$font22 : clamp(16px, 1vw + 0.6rem, 22px);
-$font20 : clamp(16px, 1vw + 0.4rem , 20px);
 
-h1 , .h1{ font-size: clamp(34px, 3vw + 0.5rem , 54px); }
-h2 , .h2{ font-size: clamp(30px, 3vw, 44px); }
-h3 , .h3{ font-size: clamp(26px, 2vw + 1rem , 37px); }
-h4 , .h4{ font-size: clamp(22px, 2vw, 31px); }
-h5 , .h5{ font-size: clamp(18px, 1vw + 0.8rem, 26px); }
-h6 , .h6{ font-size: clamp(16px, 1vw + 0.6rem, 22px); }
+// $fonth6 : clamp(16px, 1vw + 0.6rem, 22px);
+// $font20 : clamp(16px, 1vw + 0.4rem , 20px);
+
+h1 , .h1{ font-size: $fonth1; }
+h2 , .h2{ font-size: $fonth2; }
+h3 , .h3{ font-size: $fonth3; }
+h4 , .h4{ font-size: $fonth4; }
+h5 , .h5{ font-size: $fonth5; }
+h6 , .h6{ font-size: $fonth6; }
 
 h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
    color: $body_color; 
@@ -72,7 +59,9 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 .mt-40{ margin-top: 40px; }
 .mr-48{ margin-right: 48px; }
 
-.p-45{ padding: 45px; }
+.p-45{ padding: 45px;
+  @include breakpoint('lg', max) { padding: 25px; }
+}
 .pb-90{ padding-bottom: 90px; }
 
 .border-radius-14{ border-radius: 14px; }
@@ -112,9 +101,6 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
   }
 }
 
-
-
-
 .w-80{width: 80%;}
 
 .cards{ background-color: transparent; transition: all 0.5s; box-shadow: none; border-radius: 8px;
@@ -127,7 +113,7 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 
 
 
-.media{     display: -webkit-box;
+.media{ display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
@@ -137,4 +123,6 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
   .media-body{ flex: 1; flex-grow: 1;}
 }
 
-.gap-32{ gap: 32px;}
+.gap-32{ gap: 12px 32px;
+  @include breakpoint('xl', max) { gap: 12px 24px;}
+}

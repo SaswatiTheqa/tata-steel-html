@@ -79,18 +79,19 @@ window.addEventListener("scroll", myScrollFunc);
     var numItems = items.length;
     var perPage = 6;
     items.slice(perPage).hide();
-
-    $('#pagination-container').pagination({
-        items: numItems,
-        itemsOnPage: perPage,
-        prevText: "<i class='fa-solid fa-chevron-left'></i>",
-        nextText: "<i class='fa-solid fa-chevron-right'></i>",
-        onPageClick: function (pageNumber) {
-            var showFrom = perPage * (pageNumber - 1);
-            var showTo = showFrom + perPage;
-            items.hide().slice(showFrom, showTo).show();
-        }
-    });
+    if ($('.event-list').length > 0) {
+      $('#pagination-container').pagination({
+          items: numItems,
+          itemsOnPage: perPage,
+          prevText: "<i class='fa-solid fa-chevron-left'></i>",
+          nextText: "<i class='fa-solid fa-chevron-right'></i>",
+          onPageClick: function (pageNumber) {
+              var showFrom = perPage * (pageNumber - 1);
+              var showTo = showFrom + perPage;
+              items.hide().slice(showFrom, showTo).show();
+          }
+      });
+    }
 
 
 
@@ -98,59 +99,66 @@ window.addEventListener("scroll", myScrollFunc);
 
   // select2
   if ($('.select2').length > 0) {
-     $(".select2").select2();
+      $(".select2").select2();
   }
 
   // enquiry-radio-list
-  $('.enquiry-radio-list input[type="radio"]').
-  click(
+  if ($('.enquiry-form').length > 0) {
+    $('.enquiry-radio-list input[type="radio"]').click(
+        function () {
+            const inputValue =  $(this).attr("value");
+            const targetBox =  $("." + inputValue);
+            $(".radio-open-box").not(targetBox).hide();
+            $(targetBox).show();
+        }
+    );
+    $('.type-list input[type="radio"]').click(
       function () {
-          const inputValue = 
-          $(this).attr("value");
-          const targetBox = 
-          $("." + inputValue);
-          $(".radio-open-box").
-          not(targetBox).hide();
+          const inputValue =  $(this).attr("value");
+          const targetBox =  $("." + inputValue);
+          $(".type-text-box").not(targetBox).hide();
           $(targetBox).show();
       }
   );
+  }
 
 
 
 });
-
-$('[data-fancybox]').fancybox({
-  // Options will go here
-  buttons : [
-    'close'
-  ],
-  wheel : false,
-  transitionEffect: "slide",
-   // thumbs          : false,
-  // hash            : false,
-  loop            : true,
-  // keyboard        : true,
-  toolbar         : false,
-  // animationEffect : false,
-  // arrows          : true,
-  clickContent    : false
-});
-
-
-
-$(function () {
-  $(".col-md-4").slice(0, 3).show();
-  $("body").on("click touchstart", ".load-more", function (e) {
-    e.preventDefault();
-    $(".col-md-4:hidden").slice(0, 3).slideDown();
-    if ($(".col-md-4:hidden").length == 0) {
-      $(".load-more").css("visibility", "hidden");
-    }
-    $("html,body").animate(
-      {
-        scrollTop: $(this).offset().top
-      },
-      1000
-    );
+if ($('[data-fancybox]').length > 0) {
+  $('[data-fancybox]').fancybox({
+    // Options will go here
+    buttons : [
+      'close'
+    ],
+    wheel : false,
+    transitionEffect: "slide",
+    // thumbs          : false,
+    // hash            : false,
+    loop            : true,
+    // keyboard        : true,
+    toolbar         : false,
+    // animationEffect : false,
+    // arrows          : true,
+    clickContent    : false
   });
-});
+}
+
+
+
+// $(function () {
+//   $(".col-md-4").slice(0, 3).show();
+//   $("body").on("click touchstart", ".load-more", function (e) {
+//     e.preventDefault();
+//     $(".col-md-4:hidden").slice(0, 3).slideDown();
+//     if ($(".col-md-4:hidden").length == 0) {
+//       $(".load-more").css("visibility", "hidden");
+//     }
+//     $("html,body").animate(
+//       {
+//         scrollTop: $(this).offset().top
+//       },
+//       1000
+//     );
+//   });
+// });

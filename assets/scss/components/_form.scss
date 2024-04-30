@@ -50,7 +50,7 @@
             color: $davys_gray;
             border: 2px solid $black_color;
             border-radius: 6px;
-            padding: 12.5px 11px;
+            padding: 12.5px 10px;
             background: #fff;  
             margin-bottom: 0;          
         }
@@ -60,6 +60,9 @@
         border-color: $primary_color; color: #fff;
         &::before{ background: $primary_color;  border-color: $primary_color;}
     }
+    &.min-w-64 label{ min-width: 64px; text-align: center;}
+    &.min-w-80 label{ min-width: 80px; text-align: center;}
+
 }
 
 
@@ -98,6 +101,10 @@
     }
 }
 // end select 
+.custom-form-select-wrap{  
+    .select2-container{ width: auto !important;}
+ }
+// select end
 
 // bootstrap radio button
 .form-check-input{ border: 2px solid #5C5C5C; width: 18px; height: 18px;
@@ -108,5 +115,6 @@
 // bootstrap radio button
 
 
-.right-panel-img-wrap{}
 .radio-open-box{ display: none; }
+.type-text-box{display: none;}
+

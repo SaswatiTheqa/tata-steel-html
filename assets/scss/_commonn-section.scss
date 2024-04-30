@@ -42,7 +42,7 @@
 
 
 .nav-tabs { border-bottom: none;
-    .nav-link{ font-size: $font22; color: $body_color; padding: 18px  30px; line-height: 1;
+    .nav-link{ font-size: $fonth6; color: $body_color; padding: 18px  30px; line-height: 1;
       &.active{ background-color: $white_smoke; font-weight: 600; color: $body_color; border-color: $white_smoke $white_smoke transparent;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px; 
@@ -59,7 +59,7 @@
 }
 
 
-
+// pagination 
 .simple-pagination 
     ul {
         margin: 0;

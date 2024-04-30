@@ -14,6 +14,15 @@ $white_color: #fff;
 $apricotLight: #FDCFAE4D;
 
 
+// font size
+$fonth1 : clamp(34px, 3vw + 0.5rem , 54px); 
+$fonth2 : clamp(30px, 3vw, 44px);
+$fonth3 : clamp(26px, 2vw + 1rem , 37px);
+$fonth4 : clamp(22px, 2vw, 31px);
+$fonth5 : clamp(18px, 1vw + 0.8rem, 26px);
+$fonth6 : clamp(16px, 1vw + 0.6rem, 22px);
+$font20 : clamp(16px, 1vw + 0.4rem , 20px);
+$font18 : clamp(16px, 1vw + 0.2rem , 18px);
 
 /* FONTS weight */
 $fontLight: 300; 

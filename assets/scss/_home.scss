@@ -114,9 +114,9 @@
         &-img{ 
             &:after{ @include afterbefore(); background-color: rgba(0, 0, 0, 0.3); border-radius: 8px; } 
             .round-btn{ @include round(62px); position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; z-index: 1;
-                    img , svg{ max-width: 20px;margin-left: 4px;}
-                    @include breakpoint('lg', max) {@include round(42px);
-                        img{ max-width: 16px; }
+                    img , svg{ max-width: 20px; margin-left: 4px;}
+                    @include breakpoint('xl', max) {@include round(42px);
+                        img , svg{ max-width: 16px; }
                     }
                 &:hover{
                     svg{ 
@@ -126,6 +126,8 @@
                 
             }
             figure{ height: 100%; padding-top: 63%;
+                @include breakpoint('md', max) { padding-top: 70%;}
+                @include breakpoint('sm', max) { padding-top: 63%;}
                 img{ border-radius: 8px;  object-fit: cover; object-position: center;}
             }
        }
@@ -134,8 +136,7 @@
     .slider-w-sm{ width: 15.5%;
         @include breakpoint('lg', max) {width: 18.5%;}
         @include breakpoint('md', max) {width: 22.5%;}
-        @include breakpoint('md', max) {width: 25.5%;}
-        @include breakpoint('sm', max) { width: calc( 50% - 16px); }
+        @include breakpoint('sm', max) { width: calc( 40% - 16px); }
     
     }
     .slider-w-lg{ width: 39.5%;
@@ -238,8 +239,6 @@
             background: transparent linear-gradient(0deg, #FDCFAE 0%, #F49223 46%, #F49223 46%, #E45B27 100%) 0% 0% no-repeat padding-box;
         }
       }
-
-      
    }
 
 }
