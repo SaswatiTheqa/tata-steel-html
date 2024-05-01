@@ -122,38 +122,28 @@ window.addEventListener("scroll", myScrollFunc);
   );
   }
 
-
-
 });
-// if ($('[data-fancybox]').length > 0) {
-//   $('[data-fancybox]').fancybox({
-//     // Options will go here
-//     buttons : [
-//       'close'
-//     ],
-//     wheel : false,
-//     transitionEffect: "slide",
-//     // thumbs          : false,
-//     // hash            : false,
-//     loop            : true,
-//     // keyboard        : true,
-//     toolbar         : false,
-//     // animationEffect : false,
-//     // arrows          : true,
-//     clickContent    : false
-//   });
-// }
+
+if ($('.testimonial-section').length > 0) {
+  $('[data-fancybox]').fancybox({
+    // Options will go here
+    buttons : [
+      'close'
+    ],
+    wheel : false,
+    transitionEffect: "slide",
+    // thumbs          : false,
+    // hash            : false,
+    loop            : true,
+    // keyboard        : true,
+    toolbar         : false,
+    // animationEffect : false,
+    // arrows          : true,
+    clickContent    : false
+  });
+}
 
 
-
-
-// $(document).ready(function(){
-//   $(".product-item").slice(0,6).show();
-//   $("#seeMore").click(function(e){
-//     e.preventDefault();
-//     $(".product-item:hidden").slice(0,6).fadeIn("slow");
-//   });
-// })
 
 
 
@@ -184,3 +174,37 @@ $(document).ready(function(){
     }
   });
 });
+
+
+
+// /** First we get all the non-loaded image elements **/
+// var lazyImages = [].slice.call(document.querySelectorAll(".lazy-loaded-image.lazy"));
+
+// /** Then we set up a intersection observer watching over those images and whenever any of those becomes visible on the view then replace the placeholder image with actual one, remove the non-loaded class and then unobserve for that element **/
+// let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+//     entries.forEach(function(entry) {
+//         if (entry.isIntersecting) {
+//             let lazyImage = entry.target;
+//             lazyImage.src = lazyImage.dataset.src;
+//             lazyImage.classList.remove("lazy");
+//             lazyImageObserver.unobserve(lazyImage);
+//         }
+//     });
+// });
+
+// /** Now observe all the non-loaded images using the observer we have setup above **/
+// lazyImages.forEach(function(lazyImage) {
+//     lazyImageObserver.observe(lazyImage);
+// });
+
+
+
+
+
+  $(document).ready(function(event){
+    $('#selectState').on('change', function(){
+      $this = $(this);
+      $('.product-item').hide();
+      $('.'+$this.val()).show();
+    });
+  });

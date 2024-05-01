@@ -3,10 +3,6 @@
         border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 48%; z-index: 1; 
         @include breakpoint('lg', max) { display: none; }
     }
-    &::after{ @include afterbefore(); background: url(../images/Line.png) no-repeat; height: 100%; width: 110px; z-index: 2; left: 40.7%; right: auto;
-        background-size: contain; transform: rotateX(178deg);
-    }
-
     &-text-wrap{ position: relative; z-index: 1; 
         @include breakpoint('lg', max) {
            background: transparent linear-gradient(347deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box; border-radius: 0 0 14px 14px;
@@ -20,13 +16,26 @@
     }
     &-img-wrap{ position: relative;  border-radius: 0 14px 14px; z-index: 1;
         @include breakpoint('lg', max) {border-radius: 14px 14px 0 0;}
-        figure{ position: relative; padding-top: 69%;
-            img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%;
-                border-top-left-radius:68px 100%;
-             }  
+        figure{ padding-top: 69%;
+            img{  border-top-left-radius:68px 100%; }  
+        }
+        &::after{ @include afterbefore(); background: url(../images/Line.png) no-repeat; height: 100%; width: 110px; z-index: 2; 
+            right: auto;  background-size: contain; transform: rotateX(178deg); 
+            left: -12px;
+            // left: 40.7%;
+           
         }
     }
-    
+    figure{ position: relative; 
+        img{ position: absolute; left: 0; right: 0; top:0; bottom: 0; object-fit: cover; width: 100%; height: 100%;}  
+    }
+    .swiper-container{ border-radius: 14px; overflow: hidden;
+        .swiper-slide { height: auto;
+            > figure{ height: 100%; 
+                img{ border-radius: 14px;}
+            }
+        }
+    }
 
     // swiper
     &:hover{ 
@@ -71,7 +80,9 @@
 .section-benefits{ padding-top: 60px; padding-bottom: 60px;  position: relative;
     @include breakpoint('xl', max) { padding-top: 30px; padding-bottom: 30px;   }
     .benefits-text-holder , .benefits-product-img{ z-index: 1; position: relative;}
-    .benefits-product-img{ padding-left: 89px; }
+    .benefits-product-img{ padding-left: 89px; 
+        @include breakpoint('xl', max) {padding-left: 50px; }
+    }
     .benefits-text-holder { padding-left: 60px; 
         @include breakpoint('xl', max) { padding-left: 30px;  }
         @include breakpoint('md', max) { padding: 35% 20px 30px; margin-top: -30%;
@@ -146,11 +157,12 @@
     }
 
     // swiper
-    // &:hover{ 
-    //     .swiper-button-prev , .swiper-button-next{ opacity: 1;
-    //         &.swiper-button-disabled{ opacity: 0;}
-    //     }
-    // }
+    .swiper-button-prev , .swiper-button-next{ opacity: 0;}
+    &:hover{ 
+        .swiper-button-prev , .swiper-button-next{ opacity: 1;
+            &.swiper-button-disabled{ opacity: 0;}
+        }
+    }
 }
 
 //  ==================================  news-event
@@ -226,9 +238,6 @@
          }
       }
 
-
-
-      
       &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
         @include breakpoint('sm', max) {
             background: transparent linear-gradient(-45deg, #BDD9E8 0%, #106DB3 46%, #106DB3 46%, #092A49 100%) 0% 0% no-repeat padding-box;
