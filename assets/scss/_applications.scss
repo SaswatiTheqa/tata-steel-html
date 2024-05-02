@@ -140,3 +140,8 @@
   }
 }
    
+.observer-product{
+  .product-item{ opacity: 0; 
+    &.visible { opacity: 1; }
+  }
+}

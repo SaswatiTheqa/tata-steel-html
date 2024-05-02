@@ -178,7 +178,7 @@ if ($('.testimonial-section').length > 0) {
 
 
 // /** First we get all the non-loaded image elements **/
-// var lazyImages = [].slice.call(document.querySelectorAll(".lazy-loaded-image.lazy"));
+// var lazyImages = [].slice.call(document.querySelectorAll(".product-item"));
 
 // /** Then we set up a intersection observer watching over those images and whenever any of those becomes visible on the view then replace the placeholder image with actual one, remove the non-loaded class and then unobserve for that element **/
 // let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
@@ -198,12 +198,15 @@ if ($('.testimonial-section').length > 0) {
 // });
 
 
+
+
+
   $(document).ready(function(event){
-    // $('.applicaltion-select select').on('change', function(){
-    //   $this = $(this);
-    //   $('.product-item').hide();
-    //   $('.'+$this.val()).show();
-    // });
+    $('.applicaltion-select select').on('change', function(){
+      $this = $(this);
+      $('.product-item').hide();
+      $('.'+$this.val()).show();
+    });
 
 
     
@@ -219,3 +222,23 @@ if ($('.testimonial-section').length > 0) {
     });
 
   });
+
+
+const squares = document.querySelectorAll(".product-item");
+const loader = document.querySelectorAll(".loader");
+
+const observer = new IntersectionObserver((squares) => {
+    squares.forEach((square) => {
+        if (square.isIntersecting) {
+            square.target.classList.add("visible");
+        } else {
+            square.target.classList.remove("visible");
+        }
+    });
+},
+{
+        threshold: 0.5,
+    }
+);
+
+squares.forEach((square) => observer.observe(square));
