@@ -1,6 +1,6 @@
 //  Colors
-$primary_color : #106DB3;
-$secondary_color : #F49223;
+$primary : #106DB3;
+$secondary : #F49223;
 $body_color: #092A49;
 
 $columbiaBlue : #BDD9E8;
@@ -17,11 +17,14 @@ $apricotLight: #FDCFAE4D;
 $fonth1 : clamp(34px, 3vw + 0.5rem , 54px); 
 $fonth2 : clamp(30px, 3vw, 44px);
 $fonth3 : clamp(26px, 2vw + 1rem , 37px);
-$fonth4 : clamp(22px, 2vw, 31px);
-$fonth5 : clamp(18px, 1vw + 0.8rem, 26px);
-$fonth6 : clamp(16px, 1vw + 0.6rem, 22px);
+$fonth4 : clamp(20px, 2vw, 31px);
+$fonth5 : clamp(16px, 1vw + 0.8rem, 26px);
+$fonth6 : clamp(13px, 1vw + 0.5rem, 22px);
+
 $font20 : clamp(16px, 1vw + 0.4rem , 20px);
 $font18 : clamp(16px, 1vw + 0.2rem , 18px);
+
+$fontP22: clamp(16px, 1vw + 0.5rem, 22px);
 
 /* FONTS weight */
 $fontLight: 300; 

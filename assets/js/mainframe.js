@@ -198,13 +198,24 @@ $(document).ready(function(){
 // });
 
 
-
-
-
   $(document).ready(function(event){
-    $('#selectState').on('change', function(){
+    $('.applicaltion-select select').on('change', function(){
       $this = $(this);
       $('.product-item').hide();
       $('.'+$this.val()).show();
     });
+
+
+    
+    $('#newsSelect').on('change', function(){
+        $this = $(this);
+        $('.event-item').hide();
+        $('.'+$this.val()).show();
+    });
+   $('#recentSelect').on('change', function(){
+        $this = $(this);
+        $('.event-item').hide();
+        $('.'+$this.val()).show();
+    });
+
   });

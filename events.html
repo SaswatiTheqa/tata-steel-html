@@ -60,7 +60,7 @@
                                 <div class="mobile-header-address-sec d-lg-none">
                                     <address class="address">
                                         <h5 class="h5 fw-bold text-uppercase mb-2">TATA STEEL LIMITED</h5>
-                                        <h6 class="font-16 fw-bold text-site-primary mb-0">Commercial Head Quarter</h6>
+                                        <h6 class="font-16 fw-bold text-primary mb-0">Commercial Head Quarter</h6>
                                         <p class="text-uppercase fw-semibold mb-10">TATA CENTRE</p>
                                         <a href="https://maps.app.goo.gl/9cStUQL4WqTf9aUEA" target="_blank">
                                             <div class="d-flex align-items-center mb-3">
@@ -72,7 +72,7 @@
                                                 </div>
                                             </div>
                                         </a>    
-                                        <h6 class="font-16 fw-bold text-site-primary mb-2">Contact</h6>
+                                        <h6 class="font-16 fw-bold text-primary mb-2">Contact</h6>
                                         <a href="tel:1800-108-8282">
                                             <div class="d-flex align-items-center mb-1">
                                                 <div class="flex-shrink-0 me-2">
@@ -260,7 +260,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-xl-10 mx-auto">
-                        <div class="line-height-13 h6 mb-0 text-wrap">
+                        <div class="line-height-13 font-p22 mb-0 text-wrap">
                         <p>Tata Kosh is Tata Steel’s newest product offering to the distribution and fabrication segment. An optimum mix of mechanical properties and delightful appearance provided by spangles are hallmarks of Tata Kosh, something which it has inherited from its veteran sister brand Tata Shaktee. Tata Kosh is an ode by Tata Steel to the fabrication market, which is one of the fastest growing markets in India, available in discrete pockets but together having the might which makes us sit up and take notice.</p>
                         </div>
                     </div>  
@@ -275,9 +275,10 @@
                         <div class="filter-section border-radius-14 bg-white-smoke p-4 d-flex flex-wrap flex-sm-nowrap justify-content-between align-items-center mb-52">
                             <div class="d-flex align-items-center"> 
                                 <div class="d-flex gap-4">
-                                    <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity">
-                                        <option selected>Recent</option>
-                                        <option>two</option>
+                                    <select class="select2 custom-form-select" id="recentSelect" data-width="100%" data-minimum-results-for-search="Infinity">
+                                        <option selected value="all">Recent</option>
+                                        <option value="re-one">one</option>
+                                        <option value="re-two">two</option>
                                     </select>
                                 </div>   
                                 <label class="h6 fw-semibold text-decoration-none mb-0 ms-4">EVENTS & ACTIVITIES</label>
@@ -286,15 +287,16 @@
                             <div class="d-flex align-items-center"> 
                                 <label class="h6 fw-semibold text-decoration-none mb-0 me-4">FILTER BY TYPE</label>
                                 <div class="d-flex gap-4">
-                                    <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity">
-                                        <option selected>Show All</option>
-                                        <option>two</option>
+                                    <select class="select2 custom-form-select" id="newsSelect" data-width="100%" data-minimum-results-for-search="Infinity">
+                                        <option selected value="all">Show All</option>
+                                        <option value="one">One</option>
+                                        <option value="two">Two</option>
                                     </select>
                                 </div>   
                             </div>
                         </div>
                         <div class="row event-list">
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all one">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -310,7 +312,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all one">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -326,7 +328,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all one">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -342,7 +344,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all two">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -358,7 +360,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all two">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -374,7 +376,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all re-one">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -390,7 +392,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all re-two">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -406,7 +408,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -422,7 +424,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -438,7 +440,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -454,7 +456,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -470,7 +472,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item">
+                            <div class="col-12 col-sm-6 col-lg-4 mb-48 event-item all">
                                 <div class="cards events-cards p-0">                 
                                     <div class="cards-img">
                                         <figure>
@@ -505,13 +507,13 @@
                             <div class="media-body flex-grow-1">
                                 <div class="pb-3">
                                 <h2 class="h2 fw-bold ">Got a Question? We’re Here to Help!</h2>
-                                <p class="h6 mb-0 line-height-13">Do you need more information about Tata Kosh? Our team is ready to provide you with the answers you’re looking for. Whether it’s regarding our products, variants, nearest dealers or anything else, we’re here to assist you every step of the way.</p>
+                                <p class="font-p22 mb-0 line-height-13">Do you need more information about Tata Kosh? Our team is ready to provide you with the answers you’re looking for. Whether it’s regarding our products, variants, nearest dealers or anything else, we’re here to assist you every step of the way.</p>
                             </div>
 
                                 <div class="button-holder d-flex flex-wrap gap-2 gap-md-4 mt-3">
                                     <button class="btn sitebtn btn-arrow bg-primary-site max-w-174">CALL US AT: 1800 108 8282</button>
                                     <button class="btn sitebtn btn-arrow bg-secondary-site min-h-48">DEALERSHIP ENQUIRY</button> 
-                                    <button class="btn sitebtn btn-left-icon text-site-primary max-w-168"> 
+                                    <button class="btn sitebtn btn-left-icon text-primary max-w-168"> 
                                         <span class="icon-holder"> 
                                             <img src="assets/images/icon/icon-material-question-answer.svg" alt=""> 
                                         </span>
@@ -530,7 +532,7 @@
 
     <!-- Footer Start -->
     <footer class="footer-main">
-        <div class="container xl-container position-relative">
+        <div class="container position-relative">
             <div class="footer-top">
                 <div class="d-flex align-items-center justify-content-between flex-wrap">
                     <!-- <div class=""> -->
@@ -568,7 +570,7 @@
             <div class="phone-call-wrap" id="phone-call">
                 <div class="phone-no">
                     <div>
-                        <p class="text-uppercase text-site-primary mb-1 font-12 fw-semibold line-height-1">call our toll free no</p>
+                        <p class="text-uppercase text-primary mb-1 font-12 fw-semibold line-height-1">call our toll free no</p>
                         <p class="text-uppercase mb-0  fw-bold line-height-1">1800 108 8282</p>
                     </div>
                 </div>

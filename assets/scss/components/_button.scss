@@ -33,23 +33,23 @@
 
     &.min-h-48{min-height: 48px;line-height: 1.013;}
     &.bg-columbiaBlue{
-        &:hover{ background-color: $primary_color; color: #fff;}
+        &:hover{ background-color: $primary; color: $white_color;}
     }
     &.bg-apricot{
-        &:hover{ background-color: $secondary_color; color: #fff;}
+        &:hover{ background-color: $secondary; color: $white_color;}
     }
-    &.bg-primary-site{ background-color:  $primary_color !important;  color: #fff;
+    &.bg-primary-site{ background-color:  $primary !important;  color: $white_color;
         &:hover{  background-color:  $columbiaBlue !important; color: $body_color; }
     }
-    &.bg-secondary-site{ background-color:  $secondary_color !important;  color: #fff;
+    &.bg-secondary-site{ background-color:  $secondary !important;  color: $white_color;
         &:hover{  background-color:  $apricot !important; color: $body_color; }
     }
 
     &.text-white{
-        &:hover{ color:  $secondary_color !important  }
+        &:hover{ color:  $secondary !important  }
     }
-    &.text-site-primary{color:  $primary_color !important;
-        &:hover{color:  $secondary_color !important   }
+    &.text-primary{color:  $primary !important;
+        &:hover{color:  $secondary !important   }
     }
     &.round-btn{ @include round(62px); padding: 0; @include flex-center(); min-height: auto; }
 }

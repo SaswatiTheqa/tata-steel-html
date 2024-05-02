@@ -26,7 +26,7 @@
         
     }
     [type="radio"]:checked + label{
-        .check-icon{ background: $primary_color;  border-color: $primary_color;
+        .check-icon{ background: $primary;  border-color: $primary;
             
             .fa-check{ display: block;}
         }
@@ -56,9 +56,9 @@
         }
     }
     [type="radio"]:checked + label{
-        background: $primary_color;
-        border-color: $primary_color; color: #fff;
-        &::before{ background: $primary_color;  border-color: $primary_color;}
+        background: $primary;
+        border-color: $primary; color: #fff;
+        &::before{ background: $primary;  border-color: $primary;}
     }
     &.min-w-64 label{ min-width: 64px; text-align: center;}
     &.min-w-80 label{ min-width: 80px; text-align: center;}
@@ -101,9 +101,9 @@
     }
 }
 // end select 
-.custom-form-select-wrap{  
-    .select2-container{ width: auto !important;}
- }
+// .custom-form-select-wrap{  
+//     .select2-container{ width: auto !important;}
+//  }
 // select end
 
 // bootstrap radio button

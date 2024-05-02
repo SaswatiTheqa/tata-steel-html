@@ -1,10 +1,28 @@
-.product-box{  min-height: 263px; display: flex;  padding: 20px 24px 30% 60px;
+.product-box{  min-height: 263px; display: flex;  padding: 35px 24px 127px 56%;
+  @include breakpoint('xxl', max) {padding-left: 51%;
+    .sitebtn{left: 51%;}
+  }
+  @include breakpoint('xl', max) { padding-left: 42%; 
+    .sitebtn{left: 42%;}
+  }
+  @include breakpoint('lg', max) {padding-left: 51%; 
+    .sitebtn{left: 51%;}
+  }
+  @include breakpoint('md', max) { padding-left: 49%; 
+    .sitebtn{left: 49%;}
+  }
+  // @include breakpoint('sm', max) { padding-bottom: 127px; }
+
+
     .pro-box-bg{background: #FDCFAE40; position: absolute; left: 60px; right: 0; top:20px; bottom: 20px; border-radius: 10px; width: auto;  }
     .product-body , .product-img{ z-index: 1; }
-    .sitebtn{ position: absolute; bottom: 43px; right: 25px;}
+    .sitebtn{ position: absolute; bottom: 43px;}
     .product-img{position: absolute; bottom: 0; width: 50%; left: 0;}
     .product-img { width: calc(50% - 14px); }
-    .product-body{ margin-left: 50%; }  
+    // .product-body{ margin-left: 49%; 
+    //    @include breakpoint('xl', max) {margin-left: 39%;  }
+    
+    // }  
 }
 .product-row{
     & > *:nth-child(even){ 
@@ -20,7 +38,7 @@
 }
 
 
-.modal-backdrop{ background: #092A49 ; 
+.modal-backdrop{ background: $body_color; 
   &.show{ opacity: 0.6;}
 }
 
@@ -46,7 +64,7 @@
 
   .details-bottom-sec{  border-top: 2px solid  $white_smoke; padding-top: 15px; }
   .app-img-wrap{ position: relative; height: 100%;
-    &::before{ opacity: 0.8; border-radius: 10px; background: transparent linear-gradient(142deg, #F49223 0%, #106DB3 100%) 0% 0% no-repeat padding-box; @include afterbefore();}
+    &::before{ opacity: 0.8; border-radius: 10px; background: transparent linear-gradient(142deg, #F49223 $secondary 0%, #106DB3 100%) 0% 0% no-repeat padding-box; @include afterbefore();}
     img{ max-height: 400px;}
    }
   .product-size-list{ gap: 13px; }
@@ -102,23 +120,23 @@
 @keyframes shadowPulse {
   20% {
     background: $body_color;
-    box-shadow: -24px 0 $secondary_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
   }
   40% {
-    background: $secondary_color;
-    box-shadow: -24px 0 $secondary_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+    background: $secondary;
+    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
   }
   60% {
     background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $secondary_color, 48px 0 $body_color, 72px 0 $body_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $secondary, 48px 0 $body_color, 72px 0 $body_color;
   }
   80% {
     background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $secondary_color, 72px 0 $body_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $secondary, 72px 0 $body_color;
   }
   100% {
     background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $secondary_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $secondary;
   }
 }
    
