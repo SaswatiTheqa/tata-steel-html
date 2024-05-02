@@ -147,33 +147,33 @@ if ($('.testimonial-section').length > 0) {
 
 
 
-$(document).ready(function(){
-  // Function to load more products
-  function loadMoreProducts() {
-    // Show loading indicator
-    $('#loading').show();
+// $(document).ready(function(){
+//   // Function to load more products
+//   function loadMoreProducts() {
+//     // Show loading indicator
+//     $('#loading').show();
 
-    // Simulate loading delay (remove this in actual implementation)
-    setTimeout(function() {
-      $(".product-item:hidden").slice(0, 6).fadeIn("slow");
-      $('#loading').hide(); // Hide loading indicator
-      if($(".product-item:hidden").length === 0) {
-        $(window).off('scroll'); // Remove scroll event listener if all products are loaded
-      }
-    }, 1000); // Simulated delay of 1 second (adjust as needed)
-  }
+//     // Simulate loading delay (remove this in actual implementation)
+//     setTimeout(function() {
+//       $(".product-item:hidden").slice(0, 6).fadeIn("slow");
+//       $('#loading').hide(); // Hide loading indicator
+//       if($(".product-item:hidden").length === 0) {
+//         $(window).off('scroll'); // Remove scroll event listener if all products are loaded
+//       }
+//     }, 1000); // Simulated delay of 1 second (adjust as needed)
+//   }
 
-  // Show initial set of products
-  $(".product-item").slice(0, 6).show();
+//   // Show initial set of products
+//   $(".product-item").slice(0, 6).show();
 
   
-  // Check if user has scrolled to the bottom of the page
-  $(window).scroll(function() {
-    if($(window).scrollTop() + $(window).height() >= $('.product-row').height() - 200) {
-      loadMoreProducts();
-    }
-  });
-});
+//   // Check if user has scrolled to the bottom of the page
+//   $(window).scroll(function() {
+//     if($(window).scrollTop() + $(window).height() >= $('.product-row').height() - 200) {
+//       loadMoreProducts();
+//     }
+//   });
+// });
 
 
 
@@ -199,11 +199,11 @@ $(document).ready(function(){
 
 
   $(document).ready(function(event){
-    $('.applicaltion-select select').on('change', function(){
-      $this = $(this);
-      $('.product-item').hide();
-      $('.'+$this.val()).show();
-    });
+    // $('.applicaltion-select select').on('change', function(){
+    //   $this = $(this);
+    //   $('.product-item').hide();
+    //   $('.'+$this.val()).show();
+    // });
 
 
     
