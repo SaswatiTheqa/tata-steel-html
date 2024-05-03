@@ -68,7 +68,10 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 .mb-48{ margin-bottom: 48px; }
 
 .me-32{ margin-right: 32px;}
-.mt-40{ margin-top: 40px; }
+.mt-20{ margin-top: 20px;}
+.mt-40{ margin-top: 40px; 
+  @include breakpoint('lg', max) { margin-right: 20px;  }
+}
 .mr-48{ margin-right: 48px; 
   @include breakpoint('lg', max) { margin-right: 24px;  }
 }

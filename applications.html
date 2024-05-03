@@ -244,38 +244,17 @@
                         </div>
                     </div>    
                     <div class="banner-img-wrap clip-wrap col-12 col-lg-6 order-1 order-lg-2">
-                        <!-- <figure>
+                        <figure>
                             <img src="assets/images/home-banner-1.jpg" alt="Banner images" class="element"> 
-                        </figure>    -->
-                        <!-- <svg class="clip-svg" width="600" height="500" >
+                        </figure>   
+                        <!-- <svg class="clip-svg" width="0" height="0" >
                             <defs>
                               <clipPath id="clip-shape" clipPathUnits="objectBoundingBox" >
                                  <polygon points="0 1, 0 0, 1 0, 0.8 1" /> 
+                                 <polygon fill="none" points="0, 0 1, 0 1, .8 .5, 1 0 ,.8 1"/>
                               </clipPath>
                             </defs>
                           </svg>    -->
-
-                          <!-- <svg class="clip-svg" >
-                            <defs>
-                                <clipPath id="clip-shape" clipPathUnits="objectBoundingBox" >
-                            <path d="M0.5 6.5C1 52.8333 4.8 155 16 193C26.8333 234 49.8 318.1 55 326.5H752.5V1L0.5 6.5Z" fill="#D9D9D9" stroke="#CD0101"/>
-                        </clipPath>
-                    </defs>
-                        
-                        </svg> -->
-
-
-                          <svg  viewBox="0 0 753 327">
-                            <defs>
-                            <clipPath id="shape">                                
-                                <path d="M0.5 6.5C1 52.8333 4.8 155 16 193C26.8333 234 49.8 318.1 55 326.5H752.5V1L0.5 6.5Z" fill="none" />
-                            </clipPath>
-                            
-                            </defs>
-                                <image width="100%"  clip-path="url(#shape)"  
-                                xlink:href="assets/images/home-banner-1.jpg" >
-                                </image>
-                            </svg>
 
                           
                     </div>
@@ -301,20 +280,20 @@
                     </div>
                 </div>  
                 
-                  <svg width="753" height="327" viewBox="0 0 753 327">
+                  <!-- <svg viewBox="0 0 100% 225px" >
                         <defs>
                         <clipPath id="shape">
-                            
-                            <path d="M0.5 6.5C1 52.8333 4.8 155 16 193C26.8333 234 49.8 318.1 55 326.5H752.5V1L0.5 6.5Z" fill="#D9D9D9" stroke="#CD0101"/>
+                            <path fill="none" d="M0,0L80,22.7C160,45,320,91,480,113.3C640,136,800,136,960,121.8C1120,108,1280,79,1440,73.7C1600,68,1760,85,1920,76.5C2080,68,2240,34,2400,34C2560,34,2720,68,2880,73.7C3040,79,3200,57,3360,53.8C3520,51,3680,68,3840,79.3C4000,91,4160,96,4320,107.7C4480,119,4640,136,4800,127.5C4960,119,5120,85,5280,82.2C5440,79,5600,108,5760,119C5920,130,6080,125,6240,119C6400,113,6560,108,6720,104.8C6880,102,7040,102,7200,104.8C7360,108,7520,113,7680,113.3C7840,113,8000,108,8160,113.3C8320,119,8480,136,8640,138.8C8800,142,8960,130,9120,127.5C9280,125,9440,130,9600,113.3C9760,96,9920,57,10080,56.7C10240,57,10400,96,10560,93.5C10720,91,10880,45,11040,34C11200,23,11360,45,11440,56.7L11520,68L11520,170L11440,170C11360,170,11200,170,11040,170C10880,170,10720,170,10560,170C10400,170,10240,170,10080,170C9920,170,9760,170,9600,170C9440,170,9280,170,9120,170C8960,170,8800,170,8640,170C8480,170,8320,170,8160,170C8000,170,7840,170,7680,170C7520,170,7360,170,7200,170C7040,170,6880,170,6720,170C6560,170,6400,170,6240,170C6080,170,5920,170,5760,170C5600,170,5440,170,5280,170C5120,170,4960,170,4800,170C4640,170,4480,170,4320,170C4160,170,4000,170,3840,170C3680,170,3520,170,3360,170C3200,170,3040,170,2880,170C2720,170,2560,170,2400,170C2240,170,2080,170,1920,170C1760,170,1600,170,1440,170C1280,170,1120,170,960,170C800,170,640,170,480,170C320,170,160,170,80,170L0,170Z"/>
                         </clipPath>
                         
                         </defs>
                     <image width="100%" height="100%" clip-path="url(#shape)"  
                     xlink:href="assets/images/home-banner-1.jpg" >
                     </image>
-                  </svg>
+                  </svg> -->
             </div>
         </section>
+
 
         <section class="section product-list-section">
             <div class="container">
@@ -324,36 +303,211 @@
                             <div class="d-flex flex-wrap flex-lg-nowrap align-items-center"> 
                                 <span class="h6 fw-semibold text-decoration-none text-nowrap mb-0 me-4">FILTER BY</span>
                                 <div class="d-flex flex-wrap flex-lg-nowrap applicaltion-select custom-form-select-wrap gap-3 gap-lg-4">
-                                    <div class="">
+                                    <div class="w-240">
                                         <select class="select2 custom-form-select" id="selectState" data-width="100%" data-minimum-results-for-search="Infinity">
-                                            <option selected>Popularity by Region/State</option>
-                                            <option value="one">one</option>
-                                            <option value="two">two</option>
+                                            <option selected disabled hidden>Popularity by Region/State</option>
+                                            <option value="all">All States & UTs</option>
+                                            <option value="two">Andhra Pradesh </option>
+                                            <option value="two">Arunachal Pradesh </option>
+                                            <option value="two">Assam </option>
+                                            <option value="two">Bihar</option>
+                                            <option value="two">Chhattisgarh</option>
                                         </select>
                                     </div>
-                                    <div class="">
+                                    <div class="w-114">
                                         <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity">
-                                            <option selected>Used in</option>
-                                            <option>two</option>
+                                            <option selected disabled hidden>Used in</option>
+                                            <option>Two</option>
                                         </select>
                                     </div>
-                                    <div class="">  
+                                    <div class="w-98">  
                                         <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity">
-                                            <option selected>Type</option>
-                                            <option>two</option>
+                                            <option selected disabled hidden>Type</option>
+                                            <option>Two</option>
                                         </select>
                                     </div>    
                                 </div>   
+                                
                             </div>
                             <div class=""><a href="" class="h6 fw-semibold text-decoration-none text-primary my-2"> SHOWING FEW OF THE APPLICATIONS </a></div>
                         </div>
 
-                        <div class="row product-row">
+                        <div class="row product-row observer-product">
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all one">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Silos</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg" data-bs-toggle="modal" data-bs-target="#applicationsModal">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all one">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Grain Silo</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all two">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Cooler Body</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all two">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Dholak</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Bread Baking Trey</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative ">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Sewing Machine Cover</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>           
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Silos</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg" data-bs-toggle="modal" data-bs-target="#applicationsModal">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Grain Silo</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Cooler Body</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Dholak</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Bread Baking Trey</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative ">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Sewing Machine Cover</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div> 
                         </div>
-                        <div class="loading">
-                            <span class="loader"></span>
-                        </div>
-                        
+                        <!-- <a href="#" id="seeMore">Load More</a> -->
+                        <!-- <div id="loadMore">load more</div>
+                        <div id="loading">
+                            Loading Please Wait......
+                        </div> -->
+                        <!-- <span class="loader"></span> -->
                     </div>
                 </div>       
             </div>
@@ -546,6 +700,12 @@
                 </div>
 
             </div>    
+        
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <div class="call-div">
+        <div class="container position-relative mx-auto">
             <div class="phone-call-wrap" id="phone-call">
                 <div class="phone-no">
                     <div>
@@ -556,11 +716,9 @@
                 <div class="phone-call">
                     <img src="assets/images/icon/icon-phone-call.svg" alt="">
                 </div>
-            </div>   
+            </div>  
         </div>
-    </footer>
-    <!-- Footer End -->
- 
+    </div>
   
     <div class="modal fade" id="applicationsModal" tabindex="-1" aria-labelledby="applicationsModalLabel" aria-hidden="true">
         <div class="modal-dialog custom-modal modal-dialog-centered modal-xl modal-w-900">
@@ -580,28 +738,27 @@
                     <div class="col-12 col-lg-6 app-right-panel"> 
                         <h3 class="h3 fw-bold">Tata Kosh Silos</h3>
                         <div class="scrollable-sec">
-                            <p>A trench, pit, or especially a tall cylindrical structure usually sealed to exclude air and used for making and storing silage. Tata Kosh Silos are generally of 2 ft to 2.5 ft (0.6 m to 0.76 m) in diameter & 3 ft to 4 ft (0.9 m to 1.2 m) in height.</p>
+                            <p class="font-20 line-height-12">A trench, pit, or especially a tall cylindrical structure usually sealed to exclude air and used for making and storing silage. Tata Kosh Silos are generally of 2 ft to 2.5 ft (0.6 m to 0.76 m) in diameter & 3 ft to 4 ft (0.9 m to 1.2 m) in height.</p>
                             <div class="app-details mb-20">
-                                <div class="d-flex mb-3 media">
+                                <div class="d-flex align-items-center mb-3 media">
                                     <h6 class="font-18 text-primary fw-semibold mb-0">POPULAR IN: </h6>  
                                     <div class="media-body">
                                     Maharashtra, Karnataka, Gujarat 
                                     </div>
                                 </div>
                             <h6 class="font-18 text-primary fw-semibold mb-3"> TATA KOSH GP SHEET DIMENSIONS:</h6>
-
                                 <ul class="product-size-list list-unstyled d-flex flex-wrap "> 
                                 <li> <b> Width:</b> 900 mm;</li>
                                 <li> <b> Thickness:</b> 0.5-1 mm; </li>
                                 <li> <b>Coating:</b> 80 gsm;</li>
                                 </ul>
                             </div>  
-                            <div class="button-holder d-flex flex-wrap flex-lg-nowrap gap-3 mb-20"> 
+                            <div class="button-holder d-flex flex-wrap flex-lg-nowrap gap-3"> 
                                 <button class="btn sitebtn btn-arrow bg-secondary-site min-h-48 max-w-210">FIND FABRICATORS NEAR YOU</button> 
                                 <button class="btn sitebtn btn-arrow bg-primary-site max-w-174">FIND DEALERS NEAR YOU</button>
                             </div>
                         </div>    
-                        <div class="details-bottom-sec">
+                        <div class="details-bottom-sec mt-20">
                             <p class="font-14 fw-semibold text-black">Want to learn how to make Silos and other Kosh applications?</p> 
                             <button class="btn sitebtn btn-arrow bg-apricot">VISIT KOSH PATHSHALA</button>
                         </div>
@@ -615,6 +772,11 @@
       
 
 
+
+
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -623,7 +785,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script src="assets/js/mainframe.js"></script>
-    <script src="assets/js/application.js"></script>
 
 </body>
 </html>

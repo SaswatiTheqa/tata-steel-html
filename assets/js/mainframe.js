@@ -29,7 +29,7 @@ $(document).ready(function () {
             prevEl: '.testimonial-section .swiper-button-prev'
         },
         pagination: {
-          el: ".swiper-pagination",
+          el: ".testimonial-section .swiper-pagination",
           clickable: true,
         },
         breakpoints: {
@@ -100,7 +100,9 @@ window.addEventListener("scroll", myScrollFunc);
   // select2
   if ($('.select2').length > 0) {
       $(".select2").select2();
+      
   }
+  
 
   // enquiry-radio-list
   if ($('.enquiry-form').length > 0) {
@@ -231,9 +233,10 @@ const observer = new IntersectionObserver((squares) => {
     squares.forEach((square) => {
         if (square.isIntersecting) {
             square.target.classList.add("visible");
-        } else {
-            square.target.classList.remove("visible");
-        }
+        } 
+        // else {
+        //     square.target.classList.remove("visible");
+        // }
     });
 },
 {

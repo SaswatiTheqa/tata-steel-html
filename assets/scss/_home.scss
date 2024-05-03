@@ -169,12 +169,20 @@
     }
 
     // swiper
-    .swiper-button-prev , .swiper-button-next{ opacity: 0;}
+    .swiper-pagination{ bottom: -35px;
+        .swiper-pagination-bullet{ background-color: $columbiaBlue; 
+            &-active{ background-color: $primary; }
+        }
+     }
+    .swiper-button-prev , .swiper-button-next{ opacity: 0;
+        @include breakpoint('md', max) { display: none; }
+    }
     &:hover{ 
         .swiper-button-prev , .swiper-button-next{ opacity: 1;
             &.swiper-button-disabled{ opacity: 0;}
         }
     }
+
 }
 
 //  ==================================  news-event

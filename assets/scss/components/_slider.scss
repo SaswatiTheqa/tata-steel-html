@@ -8,13 +8,20 @@
         font-size: 16px; 
         border: none;
         color: $body_color; 
+        @include breakpoint('md', max) { @include round(30px);  }
         &:hover{ border-color: $secondary;}
         &:after{ display: none; }
-        svg{ width: 17px; }
+        svg{ width: 17px; 
+                @include breakpoint('md', max) {width: 9px;}
+        }
         &.swiper-button-disabled{ opacity: 0;}
 }
-.swiper-button-prev { left: -30px; }
-.swiper-button-next { right: -30px; }
+.swiper-button-prev { left: -30px; 
+        @include breakpoint('md', max) {left: -15px;}
+}
+.swiper-button-next { right: -30px; 
+        @include breakpoint('md', max) {right: -15px;}
+}
 
 .swiper-slide-height-auto{height: auto;
 	& >*{height: 100%; }
