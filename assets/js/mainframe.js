@@ -205,20 +205,23 @@ if ($('.testimonial-section').length > 0) {
 
   $(document).ready(function(event){
     $('.applicaltion-select select').on('change', function(){
-      $this = $(this);
+      const $this = $(this);
       $('.product-item').hide();
-      $('.'+$this.val()).show();
+      $('.'+$this.val()).show()
+      // if($this.val !== "" ){
+      // }
+
     });
 
 
-    
     $('#newsSelect').on('change', function(){
-        $this = $(this);
+        const $this = $(this);
         $('.event-item').hide();
         $('.'+$this.val()).show();
     });
+
    $('#recentSelect').on('change', function(){
-        $this = $(this);
+        const  $this = $(this);
         $('.event-item').hide();
         $('.'+$this.val()).show();
     });
@@ -232,6 +235,7 @@ const loader = document.querySelectorAll(".loader");
 const observer = new IntersectionObserver((squares) => {
     squares.forEach((square) => {
         if (square.isIntersecting) {
+          
             square.target.classList.add("visible");
         } 
         // else {

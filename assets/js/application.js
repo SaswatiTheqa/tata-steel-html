@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let options = {
     root: null,
     rootMargins: "0px",
-    threshold: 1
+    threshold: 0.5
   };
   // let countElement = document.querySelector(".product-row");
   // countElement.textContent = `Number of items: ${jsonData.length}`;

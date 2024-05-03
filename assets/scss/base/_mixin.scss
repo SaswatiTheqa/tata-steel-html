@@ -105,6 +105,14 @@
 }
 
 
+@mixin gradient-background($direction, $colors...) {
+  background: transparent;
+  @each $color in $colors {
+    background: linear-gradient($direction, $color 0%, $colors) 0% 0% no-repeat padding-box;
+  }
+}
+
+
 
 
 
