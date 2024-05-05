@@ -72,7 +72,7 @@ var myScrollFunc = function() {
 
 window.addEventListener("scroll", myScrollFunc);
 
-
+// phone call  end
 
 
     var items = $(".event-list .event-item");
@@ -145,64 +145,6 @@ if ($('.testimonial-section').length > 0) {
   });
 }
 
-
-
-
-
-// $(document).ready(function(){
-//   // Function to load more products
-//   function loadMoreProducts() {
-//     // Show loading indicator
-//     $('#loading').show();
-
-//     // Simulate loading delay (remove this in actual implementation)
-//     setTimeout(function() {
-//       $(".product-item:hidden").slice(0, 6).fadeIn("slow");
-//       $('#loading').hide(); // Hide loading indicator
-//       if($(".product-item:hidden").length === 0) {
-//         $(window).off('scroll'); // Remove scroll event listener if all products are loaded
-//       }
-//     }, 1000); // Simulated delay of 1 second (adjust as needed)
-//   }
-
-//   // Show initial set of products
-//   $(".product-item").slice(0, 6).show();
-
-  
-//   // Check if user has scrolled to the bottom of the page
-//   $(window).scroll(function() {
-//     if($(window).scrollTop() + $(window).height() >= $('.product-row').height() - 200) {
-//       loadMoreProducts();
-//     }
-//   });
-// });
-
-
-
-// /** First we get all the non-loaded image elements **/
-// var lazyImages = [].slice.call(document.querySelectorAll(".product-item"));
-
-// /** Then we set up a intersection observer watching over those images and whenever any of those becomes visible on the view then replace the placeholder image with actual one, remove the non-loaded class and then unobserve for that element **/
-// let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-//     entries.forEach(function(entry) {
-//         if (entry.isIntersecting) {
-//             let lazyImage = entry.target;
-//             lazyImage.src = lazyImage.dataset.src;
-//             lazyImage.classList.remove("lazy");
-//             lazyImageObserver.unobserve(lazyImage);
-//         }
-//     });
-// });
-
-// /** Now observe all the non-loaded images using the observer we have setup above **/
-// lazyImages.forEach(function(lazyImage) {
-//     lazyImageObserver.observe(lazyImage);
-// });
-
-
-
-
-
   $(document).ready(function(event){
     $('.applicaltion-select select').on('change', function(){
       const $this = $(this);
@@ -229,23 +171,41 @@ if ($('.testimonial-section').length > 0) {
   });
 
 
-const squares = document.querySelectorAll(".product-item");
-const loader = document.querySelectorAll(".loader");
-
-const observer = new IntersectionObserver((squares) => {
-    squares.forEach((square) => {
-        if (square.isIntersecting) {
-          
-            square.target.classList.add("visible");
-        } 
-        // else {
-        //     square.target.classList.remove("visible");
-        // }
-    });
-},
-{
-        threshold: 0.5,
+  $(document).ready(function(){
+    // Function to load more products
+    function loadMoreProducts() {
+      // Show loading indicator
+      $('#loading').show();
+      // Simulate loading delay (remove this in actual implementation)
+      setTimeout(function() {
+        $(".product-item:hidden").slice(0, 6).fadeIn("slow");
+      //  $('#loading').hide(); // Hide loading indicator
+        if($(".product-item:hidden").length === 0) {
+            observer.disconnect(); 
+            $('#loading').hide(); 
+        }
+      }, 2000); // Simulated delay of 1 second (adjust as needed)
     }
-);
-
-squares.forEach((square) => observer.observe(square));
+  
+    // Show initial set of products
+    // $(".product-item").slice(0, 6).show();
+  
+    // Intersection Observer API setup
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 1.0
+    };
+  
+    var observer = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                // isLoading = true;
+                loadMoreProducts();
+            }
+        });
+    }, options);
+  
+    // Start observing the bottom of the page
+    observer.observe(document.querySelector('#loading'));
+  });

@@ -75,8 +75,12 @@
 
 
 
-// .product-item{ display: none; }
-
+.product-item{ display: none; }
+// .observer-product{
+//   .product-item{ opacity: 0; 
+//     &.visible { opacity: 1; }
+//   }
+// }
 
 
 .loader {
@@ -115,11 +119,7 @@
   }
 }
    
-.observer-product{
-  .product-item{ opacity: 0; 
-    &.visible { opacity: 1; }
-  }
-}
+
 
 .w-240{ width: 245px;}
 .w-114{ width: 114px; }

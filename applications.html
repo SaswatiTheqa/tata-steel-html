@@ -501,14 +501,108 @@
                                     </div>
                                 </div>
                             </div> 
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative ">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Sewing Machine Cover</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>           
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Silos</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg" data-bs-toggle="modal" data-bs-target="#applicationsModal">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Grain Silo</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Cooler Body</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Dholak</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_2.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold  mb-0">Bread Baking Trey</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div>  
+                            <div class="col-12 col-md-6 col-lg-4 mb-3 mb-lg-4 product-item all ">
+                                <div class="product-box align-items-end position-relative ">
+                                    <div class="pro-box-bg"></div>
+                                    <div class="product-img">
+                                        <figure class="mx-auto">
+                                            <img src="assets/images/product_3.png" alt=""> 
+                                        </figure>           
+                                    </div>
+                                    <div class="product-body">
+                                        <h5 class="h5 fw-bold mb-0">Sewing Machine Cover</h6>  
+                                        <button class="btn sitebtn btn-arrow btn-arrow-bg">KNOW MORE</button>  
+                                    </div>
+                                </div>
+                            </div> 
+
                         </div>
                         
-                        <!-- <a href="#" id="seeMore">Load More</a> -->
-                        <!-- <div id="loadMore">load more</div>
-                        <div id="loading">
-                            Loading Please Wait......
-                        </div> -->
-                        <!-- <span class="loader"></span> -->
+                        <span class="loader" id="loading"></span>
                     </div>
                 </div>       
             </div>
@@ -786,6 +880,48 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.js"></script>
     <script src="assets/js/mainframe.js"></script>
+
+    <script>
+    // $(document).ready(function(){
+    //     // Function to load more products
+    //     function loadMoreProducts() {
+    //       // Show loading indicator
+    //       $('#loading').show();
+    //       // Simulate loading delay (remove this in actual implementation)
+    //       setTimeout(function() {
+    //         $(".product-item:hidden").slice(0, 6).fadeIn("slow");
+    //       //  $('#loading').hide(); // Hide loading indicator
+    //         if($(".product-item:hidden").length === 0) {
+    //             observer.disconnect(); 
+    //             $('#loading').hide(); 
+    //         }
+    //       }, 2000); // Simulated delay of 1 second (adjust as needed)
+    //     }
+      
+    //     // Show initial set of products
+    //     // $(".product-item").slice(0, 6).show();
+      
+    //     // Intersection Observer API setup
+    //     var options = {
+    //         root: null,
+    //         rootMargin: '0px',
+    //         threshold: 1.0
+    //     };
+
+    //     var observer = new IntersectionObserver(function(entries, observer) {
+    //         entries.forEach(function(entry) {
+    //             if (entry.isIntersecting) {
+    //                 // isLoading = true;
+    //                 loadMoreProducts();
+    //             }
+    //         });
+    //     }, options);
+
+    //     // Start observing the bottom of the page
+    //     observer.observe(document.querySelector('#loading'));
+    //   });
+
+    </script>
 
 </body>
 </html>
