@@ -2,13 +2,12 @@
 .container{ padding-left: 20px; padding-right: 20px; }
 }
 
-.text-white-smoke{ color: $white_smoke !important;}
+// .text-white-smoke{ color: $white_smoke !important;}
 // .text-secondary{ color: $secondary !important; }
-
-.text-apricot{color: $apricot !important;}
-.text-primary{ color: $primary !important;}
-.text-black{ color: $black_color; }
-.text-davys-gray{ color: $davys_gray; }
+// .text-black{ color: $black_color; }
+// .text-primary{ color: $primary !important;}
+// .text-apricot{color: $apricot !important;}
+// .text-davys-gray{ color: $davys_gray; }
 
 // bg
 .bg-columbiaBlue {background-color: $columbiaBlue;}
@@ -95,17 +94,19 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 .border-radius-14{ border-radius: 14px; }
 
 
-// .text-gradient{background: -webkit-linear-gradient(#eee, #333);
-//   -webkit-background-clip: text;
-//   -webkit-text-fill-color: transparent;}
-.bg-gradient-primary{ background: transparent linear-gradient(252deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%) 0% 0% no-repeat padding-box;}
-.bg-gradient-secondary{ background: transparent linear-gradient(252deg, $apricot 0%, $secondary 46%, $secondary 46%, $flame 100%) 0% 0% no-repeat padding-box;
+
+.bg-gradient-primary{ 
+  @include customLinearGradient(252deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
+}
+
+.bg-gradient-secondary{ 
+  @include customLinearGradient(252deg, $apricot 0%, $secondary 46%, $secondary 46%, $flame 100%);
     @include breakpoint('sm', max) {
-        background: transparent linear-gradient(0deg, $apricot 0%, $secondary 46%, $secondary 46%, $flame 100%) 0% 0% no-repeat padding-box;
+       @include customLinearGradient(0deg, $apricot 0%, $secondary 46%, $secondary 46%, $flame 100%);
     }
 }
-.bg-gradient-primary-secondary {background: transparent linear-gradient(142deg, $secondary 0%, $primary 100%) 0% 0% no-repeat padding-box;}
-.bg-gradient-primaryLight-top-to-bottom {background: transparent linear-gradient(225deg, $columbiaBlue 0%, $primary 100%) 0% 0% no-repeat padding-box;}
+.bg-gradient-primary-secondary {@include customLinearGradient(142deg, $secondary 0%, $primary 100%);}
+.bg-gradient-primaryLight-top-to-bottom { @include customLinearGradient(225deg, $columbiaBlue 0%, $primary 100%);}
 
 
 // ================================ dropdown
@@ -150,3 +151,40 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
   .media-body{ flex: 1; flex-grow: 1;}
 }
 
+
+// ================================ loader
+.loader {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  display: block;
+  margin:16px auto;
+  position: relative;
+  background: $body_color;
+  box-shadow: -24px 0 $body_color, 24px 0 $body_color, 48px 0 $body_color, 72px 0 $body_color;
+  box-sizing: border-box;
+  animation: shadowPulse 3s linear infinite;
+}
+
+@keyframes shadowPulse {
+  20% {
+    background: $body_color;
+    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+  }
+  40% {
+    background: $secondary;
+    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+  }
+  60% {
+    background: $body_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $secondary, 48px 0 $body_color, 72px 0 $body_color;
+  }
+  80% {
+    background: $body_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $secondary, 72px 0 $body_color;
+  }
+  100% {
+    background: $body_color;
+    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $secondary;
+  }
+}

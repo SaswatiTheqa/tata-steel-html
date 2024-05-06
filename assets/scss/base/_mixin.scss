@@ -105,14 +105,13 @@
 }
 
 
-@mixin gradient-background($direction, $colors...) {
-  background: transparent;
-  @each $color in $colors {
-    background: linear-gradient($direction, $color 0%, $colors) 0% 0% no-repeat padding-box;
-  }
+@mixin customLinearGradient($angle, $colors...) {
+  background: transparent linear-gradient(#{$angle}, $colors) 0% 0% no-repeat padding-box;
 }
 
 
-
+// .selector1 {
+//   @include customLinearGradient(252deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
+// }
 
 

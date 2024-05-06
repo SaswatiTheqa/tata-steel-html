@@ -1,11 +1,13 @@
 .banner{ border-radius: 14px;  position: relative;
-    &::before{background: transparent linear-gradient(314deg, $body_color 0%, $primary 100%) 0% 0% no-repeat padding-box;
+    &::before{
+        @include customLinearGradient(314deg, $body_color 0%, $primary 100%);
         border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 50%; z-index: 1; 
         @include breakpoint('lg', max) { display: none; }
     }
     &-text-wrap{ position: relative; z-index: 1; 
         @include breakpoint('lg', max) {
-           background: transparent linear-gradient(347deg, $body_color 0%, $primary 100%) 0% 0% no-repeat padding-box; border-radius: 0 0 14px 14px;
+           @include customLinearGradient(347deg, $body_color 0%, $primary 100%);
+           border-radius: 0 0 14px 14px;
         }
     }
     &-text{ padding: 20px 60px 20px 60px; 
@@ -98,7 +100,8 @@
     .benefits-text-holder { padding-left: 60px; 
         @include breakpoint('xl', max) { padding-left: 30px;  }
         @include breakpoint('md', max) { padding: 35% 20px 30px; margin-top: -30%;
-           border-radius: 14px; background: transparent linear-gradient(180deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%) 0% 0% no-repeat padding-box;
+           border-radius: 14px; 
+           @include customLinearGradient(180deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
            z-index: 0;
         }
     }
@@ -115,7 +118,8 @@
     }
     // .benefits-product-img{ position: absolute; right: 0; top:0;}
     &::before{ @include afterbefore(); border-radius: 14px; left: 0.75rem; right: auto; width: 83.33333333%;
-        background: transparent linear-gradient(252deg, #BDD9E8 0%, $primary 46%, $primary 46%, $body_color 100%) 0% 0% no-repeat padding-box;
+       
+        @include customLinearGradient(252deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
         @include breakpoint('md', max) {
             display: none;
         }
@@ -187,9 +191,6 @@
 }
 
 //  ==================================  news-event
-
-
-
 .news-event-section{}
 .cards{ border: 0px;
     &:hover{box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16); transition: all 0.5s;
@@ -214,7 +215,7 @@
 }
 .events-cards{
     &:hover{
-        .round-btn{background-color: $flame; color: #fff; }
+        .round-btn{background-color: $flame; color: $white_color; }
     }
 }
 
@@ -231,7 +232,7 @@
 
 //  ==================================  service-section
 .service-section{
-   .box-wrapper{ position: relative; height: 100%; overflow: hidden; padding: 44px 43px; color: #fff; min-height: 320px; display: flex; align-items: center;
+   .box-wrapper{ position: relative; height: 100%; overflow: hidden; padding: 44px 43px; color: $white_color; min-height: 320px; display: flex; align-items: center;
       @include breakpoint('xxl', max) { padding: 44px 20px;} 
       @include breakpoint('xl', max) { padding: 20px;}  
       @include breakpoint('sm', max) { padding: 0; }
@@ -259,14 +260,15 @@
          }
       }
 
-      &.bg-gradient-primary{background: transparent linear-gradient(99deg, #BDD9E8 0%, $primary 46%, $primary 46%, $body_color 100%) 0% 0% no-repeat padding-box;
+      &.bg-gradient-primary{
+        @include customLinearGradient(99deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
         @include breakpoint('sm', max) {
-            background: transparent linear-gradient(-45deg, #BDD9E8 0%, $primary 46%, $primary 46%, $body_color 100%) 0% 0% no-repeat padding-box;
+            @include customLinearGradient(-45deg, $columbiaBlue 0%, $primary 46%, $primary 46%, $body_color 100%);
         }
       }
       &.bg-gradient-secondary{ 
          @include breakpoint('sm', max) {
-            background: transparent linear-gradient(0deg, #FDCFAE 0%, #F49223 46%, #F49223 46%, #E45B27 100%) 0% 0% no-repeat padding-box;
+            @include customLinearGradient(0deg, $apricot 0%, $secondary 46%, $secondary 46%, $flame 100%);
         }
       }
    }

@@ -1,6 +1,8 @@
 .btn{ 
     &.sitebtn{padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px;  min-height: 46px; color: $body_color; 
-        line-height: 0.9; text-align: left; text-transform: uppercase;}
+        line-height: 0.9; text-align: left; text-transform: uppercase; transition: all ease 0.3s; 
+        &:hover{transition: all ease 0.3s; }
+    }
     &.btn-arrow{ padding-right: 38px; 
         &::after{ @include afterbefore(); content: "\f054"; font-family: "Font Awesome 6 Free"; font-size: 14px; line-height: 1; width: 7px; height: 14px; left: auto; right: 20px; 
             // background: url(../images/icon/icon-arrow-forward.svg) no-repeat;
@@ -29,26 +31,23 @@
         }
     }
 
-    
-
     &.min-h-48{min-height: 48px;line-height: 1.013;}
-    &.bg-columbiaBlue{
-        &:hover{ background-color: $primary; color: $white_color;}
+    &.btn-columbia-blue{
+        &:hover{ background-color: $primary; color: $white_color; border-color: $primary;}
     }
-    &.bg-apricot{
-        &:hover{ background-color: $secondary; color: $white_color;}
+    &.btn-apricot{
+        &:hover{ background-color: $secondary; border-color: $secondary; color: $white_color; }
     }
-    &.bg-primary-site{ background-color:  $primary !important;  color: $white_color;
-        &:hover{  background-color:  $columbiaBlue !important; color: $body_color; }
+    &.btn-primary{color: $white_color;
+        &:hover{ background-color:  $columbiaBlue; border-color: $columbiaBlue; color: $body_color; }
     }
-    &.bg-secondary-site{ background-color:  $secondary !important;  color: $white_color;
-        &:hover{  background-color:  $apricot !important; color: $body_color; }
+    &.btn-secondary{ color: $white_color;
+        &:hover{ background-color:  $apricot;  border-color: $apricot; color: $body_color;  }
     }
-
     &.text-white{
         &:hover{ color:  $secondary !important  }
     }
-    &.text-primary{color:  $primary !important;
+    &.text-primary{
         &:hover{color:  $secondary !important   }
     }
     &.round-btn{ @include round(62px); padding: 0; @include flex-center(); min-height: auto; }

@@ -30,14 +30,23 @@
         .btn.btn-arrow.btn-arrow-bg::after{background: $columbiaBlue; }
     }
 }
+.product-item{ display: none; }
+// .observer-product{
+//   .product-item{ opacity: 0; 
+//     &.visible { opacity: 1; }
+//   }
+// }
 
 
+// ===================================== fancybox
+.fancybox-bg{background: $body_color; }
+.fancybox-is-open .fancybox-bg{opacity: 0.6;}
+
+// ===================================== Modal
 .modal-w-900{ 
     @include breakpoint('md', min) { max-width: 700px;}
     @include breakpoint('lg', min) { max-width: 900px;}
 }
-
-
 .modal-backdrop{ background: $body_color; 
   &.show{ opacity: 0.6;}
 }
@@ -47,13 +56,13 @@
       @include breakpoint('sm', max) { padding: 20px;}
     }
     .modal-content{ border: none; box-shadow: 0px 3px 6px #00000033; border-radius: 8px;}
-   .btn-close{ position: absolute;  opacity: 1; background-image: none; padding: 0; top:12px; right:13px; width: auto; height: auto; z-index: 2; 
-    @include breakpoint('sm', max) { 
-        top: 0px;
-        right: 6px;
-        width: 14px;
+    .btn-close{ position: absolute;  opacity: 1; background-image: none; padding: 0; top:12px; right:13px; width: auto; height: auto; z-index: 2; 
+      @include breakpoint('sm', max) { 
+          top: 0px;
+          right: 6px;
+          width: 14px;
+      }
     }
-   }
   
    .app-left-panel{ padding-right: 45px; 
       @include breakpoint('lg', max) {padding-right: 0px; padding-bottom: 30px;  }
@@ -64,60 +73,23 @@
 
   .details-bottom-sec{  border-top: 2px solid  $white_smoke; padding-top: 15px; }
   .app-img-wrap{ position: relative; height: 100%;
-    &::before{ opacity: 0.8; border-radius: 10px; background:  transparent linear-gradient(142deg, $secondary 0%, $primary 100%) 0% 0% no-repeat padding-box; @include afterbefore();}
+    &::before{ opacity: 0.8; border-radius: 10px; 
+      @include customLinearGradient(142deg, $secondary 0%, $primary 100%);
+      @include afterbefore();}
     img{ max-height: 400px;}
    }
   .product-size-list{ gap: 13px; }
 
-   .scrollable-sec{max-height: 310px; overflow-y: auto; padding-right:5px;}
+  .scrollable-sec{max-height: 310px; overflow-y: auto; padding-right:5px;}
 
 }
 
 
 
-.product-item{ display: none; }
-// .observer-product{
-//   .product-item{ opacity: 0; 
-//     &.visible { opacity: 1; }
-//   }
-// }
 
 
-.loader {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  display: block;
-  margin:16px auto;
-  position: relative;
-  background: $body_color;
-  box-shadow: -24px 0 $body_color, 24px 0 $body_color, 48px 0 $body_color, 72px 0 $body_color;
-  box-sizing: border-box;
-  animation: shadowPulse 3s linear infinite;
-}
 
-@keyframes shadowPulse {
-  20% {
-    background: $body_color;
-    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
-  }
-  40% {
-    background: $secondary;
-    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
-  }
-  60% {
-    background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $secondary, 48px 0 $body_color, 72px 0 $body_color;
-  }
-  80% {
-    background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $secondary, 72px 0 $body_color;
-  }
-  100% {
-    background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $secondary;
-  }
-}
+
    
 
 

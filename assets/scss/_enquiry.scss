@@ -1,7 +1,7 @@
 .enquiry-img-wrap{ max-width: 500px; 
     img{ left: -15px; bottom: -10.5%; top:auto; }
     &::before{ @include afterbefore(); right: auto; bottom: 3%; width: 100%; max-width: 485px;  border-radius: 14px;
-         background: transparent linear-gradient(225deg, $columbiaBlue 0%, $primary 100%) 0% 0% no-repeat padding-box;
+         @include customLinearGradient(225deg, $columbiaBlue 0%, $primary 100%);
     }
 }
 
