@@ -8,16 +8,18 @@
                 img{ border-bottom-left-radius: 38px 89%; border-top-left-radius: 10px 23px;
                     @include breakpoint('lg', max) { border-top-left-radius: 14px; border-bottom-left-radius: 0px;  }
                 }
-
             }
             &::after{ @include afterbefore(); background: url(../images/Line.png) no-repeat; height: 100%; width: 110px; z-index: 2;  right: auto;
-                background-size: contain;  transform: rotateX(0deg); width: 45px; left: -4px;}
+                background-size: contain;  transform: rotateX(0deg); width: 45px; left: -4px;
+                @include breakpoint('lg', max) { display: none;}
+            }
         }
-        &::after{ display: none;}
         &::before{
             @include customLinearGradient(237deg, $primary 0%, #08375A 100%);
             width: 55%; }
-        .banner-text {  padding: 20px 45px 50px 50px;}
+        .banner-text {  padding: 20px 45px 50px 50px;
+            @include breakpoint('sm', max) { padding: 40px 20px 30px 20px;}
+        }
     }  
     .breadcrumb-item{ color: $columbiaBlue;
         a{color: $columbiaBlue;} 

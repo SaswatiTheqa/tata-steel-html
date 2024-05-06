@@ -2,18 +2,6 @@
 .container{ padding-left: 20px; padding-right: 20px; }
 }
 
-// .text-white-smoke{ color: $white_smoke !important;}
-// .text-secondary{ color: $secondary !important; }
-// .text-black{ color: $black_color; }
-// .text-primary{ color: $primary !important;}
-// .text-apricot{color: $apricot !important;}
-// .text-davys-gray{ color: $davys_gray; }
-
-// bg
-.bg-columbiaBlue {background-color: $columbiaBlue;}
-.bg-apricot {background-color: $apricot;}
-.bg-white-smoke{background-color: $white_smoke;}
-
 
 .section{ padding: 45px 0; 
   @include breakpoint('lg', max) {padding: 30px 0; }
@@ -113,7 +101,6 @@ h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
 .dropdown{ font-size: 16px;
   &-toggle{
     &:after{
-      
         background: url(../images/icon/arrow-down.svg) no-repeat;  background-size: contain; border: 0px; width: 8px; height: 4px; margin-left: 5px; 
     }
     &.show{

@@ -175,7 +175,7 @@
 
     // swiper
     .swiper-pagination{ bottom: -35px;
-        .swiper-pagination-bullet{ background-color: $columbiaBlue; 
+        .swiper-pagination-bullet{ background-color: $davys_gray;  border: none;
             &-active{ background-color: $primary; }
         }
      }
@@ -207,7 +207,7 @@
             a{ text-decoration: none; color: $black_color;}
         }
     }
-    &-footer{ padding: 0px 70px 16px 20px;
+    &-footer{ padding: 0px 70px 16px 16px;
         p{letter-spacing: 0.07px; font-size: 14px; font-weight: 600; color: #5C5C5C; margin-bottom: 4px;}
     }
     .round-btn{@include round(30px); background-color: $apricot;  color: $body_color;  position: absolute; right: 20px; bottom: 20px; font-size: 14px;
@@ -222,6 +222,7 @@
 .event-list{ 
     .cards{
         &-body{ padding: 20px 20px;}
+        &-footer{ padding-left: 20px;}
         &-img{
           figure{ padding-top: 62.3%;}
         }

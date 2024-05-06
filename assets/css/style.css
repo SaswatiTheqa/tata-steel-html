@@ -10891,18 +10891,6 @@ a:hover {
     padding-right: 20px;
   }
 }
-.bg-columbiaBlue {
-  background-color: #BDD9E8;
-}
-
-.bg-apricot {
-  background-color: #FDCFAE;
-}
-
-.bg-white-smoke {
-  background-color: #F2F2F2;
-}
-
 .section {
   padding: 45px 0;
 }
@@ -12009,7 +11997,8 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   bottom: -35px;
 }
 .testimonial-section .swiper-pagination .swiper-pagination-bullet {
-  background-color: #BDD9E8;
+  background-color: #5C5C5C;
+  border: none;
 }
 .testimonial-section .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #106DB3;
@@ -12068,7 +12057,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #000;
 }
 .cards-footer {
-  padding: 0px 70px 16px 20px;
+  padding: 0px 70px 16px 16px;
 }
 .cards-footer p {
   letter-spacing: 0.07px;
@@ -12096,6 +12085,9 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .event-list .cards-body {
   padding: 20px 20px;
+}
+.event-list .cards-footer {
+  padding-left: 20px;
 }
 .event-list .cards-img figure {
   padding-top: 62.3%;
@@ -12236,8 +12228,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   width: 45px;
   left: -4px;
 }
-.banner-section-inner .banner::after {
-  display: none;
+@media (max-width: 991px) {
+  .banner-section-inner .banner .banner-img-wrap::after {
+    display: none;
+  }
 }
 .banner-section-inner .banner::before {
   background: transparent linear-gradient(237deg, #106DB3 0%, #08375A 100%) 0% 0% no-repeat padding-box;
@@ -12245,6 +12239,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .banner-section-inner .banner .banner-text {
   padding: 20px 45px 50px 50px;
+}
+@media (max-width: 575px) {
+  .banner-section-inner .banner .banner-text {
+    padding: 40px 20px 30px 20px;
+  }
 }
 .banner-section-inner .breadcrumb-item {
   color: #BDD9E8;

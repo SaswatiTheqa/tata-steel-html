@@ -174,12 +174,10 @@ if ($('.testimonial-section').length > 0) {
   $(document).ready(function(){
     // Function to load more products
     function loadMoreProducts() {
-      // Show loading indicator
+      // Show loading
       $('#loading').show();
-      // Simulate loading delay (remove this in actual implementation)
       setTimeout(function() {
         $(".product-item:hidden").slice(0, 6).fadeIn("slow");
-      //  $('#loading').hide(); // Hide loading indicator
         if($(".product-item:hidden").length === 0) {
             observer.disconnect(); 
             $('#loading').hide(); 
@@ -188,7 +186,7 @@ if ($('.testimonial-section').length > 0) {
     }
   
     // Show initial set of products
-    // $(".product-item").slice(0, 6).show();
+    $(".product-item").slice(0, 6).show();
   
     // Intersection Observer API setup
     var options = {
