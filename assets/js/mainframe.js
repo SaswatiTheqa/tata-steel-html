@@ -53,28 +53,27 @@ $(document).ready(function () {
 
 
 
-// phone call 
-var myID = document.getElementById("phone-call");
+   // phone call 
+    var myID = document.getElementById("phone-call");
 
-var myScrollFunc = function() {
-  var y = window.scrollY;
-  var windowHeight = window.innerHeight;
-  var documentHeight = document.body.clientHeight;
-  // Calculate the bottom position
-  var bottomPosition = documentHeight - windowHeight - y;
-  // You can adjust the value (10 in this case) for a different sensitivity
-  if (bottomPosition < 15) {
-    myID.className = "phone-call-wrap show";
-  } else {
-    myID.className = "phone-call-wrap";
-  }
-};
+    var myScrollFunc = function() {
+        var y = window.scrollY;
+        var windowHeight = window.innerHeight;
+        var documentHeight = document.body.clientHeight;
+        // Calculate the bottom position
+        var bottomPosition = documentHeight - windowHeight - y;
+        if (bottomPosition < 5) {
+          myID.className = "phone-call-wrap show";
+        } 
+        else {
+          myID.className = "phone-call-wrap";
+        }
+    };
 
-window.addEventListener("scroll", myScrollFunc);
+  window.addEventListener("scroll", myScrollFunc);
+  // phone call  end
 
-// phone call  end
-
-
+  // pagination-container
     var items = $(".event-list .event-item");
     var numItems = items.length;
     var perPage = 6;
@@ -92,11 +91,7 @@ window.addEventListener("scroll", myScrollFunc);
           }
       });
     }
-
-
-
-
-
+  // pagination-container end
   // select2
   if ($('.select2').length > 0) {
       $(".select2").select2();
@@ -115,14 +110,21 @@ window.addEventListener("scroll", myScrollFunc);
         }
     );
     $('.type-list input[type="radio"]').click(
-      function () {
-          const inputValue =  $(this).attr("value");
-          const targetBox =  $("." + inputValue);
-          $(".type-text-box").not(targetBox).hide();
-          $(targetBox).show();
-      }
-  );
+        function () {
+            const inputValue =  $(this).attr("value");
+            const targetBox =  $("." + inputValue);
+            $(".type-text-box").not(targetBox).hide();
+            $(targetBox).show();
+        }
+    );
   }
+
+
+
+
+
+
+
 
 });
 
