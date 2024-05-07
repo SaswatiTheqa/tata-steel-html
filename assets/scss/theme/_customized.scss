@@ -3,6 +3,8 @@
 @import "../bootstrap/scss/utilities";
 
 
+@import '../base/variables';
+
 // $utilities:() !default;
 
 /* Container */
@@ -15,79 +17,54 @@ $container-max-widths: (
 );
 
 
-// $utilities: map-merge(
-  
-//   (
-//     "cursor": (
-//       property: cursor,      
-//       responsive: true,
-//       values: auto pointer grab,
-//     )
-//   ), $utilities
-// );
-
-// font-weight start
-$font-weight-lighter:         lighter;
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-medium:          500;
-$font-weight-semibold:        600;
-$font-weight-bold:            700;
-$font-weight-bolder:          bolder;
-
-
-// font-weight start
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+);
 
 
 
-$azul :              #106DB3;
-$carrotOrange :      #F49223;
-$prussianBlue:       #092A49;
-$columbiaBlue :      #BDD9E8;
-$apricot:            #FDCFAE;
-$flame :             #E45B27;
-$davys_gray :        #5C5C5C;
-$white_smoke:        #F2F2F2;
-$apricotLight:       #FDCFAE4D;
-
-
-$body-color: $prussianBlue;
 
 
 
-$blue:    #0d6efd;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #d63384;
-$red:     #dc3545;
-$orange:  #fd7e14;
-$yellow:  #ffc107;
-$green:   #198754;
-$teal:    #20c997;
-$cyan:    #0dcaf0;
+
+// $blue:    #0d6efd;
+// $indigo:  #6610f2;
+// $purple:  #6f42c1;
+// $pink:    #d63384;
+// $red:     #dc3545;
+// $orange:  #fd7e14;
+// $yellow:  #ffc107;
+// $green:   #198754;
+// $teal:    #20c997;
+// $cyan:    #0dcaf0;
 
 
-$primary:       $azul;
-$secondary:     $carrotOrange ;
-$success:       $green;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
+// // $primary:       $azul;
+// // $secondary:     $carrotOrange ;
+// $success:       $green;
+// $info:          $cyan;
+// $warning:       $yellow;
+// $danger:        $red;
+// $light:         $gray-100;
+// $dark:          $gray-900;
 
 
-$white:    #fff;
-$gray-100: #f8f9fa;
-$gray-200: #e9ecef;
-$gray-300: #dee2e6;
-$gray-400: #ced4da;
-$gray-500: #adb5bd;
-$gray-600: #6c757d;
-$gray-700: #495057;
-$gray-800: #343a40;
-$gray-900: #212529;
-$black:    #000;
+// $white:    #fff;
+// $gray-100: #f8f9fa;
+// $gray-200: #e9ecef;
+// $gray-300: #dee2e6;
+// $gray-400: #ced4da;
+// $gray-500: #adb5bd;
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+// $black:    #000;
 
 $theme-colors: (
   "primary":          $primary,
@@ -134,7 +111,12 @@ $utilities: (
   //       )
   //     )
   //   ),
-
+  "font-size": (
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes
+  ),
   "font-weight": (
         property: font-weight,
         class: fw,

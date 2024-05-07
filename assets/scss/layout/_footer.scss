@@ -1,5 +1,5 @@
-.footer-main{ background: $body_color; color: $white_color; padding: 38px 0 26px;
-    a{color: $white_color;
+.footer-main{ background: $body_color; color: $white; padding: 38px 0 26px;
+    a{color: $white;
       &:hover{ color: $secondary;}
    }
    .footer-top{ border-bottom: 1px solid #F0F0F066; padding-bottom: 8px; }
@@ -40,11 +40,11 @@
 .phone-call-wrap{ cursor: pointer; position: absolute; right: -15px; z-index: 99; bottom: 30px;  
 
    @include breakpoint('sm', max) { right: 15px; bottom: 130px ; }
-   .phone-no{ padding-left: 20px; transition: 0.5s all; padding-right: 65px; border-radius: 40px;  margin-right: 5px; height: 52px; display: flex; align-items: center; background: $white_color;
+   .phone-no{ padding-left: 20px; transition: 0.5s all; padding-right: 65px; border-radius: 40px;  margin-right: 5px; height: 52px; display: flex; align-items: center; background: $white;
       opacity: 0; visibility: hidden; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); 
       .font-12{ font-size: 12px;}
    }
-   .phone-call{  box-shadow: 5px 0px 4px #00000033;  @include round(60px); @include flex-center(); border: 5px solid $white_color; 
+   .phone-call{  box-shadow: 5px 0px 4px #00000033;  @include round(60px); @include flex-center(); border: 5px solid $white; 
        @include customLinearGradient(226deg, $secondary 0%, $flame 100%);
       position: absolute; right: 0; bottom: 0;
    }

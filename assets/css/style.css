@@ -83,47 +83,27 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
-}
-@media (min-width: 1200px) {
-  h1, .h1 {
-    font-size: 2.5rem;
-  }
+  font-size: clamp(34px, 3vw + 0.5rem, 54px);
 }
 
 h2, .h2 {
-  font-size: calc(1.325rem + 0.9vw);
-}
-@media (min-width: 1200px) {
-  h2, .h2 {
-    font-size: 2rem;
-  }
+  font-size: clamp(30px, 3vw, 44px);
 }
 
 h3, .h3 {
-  font-size: calc(1.3rem + 0.6vw);
-}
-@media (min-width: 1200px) {
-  h3, .h3 {
-    font-size: 1.75rem;
-  }
+  font-size: clamp(26px, 2vw + 1rem, 37px);
 }
 
 h4, .h4 {
-  font-size: calc(1.275rem + 0.3vw);
-}
-@media (min-width: 1200px) {
-  h4, .h4 {
-    font-size: 1.5rem;
-  }
+  font-size: clamp(20px, 2vw, 31px);
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: clamp(16px, 1vw + 0.8rem, 26px);
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: clamp(13px, 1vw + 0.5rem, 22px);
 }
 
 p {
@@ -7453,27 +7433,27 @@ textarea.form-control-lg {
 }
 
 .fs-1 {
-  font-size: calc(1.375rem + 1.5vw) !important;
+  font-size: clamp(34px, 3vw + 0.5rem, 54px) !important;
 }
 
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: clamp(30px, 3vw, 44px) !important;
 }
 
 .fs-3 {
-  font-size: calc(1.3rem + 0.6vw) !important;
+  font-size: clamp(26px, 2vw + 1rem, 37px) !important;
 }
 
 .fs-4 {
-  font-size: calc(1.275rem + 0.3vw) !important;
+  font-size: clamp(20px, 2vw, 31px) !important;
 }
 
 .fs-5 {
-  font-size: 1.25rem !important;
+  font-size: clamp(16px, 1vw + 0.8rem, 26px) !important;
 }
 
 .fs-6 {
-  font-size: 1rem !important;
+  font-size: clamp(13px, 1vw + 0.5rem, 22px) !important;
 }
 
 .fst-italic {
@@ -10344,20 +10324,6 @@ textarea.form-control-lg {
     cursor: grab !important;
   }
 }
-@media (min-width: 1200px) {
-  .fs-1 {
-    font-size: 2.5rem !important;
-  }
-  .fs-2 {
-    font-size: 2rem !important;
-  }
-  .fs-3 {
-    font-size: 1.75rem !important;
-  }
-  .fs-4 {
-    font-size: 1.5rem !important;
-  }
-}
 @media print {
   .d-print-inline {
     display: inline !important;
@@ -10390,7 +10356,6 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/* FONTS weight */
 @font-face {
   font-family: "Myriad Pro";
   src: url("../fonts/MyriadPro-Regular.woff2") format("woff2"), url("../fonts/MyriadPro-Regular.woff") format("woff"), url("../fonts/MyriadPro-Regular.ttf") format("truetype");
@@ -10470,7 +10435,6 @@ a:hover {
   font-weight: 600;
   border-radius: 25px;
   min-height: 46px;
-  color: #092A49;
   line-height: 0.9;
   text-align: left;
   text-transform: uppercase;
@@ -10546,15 +10510,21 @@ a:hover {
   min-height: 48px;
   line-height: 1.013;
 }
-.btn.btn-columbia-blue:hover {
-  background-color: #106DB3;
-  color: #fff;
-  border-color: #106DB3;
+.btn.btn-apricot {
+  color: #092A49;
 }
 .btn.btn-apricot:hover {
   background-color: #F49223;
   border-color: #F49223;
   color: #fff;
+}
+.btn.btn-columbia-blue {
+  color: #092A49;
+}
+.btn.btn-columbia-blue:hover {
+  background-color: #106DB3;
+  color: #fff;
+  border-color: #106DB3;
 }
 .btn.btn-primary {
   color: #fff;
@@ -10905,32 +10875,8 @@ a:hover {
 }
 @media (max-width: 991px) {
   .mainContent {
-    padding: 30px 0;
+    padding-bottom: 30px;
   }
-}
-
-h1, .h1 {
-  font-size: clamp(34px, 3vw + 0.5rem, 54px);
-}
-
-h2, .h2 {
-  font-size: clamp(30px, 3vw, 44px);
-}
-
-h3, .h3 {
-  font-size: clamp(26px, 2vw + 1rem, 37px);
-}
-
-h4, .h4 {
-  font-size: clamp(20px, 2vw, 31px);
-}
-
-h5, .h5 {
-  font-size: clamp(16px, 1vw + 0.8rem, 26px);
-}
-
-h6, .h6 {
-  font-size: clamp(13px, 1vw + 0.5rem, 22px);
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -11171,7 +11117,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .loader {
   width: 17px;
   height: 17px;
-  border-radius: 50%;
+  border-radius: 8.5px;
   display: block;
   margin: 16px auto;
   position: relative;
@@ -11628,7 +11574,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .banner-text {
   padding: 20px 60px 20px 60px;
 }
-.banner-text .h6 {
+.banner-text .fs-6 {
   line-height: 1.28;
 }
 @media (max-width: 1199px) {
@@ -11725,6 +11671,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   margin: 0 6px;
 }
 
+@media (min-width: 1200px) {
+  .banner-section-home .banner-text-wrap {
+    min-height: 550px;
+  }
+}
 .banner-section-home .banner .element {
   clip-path: polygon(1.041% 20.864%, 1.041% 20.864%, 1.206% 18.713%, 1.442% 16.441%, 1.735% 14.101%, 2.07% 11.744%, 2.432% 9.423%, 2.809% 7.188%, 3.184% 5.091%, 3.545% 3.185%, 3.875% 1.52%, 4.162% 0.149%, 100% 0.149%, 100% 100%, 65.973% 100%, 9.469% 100%, 9.469% 100%, 9.386% 99.701%, 9.154% 98.871%, 8.802% 97.611%, 8.36% 96.023%, 7.856% 94.206%, 7.319% 92.263%, 6.777% 90.295%, 6.259% 88.402%, 5.794% 86.685%, 5.411% 85.246%, 5.411% 85.246%, 5.333% 84.823%, 5.116% 83.651%, 4.791% 81.874%, 4.385% 79.638%, 3.928% 77.086%, 3.448% 74.365%, 2.974% 71.619%, 2.534% 68.993%, 2.158% 66.632%, 1.873% 64.68%, 1.873% 64.68%, 1.83% 64.224%, 1.712% 62.958%, 1.537% 61.035%, 1.32% 58.609%, 1.08% 55.831%, 0.832% 52.855%, 0.593% 49.834%, 0.381% 46.92%, 0.213% 44.267%, 0.104% 42.027%, 0.104% 42.027%, 0.12% 41.598%, 0.165% 40.408%, 0.234% 38.601%, 0.324% 36.323%, 0.429% 33.718%, 0.546% 30.932%, 0.67% 28.108%, 0.797% 25.393%, 0.922% 22.93%, 1.041% 20.864%);
 }
@@ -11967,7 +11918,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   max-width: 500px;
 }
 @media (min-width: 1200px) {
-  .section-market .h2 {
+  .section-market h2, .section-market .h2, .section-market .fs-2 {
     max-width: 90%;
   }
 }
@@ -12328,7 +12279,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   border-bottom: none;
 }
 .nav-tabs .nav-link {
-  font-size: clamp(13px, 1vw + 0.5rem, 22px);
+  font-size: clamp(16px, 1vw + 0.5rem, 22px);
   color: #092A49;
   padding: 18px 30px;
   line-height: 1;

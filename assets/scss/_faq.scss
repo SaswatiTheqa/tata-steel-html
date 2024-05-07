@@ -3,8 +3,8 @@
   .accordion-item:first-of-type , .accordion-item:last-of-type{ border-radius: 0px;}
     .accordion{counter-reset: section; 
         .accordion-item{  background-color: transparent; border: none; box-shadow: inset 0px -2px 0px $body_color;
-          .accordion-button{ box-shadow: none;  border-radius: 0px;  font-size: $fonth5; margin-bottom: 0px; line-height: 1; min-height: 72px;
-              position: relative; padding:14px 20px 14px 84px; background-color: $body_color; color: $white_color; font-weight: bold;
+          .accordion-button{ box-shadow: none;  border-radius: 0px;  font-size: $h5-font-size; margin-bottom: 0px; line-height: 1; min-height: 72px;
+              position: relative; padding:14px 20px 14px 84px; background-color: $body_color; color: $white; font-weight: bold;
               @include breakpoint('md', max) { padding-left: 64px;}
                &:after {position: absolute;  left: 30px; top:0; bottom: 0; width: 20px; height: 20px; content: ""; 
                 background: url(../images/icon/Icon-feather-minus.svg) no-repeat center; display: flex; align-items: center; 

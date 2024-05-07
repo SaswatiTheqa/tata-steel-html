@@ -11,7 +11,7 @@
         }
     }
     &-text{ padding: 20px 60px 20px 60px; 
-        .h6{ line-height: 1.28;}
+        .fs-6{ line-height: 1.28;}
         
         @include breakpoint('xl', max) { padding: 30px 20px;}
         @include breakpoint('lg', max) { padding: 60px 20px 70px;}
@@ -59,7 +59,7 @@
 .banner-section-home{
     .banner{
         &-text-wrap{
-            // @include breakpoint('xl', min) {min-height: 550px;}
+            @include breakpoint('xl', min) {min-height: 550px;}
         }
         .element {
             // -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 80% 100%);

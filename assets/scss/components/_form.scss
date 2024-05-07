@@ -11,9 +11,9 @@
             cursor: pointer;
             line-height: 20px;
             display: inline-block;
-            color: $black_color;
-            .check-icon{ position: absolute; left: 0; top: 0; @include round(18px);border: 1px solid $black_color;
-             background: $white_color; font-size: 10px; color: $white_color; @include flex-center();
+            color: $black;
+            .check-icon{ position: absolute; left: 0; top: 0; @include round(18px);border: 1px solid $black;
+             background: $white; font-size: 10px; color: $white; @include flex-center();
             //  .fa-check{ display: none;}
             }
         }
@@ -48,16 +48,16 @@
             line-height: 1;
             display: inline-block;
             color: $davys_gray;
-            border: 2px solid $black_color;
+            border: 2px solid $black;
             border-radius: 6px;
             padding: 12.5px 10px;
-            background: $white_color;  
+            background: $white;  
             margin-bottom: 0;          
         }
     }
     [type="radio"]:checked + label{
         background: $primary;
-        border-color: $primary; color: $white_color;
+        border-color: $primary; color: $white;
         &::before{ background: $primary;  border-color: $primary;}
     }
     &.min-w-64 label{ min-width: 64px; text-align: center;}
@@ -128,7 +128,7 @@
 
 // bootstrap radio button
 .form-check-input{ border: 2px solid $davys_gray; width: 18px; height: 18px;
-    &:checked{ background-color: $white_color; border-color: $body_color;
+    &:checked{ background-color: $white; border-color: $body_color;
         &[type=radio]{  background-image: url(../images/icon/Icon-round.svg) ; }
     }
 }

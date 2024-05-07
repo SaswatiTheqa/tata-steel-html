@@ -1,5 +1,5 @@
 .btn{ 
-    &.sitebtn{padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px;  min-height: 46px; color: $body_color; 
+    &.sitebtn{padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px;  min-height: 46px; 
         line-height: 0.9; text-align: left; text-transform: uppercase; transition: all ease 0.3s; 
         &:hover{transition: all ease 0.3s; }
     }
@@ -16,7 +16,6 @@
         }
     }
     
-   
     &.btn-left-icon{ padding: 7px; display: flex; align-items: center; justify-content: start; 
         .icon-holder{ margin-right: 10px; max-width: 24px;
             img{ max-height: 24px; min-width: 16px; }
@@ -32,16 +31,17 @@
     }
 
     &.min-h-48{min-height: 48px;line-height: 1.013;}
-    &.btn-columbia-blue{
-        &:hover{ background-color: $primary; color: $white_color; border-color: $primary;}
+   
+    &.btn-apricot{ color: $body_color;
+        &:hover{ background-color: $secondary; border-color: $secondary; color: $white; }
     }
-    &.btn-apricot{
-        &:hover{ background-color: $secondary; border-color: $secondary; color: $white_color; }
+    &.btn-columbia-blue{ color: $body_color;
+        &:hover{ background-color: $primary; color: $white; border-color: $primary;}
     }
-    &.btn-primary{color: $white_color;
+    &.btn-primary{color: $white;
         &:hover{ background-color:  $columbiaBlue; border-color: $columbiaBlue; color: $body_color; }
     }
-    &.btn-secondary{ color: $white_color;
+    &.btn-secondary{ color: $white;
         &:hover{ background-color:  $apricot;  border-color: $apricot; color: $body_color;  }
     }
     &.text-white{

@@ -1,7 +1,7 @@
 .main-menu{
     .navbar-nav{
         .nav-item{ position: relative;
-            .nav-link{ position: relative; padding: 40px 12px 37px; text-transform: uppercase;  color: $black_color; font-size: 1rem; 
+            .nav-link{ position: relative; padding: 40px 12px 37px; text-transform: uppercase;  color: $black; font-size: 1rem; 
                 line-height: 1 !important; font-weight: 600; transition: all 0.3s;
                 @include breakpoint('xl', min) { font-size: 1rem;}
                 @include breakpoint('xl', max) { 
@@ -29,13 +29,13 @@
                 @include breakpoint('lg', max) { background-color: transparent; box-shadow: none;}
                 li{ 
                     a{ padding: 12px 17px; line-height: 1; text-transform: capitalize;}
-                    .dropdown-item{white-space: normal; color: $black_color; }
+                    .dropdown-item{white-space: normal; color: $black; }
                 }
             }
             &.dropdown{
                 li{
                     a.dropdown-item{ 
-                        &:hover ,  &:active , &:focus { background-color: rgba(189, 217, 232, 0.3); color: $black_color; }
+                        &:hover ,  &:active , &:focus { background-color: rgba(189, 217, 232, 0.3); color: $black; }
                     }
                 } 
             }
@@ -102,7 +102,7 @@
         a{ text-decoration: none;}
     }
     .social-links{
-        a{ color: $primary ;}
+        a{ color: $primary;}
     }
 
 }

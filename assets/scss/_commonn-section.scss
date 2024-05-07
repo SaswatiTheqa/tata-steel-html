@@ -30,7 +30,7 @@
 
 // ==========================  tabs
 .nav-tabs { border-bottom: none;
-    .nav-link{ font-size: $fonth6; color: $body_color; padding: 18px  30px; line-height: 1;
+    .nav-link{ font-size: $fontP22; color: $body_color; padding: 18px  30px; line-height: 1;
       &.active{ background-color: $white_smoke; font-weight: 600; color: $body_color; border-color: $white_smoke $white_smoke transparent;
           border-top-left-radius: 10px;
           border-top-right-radius: 10px; 
@@ -60,7 +60,7 @@
         li {
             + li {margin-left: 24px;}
             a , span{
-                color: $white_color;
+                color: $white;
                 @include round(42px); 
                 padding: 0; 
                 @include flex-center();
@@ -73,12 +73,12 @@
             a:hover{
                 border: 1px solid $davys_gray;
                 background-color: $davys_gray;
-                color: $white_color;
+                color: $white;
              }
         }
   
         .current {
-            color: $white_color;
+            color: $white;
             background-color: $primary;
             border-color: $primary;
         }
