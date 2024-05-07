@@ -128,24 +128,24 @@ $(document).ready(function () {
 
 });
 
-if ($('.testimonial-section').length > 0) {
-  $('[data-fancybox]').fancybox({
-    // Options will go here
-    buttons : [
-      'close'
-    ],
-    wheel : false,
-    transitionEffect: "slide",
-    // thumbs          : false,
-    // hash            : false,
-    loop            : true,
-    // keyboard        : true,
-    toolbar         : false,
-    // animationEffect : false,
-    // arrows          : true,
-    clickContent    : false
-  });
-}
+// if ($('.testimonial-section').length > 0) {
+//   $('[data-fancybox]').fancybox({
+//     // Options will go here
+//     buttons : [
+//       'close'
+//     ],
+//     wheel : false,
+//     transitionEffect: "slide",
+//     // thumbs          : false,
+//     // hash            : false,
+//     loop            : true,
+//     // keyboard        : true,
+//     toolbar         : false,
+//     // animationEffect : false,
+//     // arrows          : true,
+//     clickContent    : false
+//   });
+// }
 
   $(document).ready(function(event){
     $('.applicaltion-select select').on('change', function(){
@@ -209,3 +209,5 @@ if ($('.testimonial-section').length > 0) {
     // Start observing the bottom of the page
     observer.observe(document.querySelector('#loading'));
   });
+
+  // document.querySelectorAll('.my-lightbox-toggle').forEach(el => el.addEventListener('click', Lightbox.initialize));
