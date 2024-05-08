@@ -59,8 +59,8 @@
 
 .section-market{
      .text-wrap-max-w{ max-width: 500px; }
-      h2 , .fs-2{  
-        @include breakpoint('xl', min) { max-width: 90%; }
+      .fs-2{  
+        @include breakpoint('md', min) { max-width: 86%; }
       }
      .para-wrap{ margin:32px 0 40px }
 }
@@ -191,7 +191,9 @@
             @include breakpoint('sm', max) { margin-left: auto;}
         }
         @include breakpoint('xl', min) {
-            .text-wrap-max-w{ max-width: 303px; }
+            .text-wrap-max-w{ max-width: 303px; 
+                .fs-5{ max-width: 270px;}
+            }
          }
       }
       &-right{

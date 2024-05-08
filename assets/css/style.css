@@ -10514,7 +10514,7 @@ a:hover {
 }
 .btn.min-h-48 {
   min-height: 48px;
-  line-height: 1.013;
+  line-height: 1;
 }
 .btn.btn-apricot {
   color: #092A49;
@@ -11520,6 +11520,7 @@ h3, .h3, .fs-3 {
   padding-left: 20px;
   transition: 0.5s all;
   padding-right: 65px;
+  padding-top: 5px;
   border-radius: 40px;
   margin-right: 5px;
   height: 52px;
@@ -11567,8 +11568,9 @@ h3, .h3, .fs-3 {
 .banner {
   border-radius: 14px;
   position: relative;
+  background: transparent linear-gradient(314deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box;
 }
-.banner::before {
+.banner .swiper-slide::before {
   background: transparent linear-gradient(314deg, #092A49 0%, #106DB3 100%) 0% 0% no-repeat padding-box;
   border-radius: 14px 0 0 14px;
   content: "";
@@ -11580,9 +11582,12 @@ h3, .h3, .fs-3 {
   z-index: 1;
 }
 @media (max-width: 991.98px) {
-  .banner::before {
+  .banner .swiper-slide::before {
     display: none;
   }
+}
+.banner .swiper-slide > * {
+  z-index: 1;
 }
 @media (min-width: 992px) {
   .banner-text-wrap {
@@ -11961,9 +11966,9 @@ h3, .h3, .fs-3 {
 .section-market .text-wrap-max-w {
   max-width: 500px;
 }
-@media (min-width: 1200px) {
-  .section-market h2, .section-market .h2, .section-market .fs-2 {
-    max-width: 90%;
+@media (min-width: 768px) {
+  .section-market .fs-2 {
+    max-width: 86%;
   }
 }
 .section-market .para-wrap {
@@ -12236,6 +12241,9 @@ h3, .h3, .fs-3 {
 @media (min-width: 1200px) {
   .service-section .box-wrapper-left .text-wrap-max-w {
     max-width: 303px;
+  }
+  .service-section .box-wrapper-left .text-wrap-max-w .fs-5 {
+    max-width: 270px;
   }
 }
 .service-section .box-wrapper-right .text-wrap-max-w {
@@ -12636,6 +12644,7 @@ h3, .h3, .fs-3 {
   background-color: transparent;
   border: none;
   box-shadow: inset 0px -2px 0px #092A49;
+  margin-bottom: 5px;
 }
 .faq-section .accordion .accordion-item .accordion-button {
   box-shadow: none;
@@ -12643,7 +12652,7 @@ h3, .h3, .fs-3 {
   font-size: clamp(16px, 1vw + 0.8rem, 26px);
   margin-bottom: 0px;
   line-height: 1;
-  min-height: 72px;
+  min-height: 67px;
   position: relative;
   padding: 14px 20px 14px 84px;
   background-color: #092A49;
@@ -12682,6 +12691,10 @@ h3, .h3, .fs-3 {
   content: "";
   background-image: url(../images/icon/Icon-feather-plus.svg);
 }
+.faq-section .accordion .accordion-item .accordion-button.collapsed:hover {
+  background-color: #092A49;
+  color: #fff;
+}
 .faq-section .accordion .accordion-item .accordion-body {
   padding: 30px 50px 50px 84px;
   margin-bottom: 0;
@@ -12690,6 +12703,9 @@ h3, .h3, .fs-3 {
   .faq-section .accordion .accordion-item .accordion-body {
     padding: 20px 20px 30px 64px;
   }
+}
+.faq-section .accordion .accordion-item:last-child {
+  margin-bottom: 0px;
 }
 
 .contact-section .ratio {

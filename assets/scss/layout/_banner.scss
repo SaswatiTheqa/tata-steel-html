@@ -1,8 +1,11 @@
-.banner{ border-radius: 14px;  position: relative;
-    &::before{
-        @include customLinearGradient(314deg, $body_color 0%, $primary 100%);
-        border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 50%; z-index: 1; 
-        @include breakpoint('lg', max) { display: none; }
+.banner{ border-radius: 14px;  position: relative;  @include customLinearGradient(314deg, $body_color 0%, $primary 100%);
+    .swiper-slide{
+        &::before{
+            @include customLinearGradient(314deg, $body_color 0%, $primary 100%);
+            border-radius: 14px 0 0 14px; content: ""; position: absolute; left: 0; top:0; bottom: 0; width: 50%; z-index: 1; 
+            @include breakpoint('lg', max) { display: none; }
+        }
+       > *{ z-index: 1;}
     }
     &-text-wrap{ 
         @include breakpoint('lg', min) {
