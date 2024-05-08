@@ -1,6 +1,6 @@
 .btn{ 
     &.sitebtn{padding: 7px 20px; position: relative; font-weight: 600; border-radius: 25px;  min-height: 46px; 
-        line-height: 0.9; text-align: left; text-transform: uppercase; transition: all ease 0.3s; 
+        line-height: 0.9; text-align: left; text-transform: uppercase; transition: all ease 0.3s; font-stretch: semi-expanded;
         &:hover{transition: all ease 0.3s; }
     }
     &.btn-arrow{ padding-right: 38px; 
@@ -10,7 +10,7 @@
         &.btn-arrow-bg{ padding: 0 52px 0 0; min-height: 32px;
             &::after{ @include round(32px); @include flex-center(); background-color: $apricot; right: 0; }
         }   
-        &.back-btn{  padding-right: 20px; padding-left: 27px;
+        &.back-btn{  padding-right: 20px; padding-left: 27px; font-stretch: semi-condensed;
             &::after{ content: "\f053"; right: auto; left: 10px; }
     
         }

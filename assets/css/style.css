@@ -158,7 +158,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 900;
 }
 
 small, .small {
@@ -7489,7 +7489,7 @@ textarea.form-control-lg {
 }
 
 .fw-bolder {
-  font-weight: bolder !important;
+  font-weight: 900 !important;
 }
 
 .lh-1 {
@@ -10377,8 +10377,12 @@ textarea.form-control-lg {
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "GlobalFont";
+  src: url("../fonts/MyriadVariableConcept-Roman.otf");
+}
 body {
-  font-family: "Myriad Pro", sans-serif;
+  font-family: "GlobalFont", sans-serif;
   background: #fff;
 }
 
@@ -10439,6 +10443,7 @@ a:hover {
   text-align: left;
   text-transform: uppercase;
   transition: all ease 0.3s;
+  font-stretch: semi-expanded;
 }
 .btn.sitebtn:hover {
   transition: all ease 0.3s;
@@ -10480,6 +10485,7 @@ a:hover {
 .btn.btn-arrow.back-btn {
   padding-right: 20px;
   padding-left: 27px;
+  font-stretch: semi-condensed;
 }
 .btn.btn-arrow.back-btn::after {
   content: "\f053";
@@ -10883,6 +10889,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   color: #092A49;
 }
 
+h3, .h3, .fs-3 {
+  letter-spacing: 0.18px;
+}
+
+.font-semi-condensed {
+  font-stretch: semi-condensed;
+}
+
+.font-semi-expanded {
+  font-stretch: semi-expanded;
+}
+
+.text-uppercase:not(h1, .h1, .fs-1, button, .btn, .font-semi-expanded) {
+  font-stretch: semi-condensed;
+}
+
 .font-20 {
   font-size: clamp(16px, 1vw + 0.4rem, 20px);
 }
@@ -11273,6 +11295,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   line-height: 1 !important;
   font-weight: 600;
   transition: all 0.3s;
+  font-stretch: semi-condensed;
 }
 @media (min-width: 1200px) {
   .main-menu .navbar-nav .nav-item .nav-link {

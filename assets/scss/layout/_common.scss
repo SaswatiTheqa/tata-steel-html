@@ -17,8 +17,19 @@
 
 
 
-h1 , .h1 , h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
+h1 , .h1 , h2 , .h2 , h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6{
    color: $body_color; 
+}
+h3 , .h3 , .fs-3{
+  letter-spacing: 0.18px;
+}
+// h2 , .h2 ,h3 , .h3 , h4 , .h4 ,h5 , .h5 ,h6 , .h6 , .fs-2 , .fs-3 , .fs-4 , .fs-5 , .fs-6 {
+//     &.text-uppercase{ font-stretch: semi-condensed; }
+// }
+.font-semi-condensed{font-stretch: semi-condensed;}
+.font-semi-expanded{font-stretch: semi-expanded;}
+.text-uppercase:not(h1 , .h1 , .fs-1 , button , .btn , .font-semi-expanded) {
+  font-stretch: semi-condensed;
 }
 
 .font-20{ font-size: $font20; }
