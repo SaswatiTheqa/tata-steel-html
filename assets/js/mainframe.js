@@ -14,13 +14,11 @@ $(document).ready(function () {
           el: ".banner-section-home .swiper-pagination",
           clickable: true,
         },
-      
-        
       });
 
     // ===========   insta-feed slider
 
-      var swiper1 = new Swiper(".testimonial-section .swiper-container", {
+      var swiper2 = new Swiper(".testimonial-section .swiper-container", {
         // slidesPerView: 4.6,
         spaceBetween: 24,
         // centeredSlides: true,
@@ -75,41 +73,32 @@ $(document).ready(function () {
               $(targetBox).show();
           }
       );
+      
     }
 
 
 
-
       // pagination-container
-      var items = $(".event-list .event-item");
-      var numItems = items.length;
-      var perPage = 6;
-      items.slice(perPage).hide();
-      if ($('.event-list').length > 0) {
-        $('#pagination-container').pagination({
-            items: numItems,
-            itemsOnPage: perPage,
-            prevText: "<i class='fa-solid fa-chevron-left'></i>",
-            nextText: "<i class='fa-solid fa-chevron-right'></i>",
-            onPageClick: function (pageNumber) {
-                var showFrom = perPage * (pageNumber - 1);
-                var showTo = showFrom + perPage;
-                items.hide().slice(showFrom, showTo).show();
-            }
-        });
-      }
+      // var items = $(".event-list .event-item");
+      // var numItems = items.length;
+      // var perPage = 6;
+      // items.slice(perPage).hide();
+      // if ($('.event-list').length > 0) {
+      //   $('#pagination-container').pagination({
+      //       items: numItems,
+      //       itemsOnPage: perPage,
+      //       prevText: "<i class='fa-solid fa-chevron-left'></i>",
+      //       nextText: "<i class='fa-solid fa-chevron-right'></i>",
+      //       onPageClick: function (pageNumber) {
+      //           var showFrom = perPage * (pageNumber - 1);
+      //           var showTo = showFrom + perPage;
+      //           items.hide().slice(showFrom, showTo).show();
+      //       }
+      //   });
+      // }
       
     // pagination-container end
    
-
-    $('.applicaltion-select select').on('change', function(){
-      const $this = $(this);
-      $('.product-item').hide();
-      $('.'+$this.val()).show()
-      // if($this.val !== "" ){
-      // }
-
-    });
 
 
     $('#newsSelect').on('change', function(){
@@ -132,11 +121,11 @@ $(document).ready(function () {
    // phone call 
   const phoneCall = document.getElementById("phone-call");
   const phoneScrollFunc = function() {
-      var y = window.scrollY;
-      var windowHeight = window.innerHeight;
-      var documentHeight = document.body.clientHeight;
+      let y = window.scrollY;
+      let windowHeight = window.innerHeight;
+      let documentHeight = document.body.clientHeight;
       // Calculate the bottom position
-      var bottomPosition = documentHeight - windowHeight - y;
+      let bottomPosition = documentHeight - windowHeight - y;
       if (bottomPosition < 5) {
         phoneCall.className = "phone-call-wrap show";
       } 
@@ -147,4 +136,7 @@ $(document).ready(function () {
 
  window.addEventListener("scroll", phoneScrollFunc);
  // phone call  end
+
+
+
 

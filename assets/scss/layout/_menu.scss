@@ -1,8 +1,8 @@
 .main-menu{
     .navbar-nav{
         .nav-item{ position: relative;
-            .nav-link{ position: relative; padding: 40px 12px 37px; text-transform: uppercase;  color: $black; font-size: 1rem; 
-                line-height: 1 !important; font-weight: 600; transition: all 0.3s; font-stretch: semi-condensed;
+            .nav-link{ position: relative; padding: 41px 12px 37px; text-transform: uppercase;  color: $black; font-size: 1rem; 
+                line-height: 1 !important; font-weight: $font-weight-semibold; transition: all 0.3s; font-stretch: semi-condensed; letter-spacing: 0.08px;
                 @include breakpoint('xl', min) { font-size: 1rem;}
                 @include breakpoint('xl', max) { 
                     display: inline-block; padding: 40px 8px 37px;  
@@ -82,11 +82,11 @@
     }
 }
 
-.hamburger-menu{ font-size: 16px; color: black; display: flex; 
+.hamburger-menu{ font-size: 16px; color: $black; display: flex; align-items: center;
     &:focus{box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);}
-    &:hover{color: black;}
+    &:hover{color: $black;}
     .icons{  height: 20px; width: 32px; display: block; text-align: right;
-        .icon-close{  display: none;}
+        .icon-close{display: none;}
         .icon-bar{display: inline-block; }
     }
     &[aria-expanded="true"]{

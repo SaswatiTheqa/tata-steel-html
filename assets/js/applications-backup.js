@@ -1,3 +1,5 @@
+const productItems = document.querySelectorAll('.product-item');
+
 $(document).ready(function(){
     // Function to load more products
     function loadMoreProducts() {
@@ -15,25 +17,26 @@ $(document).ready(function(){
     // Show initial set of products
     $(".product-item").slice(0, 6).show();
 
-    // Function to filter products based on region selection
     function filterProducts() {
         const selectedValue = this.value;
-        $('.product-item').hide(); // Hide all product items
-        
-        const itemsToShow = $('.product-item.' + selectedValue); // Select items matching the selected region
-        
-        itemsToShow.slice(0, 6).fadeIn("slow"); // Show the first 6 items
-        $('#loading').show();
-
-        if (itemsToShow.length <= 6) {
+        productItems.forEach(function(item) {
+            item.style.display = 'none';
+        });
+        const itemsArray = Array.from(document.querySelectorAll('.' + selectedValue));
+        if (itemsArray.length < 6){
             observer.disconnect(); 
             $('#loading').hide(); 
         }
+        
+        itemsArray.forEach(function(item) {
+            item.style.display = 'block';
+        });
 
     };
+    document.querySelector('#selectRegion').addEventListener('change', filterProducts);
     
-    // Event listener for region selection change
-    $('#selectRegion').on('change', filterProducts);
+
+
   
     // Intersection Observer API setup
     const options = {
@@ -46,10 +49,31 @@ $(document).ready(function(){
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 loadMoreProducts();
+                
             }
         });
     }, options);
   
     // Start observing the bottom of the page
     observer.observe(document.querySelector('#loading'));
+
+
+
+    
+
+
+
 });
+
+// document.querySelector('#selectRegion').addEventListener('change', function() {
+//     // var selectedValue = this.value;
+//     // var productItems = document.querySelectorAll('.product-item');
+//     // productItems.forEach(function(item) {
+//     //     item.style.display = 'none';
+//     // });
+//     // document.querySelectorAll('.' + selectedValue).forEach(function(item) {
+//     //     item.style.display = 'block';
+//     // });
+//     console.log("abc")
+// });
+

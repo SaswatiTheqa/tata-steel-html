@@ -82,6 +82,9 @@
 // select 2 style
 .select2-container .select2-selection--single{ height: 48px;}
 .select2-container .select2-selection--single .select2-selection__rendered{ padding-left: 16px; padding-right: 36px;}
+.select-black {
+
+}
 .select2-container--default{ 
     .select2-selection--single{  border-color: $davys_gray; border-width: 2px;
         .select2-selection__arrow { top:0; bottom: 0; margin: auto; width: 14px; right: 16px;
@@ -100,13 +103,11 @@
         .select2-selection--single { border-radius: 4px !important;
            .select2-selection__arrow b::before{  content: "\f106"; }
         }
-       
     }
     .select2-dropdown{ border: 2px solid $davys_gray; padding: 10px 5px 10px 10px; border-radius: 6px;
         [aria-disabled=true] { display: none;}
         &.select2-dropdown--above{ top: -6px; }
         &.select2-dropdown--below{ top: 6px;}
-        
     }
     .select2-results__option{ color: $body_color; font-weight: 600; line-height: 1.2; padding: 8px; 
         &.select2-results__option--highlighted{ background-color: transparent; color: $body_color;}
@@ -118,13 +119,16 @@
     //     border-bottom-right-radius: 0;
     // }
 }
+.select-black{
+    .select2-selection--single { border-color: $black;
+        .select2-selection__arrow { 
+            b:before{
+                color: $black; font-size: 20px;
+            }
+        }
+    }
+}
 
-
-// end select 
-// .custom-form-select-wrap{  
-//     .select2-container{ width: auto !important;}
-//  }
-// select end
 
 // bootstrap radio button
 .form-check-input{ border: 2px solid $davys_gray; width: 18px; height: 18px;

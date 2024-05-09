@@ -10434,7 +10434,7 @@ a:hover {
 }
 
 .btn.sitebtn {
-  padding: 7px 20px;
+  padding: 7px 20px 5px;
   position: relative;
   font-weight: 600;
   border-radius: 25px;
@@ -10762,6 +10762,14 @@ a:hover {
 .select2-container--default .select2-results__option[aria-selected=true] {
   color: #F49223;
   background-color: transparent;
+}
+
+.select-black .select2-selection--single {
+  border-color: #000;
+}
+.select-black .select2-selection--single .select2-selection__arrow b:before {
+  color: #000;
+  font-size: 20px;
 }
 
 .form-check-input {
@@ -11137,14 +11145,14 @@ h3, .h3, .fs-3 {
 }
 
 .loader {
-  width: 17px;
-  height: 17px;
-  border-radius: 8.5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
   display: block;
-  margin: 16px auto;
+  margin: 40px auto 30px;
   position: relative;
   background: #092A49;
-  box-shadow: -24px 0 #092A49, 24px 0 #092A49, 48px 0 #092A49, 72px 0 #092A49;
+  box-shadow: -64px 0 #092A49, -32px 0 #092A49, 32px 0 #092A49, 64px 0 #092A49;
   box-sizing: border-box;
   animation: shadowPulse 3s linear infinite;
 }
@@ -11152,38 +11160,34 @@ h3, .h3, .fs-3 {
 @keyframes shadowPulse {
   20% {
     background: #092A49;
-    box-shadow: -24px 0 #F49223, 24px 0 #092A49, 48px 0 #092A49, 72px 0 #092A49;
+    box-shadow: -64px 0 #F49223, -32px 0 #092A49, 32px 0 #092A49, 64px 0 #092A49;
   }
   40% {
-    background: #F49223;
-    box-shadow: -24px 0 #F49223, 24px 0 #092A49, 48px 0 #092A49, 72px 0 #092A49;
+    background: #092A49;
+    box-shadow: -64px 0 #092A49, -32px 0 #F49223, 32px 0 #092A49, 64px 0 #092A49;
   }
   60% {
-    background: #092A49;
-    box-shadow: -24px 0 #092A49, 24px 0 #F49223, 48px 0 #092A49, 72px 0 #092A49;
+    background: #F49223;
+    box-shadow: -64px 0 #092A49, -32px 0 #F49223, 32px 0 #092A49, 64px 0 #092A49;
   }
   80% {
     background: #092A49;
-    box-shadow: -24px 0 #092A49, 24px 0 #092A49, 48px 0 #F49223, 72px 0 #092A49;
+    box-shadow: -64px 0 #092A49, -32px 0 #092A49, 32px 0 #F49223, 64px 0 #092A49;
   }
   100% {
     background: #092A49;
-    box-shadow: -24px 0 #092A49, 24px 0 #092A49, 48px 0 #092A49, 72px 0 #F49223;
+    box-shadow: -64px 0 #092A49, -32px 0 #092A49, 32px 0 #092A49, 64px 0 #F49223;
   }
 }
 .header-main {
-  background-color: #fff;
-}
-@media (max-width: 991.98px) {
-  .header-main {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999;
-  }
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
 }
 .header-main + * {
-  margin-top: 30px;
+  margin-top: 124px;
 }
 @media (max-width: 991.98px) {
   .header-main + * {
@@ -11288,7 +11292,7 @@ h3, .h3, .fs-3 {
 }
 .main-menu .navbar-nav .nav-item .nav-link {
   position: relative;
-  padding: 40px 12px 37px;
+  padding: 41px 12px 37px;
   text-transform: uppercase;
   color: #000;
   font-size: 1rem;
@@ -11296,6 +11300,7 @@ h3, .h3, .fs-3 {
   font-weight: 600;
   transition: all 0.3s;
   font-stretch: semi-condensed;
+  letter-spacing: 0.08px;
 }
 @media (min-width: 1200px) {
   .main-menu .navbar-nav .nav-item .nav-link {
@@ -11406,14 +11411,15 @@ h3, .h3, .fs-3 {
 
 .hamburger-menu {
   font-size: 16px;
-  color: black;
+  color: #000;
   display: flex;
+  align-items: center;
 }
 .hamburger-menu:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 .hamburger-menu:hover {
-  color: black;
+  color: #000;
 }
 .hamburger-menu .icons {
   height: 20px;
@@ -11518,7 +11524,7 @@ h3, .h3, .fs-3 {
 }
 .phone-call-wrap .phone-no {
   padding-left: 20px;
-  transition: 0.5s all;
+  transition: 0.2s all;
   padding-right: 65px;
   padding-top: 5px;
   border-radius: 40px;
@@ -11528,8 +11534,9 @@ h3, .h3, .fs-3 {
   align-items: center;
   background: #fff;
   opacity: 0;
-  visibility: hidden;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  left: 190px;
 }
 .phone-call-wrap .phone-no .font-12 {
   font-size: 12px;
@@ -11553,7 +11560,8 @@ h3, .h3, .fs-3 {
 }
 .phone-call-wrap:hover .phone-no, .phone-call-wrap.show .phone-no {
   opacity: 1;
-  visibility: visible;
+  left: 0;
+  transition: 0.2s all;
 }
 
 .call-div {
@@ -11813,7 +11821,7 @@ h3, .h3, .fs-3 {
 .icon-box-wraper {
   text-align: center;
   width: calc(50% - 0.5rem);
-  max-width: 180px;
+  max-width: 172px;
   padding: 20px 0;
 }
 .icon-box-wraper .icon-box-img {
@@ -11844,9 +11852,6 @@ h3, .h3, .fs-3 {
   z-index: 1;
   max-width: 100px;
 }
-.icon-box-wraper .icon-box-img img:hover {
-  filter: brightness(108%) saturate(85%) hue-rotate(359deg) invert(1);
-}
 @media (max-width: 991.98px) {
   .icon-box-wraper .icon-box-img {
     width: 100px;
@@ -11863,6 +11868,12 @@ h3, .h3, .fs-3 {
   .icon-box-wraper {
     max-width: 160px;
   }
+}
+.icon-box-wraper:hover .icon-box-img::before {
+  background-color: #F2F2F2;
+}
+.icon-box-wraper:hover .icon-box-img img {
+  filter: brightness(108%) saturate(85%) hue-rotate(359deg) invert(1);
 }
 
 .section-benefits {
@@ -12106,6 +12117,9 @@ h3, .h3, .fs-3 {
 
 .cards {
   border: 0px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .cards:hover {
   box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.16);
@@ -12130,6 +12144,11 @@ h3, .h3, .fs-3 {
 .cards-body {
   padding: 20px 70px 0px 16px;
 }
+@media (max-width: 1199.98px) {
+  .cards-body {
+    padding-right: 60px;
+  }
+}
 @media (max-width: 991.98px) {
   .cards-body {
     padding-right: 55px;
@@ -12144,6 +12163,17 @@ h3, .h3, .fs-3 {
 }
 .cards-footer {
   padding: 0px 70px 16px 16px;
+  margin-top: auto;
+}
+@media (max-width: 1199.98px) {
+  .cards-footer {
+    padding-right: 60px;
+  }
+}
+@media (max-width: 991.98px) {
+  .cards-footer {
+    padding-right: 55px;
+  }
 }
 .cards-footer p {
   letter-spacing: 0.07px;
@@ -12399,6 +12429,34 @@ h3, .h3, .fs-3 {
   border: 1px solid #BDD9E8;
   background-color: #BDD9E8;
   color: #092A49;
+}
+
+.pagination .page-item + .page-item {
+  margin-left: 24px;
+}
+.pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
+  border-radius: 50%;
+}
+.pagination .page-item.active .page-link {
+  background-color: #106DB3;
+}
+.pagination .page-item .page-link {
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(16px, 1vw + 0.4rem, 20px);
+  text-decoration: none;
+  border: 1px solid #5C5C5C;
+  background-color: #5C5C5C;
+  box-shadow: 0px 0px 10px 0px #EEE;
+}
+.pagination .page-item .page-link .fa-chevron-left, .pagination .page-item .page-link .fa-chevron-right {
+  font-size: 14px;
 }
 
 .product-box {

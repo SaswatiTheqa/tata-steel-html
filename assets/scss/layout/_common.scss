@@ -149,12 +149,12 @@ h3 , .h3 , .fs-3{
 
 // ================================ loader
 .loader {
-  @include round(17px);
+  @include round(16px);
   display: block;
-  margin:16px auto;
+  margin: 40px auto 30px;
   position: relative;
   background: $body_color;
-  box-shadow: -24px 0 $body_color, 24px 0 $body_color, 48px 0 $body_color, 72px 0 $body_color;
+  box-shadow: -64px 0 $body_color, -32px 0 $body_color, 32px 0 $body_color, 64px 0 $body_color;
   box-sizing: border-box;
   animation: shadowPulse 3s linear infinite;
 }
@@ -162,22 +162,22 @@ h3 , .h3 , .fs-3{
 @keyframes shadowPulse {
   20% {
     background: $body_color;
-    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+    box-shadow: -64px 0 $secondary, -32px 0 $body_color , 32px 0 $body_color, 64px 0 $body_color;
   }
   40% {
-    background: $secondary;
-    box-shadow: -24px 0 $secondary, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $body_color;
+    background: $body_color;
+    box-shadow: -64px 0 $body_color, -32px 0 $secondary , 32px 0 $body_color, 64px 0 $body_color;
   }
   60% {
-    background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $secondary, 48px 0 $body_color, 72px 0 $body_color;
+    background: $secondary;
+    box-shadow: -64px 0 $body_color, -32px 0 $secondary, 32px 0 $body_color, 64px 0 $body_color;
   }
   80% {
     background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $secondary, 72px 0 $body_color;
+    box-shadow: -64px 0 $body_color, -32px 0 $body_color , 32px 0 $secondary, 64px 0 $body_color;
   }
   100% {
     background: $body_color;
-    box-shadow: -24px 0 $body_color, 24px 0 $body_color , 48px 0 $body_color, 72px 0 $secondary;
+    box-shadow: -64px 0 $body_color, -32px 0 $body_color , 32px 0 $body_color, 64px 0 $secondary;
   }
 }
