@@ -78,6 +78,8 @@ $(document).ready(function () {
 
 
 
+
+    
       // pagination-container
       // var items = $(".event-list .event-item");
       // var numItems = items.length;
