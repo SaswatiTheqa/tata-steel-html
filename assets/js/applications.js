@@ -1,39 +1,27 @@
 $(document).ready(function(){
+    var showClass = "product-item";
+    $("."+showClass).slice(0, 6).show();
+    
     // Function to load more products
     function loadMoreProducts() {
+        $('#loading').show();
       // Show loading
-      $('#loading').show();
       setTimeout(function() {
-        $(".product-item:hidden").slice(0, 6).fadeIn("slow");
-        if($(".product-item:hidden").length === 0) {
-            observer.disconnect(); 
-            $('#loading').hide(); 
+        $("."+showClass+":hidden").slice(0, 3).fadeIn("slow");
+        if($("."+showClass+":hidden").length === 0 ) {
+            $('#loading').hide();
         }
-      }, 2000); // Simulated delay of 1 second (adjust as needed)
+      }, 1000); // Simulated delay of 1 second (adjust as needed)
     }
   
-    // Show initial set of products
-    $(".product-item").slice(0, 6).show();
-
-    // Function to filter products based on region selection
-    function filterProducts() {
-        const selectedValue = this.value;
-        $('.product-item').hide(); // Hide all product items
-        
-        const itemsToShow = $('.product-item.' + selectedValue); // Select items matching the selected region
-        
-        itemsToShow.slice(0, 6).fadeIn("slow"); // Show the first 6 items
-        $('#loading').show();
-
-        if (itemsToShow.length <= 6) {
-            observer.disconnect(); 
-            $('#loading').hide(); 
+    $('#selectRegion').on('change', function(){        
+        $('.product-item').hide() // Hide all product items
+        const selectedValue = this.value
+        showClass = selectedValue
+        if(showClass !== ""){
+          loadMoreProducts()  
         }
-
-    };
-    
-    // Event listener for region selection change
-    $('#selectRegion').on('change', filterProducts);
+    });
   
     // Intersection Observer API setup
     const options = {
@@ -42,7 +30,7 @@ $(document).ready(function(){
         threshold: 1.0
     };
   
-    const observer = new IntersectionObserver(function(entries, observer) {
+    const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
                 loadMoreProducts();
@@ -53,3 +41,4 @@ $(document).ready(function(){
     // Start observing the bottom of the page
     observer.observe(document.querySelector('#loading'));
 });
+
