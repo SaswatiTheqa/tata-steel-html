@@ -48,7 +48,7 @@
         }
      } 
     .btn{ @include flex-center(); }
-    .drop-left-icon{ margin-right: 6px;}
+    .drop-left-icon{ margin-right: 6px; margin-top: -2px;}
     .check-style{
         [type="radio"]:checked,
         [type="radio"]:not(:checked) {

@@ -37,29 +37,32 @@
 
 
 // phone-call-wrap
-.phone-call-wrap{ cursor: pointer; position: absolute; right: -15px; z-index: 99; bottom: 30px; 
-
+.phone-call-wrap{ position: absolute; right: -15px; z-index: 99; bottom: 30px; 
    @include breakpoint('sm', max) { right: 15px; bottom: 130px ; }
-   
    .phone-no{ padding-left: 20px; transition: 0.2s all; padding-right: 65px; padding-top: 5px; border-radius: 40px;  margin-right: 5px; height: 52px; display: flex; align-items: center; background: $white;
       opacity: 0; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); position: relative; left: 190px; 
       .font-12{ font-size: 12px;}
    }
-   .phone-call{  box-shadow: 5px 0px 4px #00000033;  @include round(60px); @include flex-center(); border: 5px solid $white; 
-       @include customLinearGradient(226deg, $secondary 0%, $flame 100%);
-      position: absolute; right: 0; bottom: 0;
-   }
-   &:hover ,  &.show{ 
-      //  overflow: hidden;
-      .phone-call{
-         @include customLinearGradient(-226deg, $secondary 0%, $flame 100%); 
+   .phone-call{ position: absolute; right: 0; bottom: 0; box-shadow: 5px 0px 4px #00000033;  @include round(60px); 
+      @include flex-center(); 
+      border: 5px solid $white; 
+      @include customLinearGradient(226deg, $secondary 0%, $flame 100%); 
+      z-index: 1; 
+      cursor: pointer; 
+      &:hover ,  &.show{ @include customLinearGradient(-226deg, $secondary 0%, $flame 100%);
+         +  .phone-no{  opacity: 1;  left: 0; transition: 0.2s all;
+         }
       }
-      .phone-no{  opacity: 1;  left: 0; transition: 0.2s all;
-      }
    }
- 
 }
 
 .call-div{ position: fixed; left: 0; right: 0; bottom: 0; z-index: 99; height: 0; 
    // .container{ overflow: hidden; height: 70px; width: auto;} 
+   // &.show{
+   //    .phone-call-wrap .phone-call{
+   //       @include customLinearGradient(-226deg, $secondary 0%, $flame 100%);
+   //       +  .phone-no{  opacity: 1;  left: 0; transition: 0.2s all;
+   //       }
+   //    }
+   // }
 }

@@ -10378,11 +10378,11 @@ textarea.form-control-lg {
   font-display: swap;
 }
 @font-face {
-  font-family: "GlobalFont";
+  font-family: "MyriadVariableFont";
   src: url("../fonts/MyriadVariableConcept-Roman.otf");
 }
 body {
-  font-family: "GlobalFont", sans-serif;
+  font-family: "MyriadVariableFont", sans-serif;
   background: #fff;
 }
 
@@ -10791,6 +10791,22 @@ a:hover {
 
 .type-text-box {
   display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.form-control small, .form-control .small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small, .form-control.error .small {
+  visibility: visible;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -11267,6 +11283,7 @@ h3, .h3, .fs-3 {
 }
 .lang-drop .drop-left-icon {
   margin-right: 6px;
+  margin-top: -2px;
 }
 .lang-drop .check-style [type=radio]:checked + label,
 .lang-drop .check-style [type=radio]:not(:checked) + label {
@@ -11510,7 +11527,6 @@ h3, .h3, .fs-3 {
 }
 
 .phone-call-wrap {
-  cursor: pointer;
   position: absolute;
   right: -15px;
   z-index: 99;
@@ -11542,6 +11558,9 @@ h3, .h3, .fs-3 {
   font-size: 12px;
 }
 .phone-call-wrap .phone-call {
+  position: absolute;
+  right: 0;
+  bottom: 0;
   box-shadow: 5px 0px 4px rgba(0, 0, 0, 0.2);
   width: 60px;
   height: 60px;
@@ -11551,14 +11570,13 @@ h3, .h3, .fs-3 {
   justify-content: center;
   border: 5px solid #fff;
   background: transparent linear-gradient(226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box;
-  position: absolute;
-  right: 0;
-  bottom: 0;
+  z-index: 1;
+  cursor: pointer;
 }
-.phone-call-wrap:hover .phone-call, .phone-call-wrap.show .phone-call {
+.phone-call-wrap .phone-call:hover, .phone-call-wrap .phone-call.show {
   background: transparent linear-gradient(-226deg, #F49223 0%, #E45B27 100%) 0% 0% no-repeat padding-box;
 }
-.phone-call-wrap:hover .phone-no, .phone-call-wrap.show .phone-no {
+.phone-call-wrap .phone-call:hover + .phone-no, .phone-call-wrap .phone-call.show + .phone-no {
   opacity: 1;
   left: 0;
   transition: 0.2s all;

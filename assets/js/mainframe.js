@@ -1,3 +1,4 @@
+"use strict";
 $(document).ready(function () {
   // documentReady
     // ===========   slider-students-feeling slider
@@ -117,6 +118,7 @@ $(document).ready(function () {
         $('.'+$this.val()).show();
     });
 
+   
   // documentReady end
   });
 
@@ -129,10 +131,10 @@ $(document).ready(function () {
       // Calculate the bottom position
       let bottomPosition = documentHeight - windowHeight - y;
       if (bottomPosition < 5) {
-        phoneCall.className = "phone-call-wrap show";
+        phoneCall.className = "phone-call show";
       } 
       else {
-        phoneCall.className = "phone-call-wrap";
+        phoneCall.className = "phone-call";
       }
   };
 
@@ -140,5 +142,12 @@ $(document).ready(function () {
  // phone call  end
 
 
-
-
+ $(document).ready(function () {
+  $('.enquiry-form .btn-step').click(function () {
+      const target = $(this).data('bs-target');
+      $('.nav-link').removeClass('active');
+      $('button[data-bs-target="' + target + '"]').addClass('active');
+      $('.tab-pane').removeClass('show active');
+      $(target).addClass('show active');
+  });
+});
