@@ -10809,6 +10809,16 @@ input[type=number]::-webkit-inner-spin-button {
   visibility: visible;
 }
 
+.form-group {
+  position: relative;
+}
+.form-group label.error {
+  position: absolute;
+  bottom: -24px;
+  font-size: 14px;
+  color: #E45B27;
+}
+
 .swiper-button-prev, .swiper-button-next {
   width: 60px;
   height: 60px;

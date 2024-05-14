@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -327,50 +327,55 @@
                                 <h3 class="fs-3 fw-bold ">FEEDBACK FORM</h3>
                                 <p class=" mb-0 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
                             </div>
-                                <form>
+                                <form action="" method="post" id="feedbackform" novalidate="novalidate">
                                     <div class="row">
                                         <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mb-32">
                                             <div class="form-group">
                                                 <label for="exampleInputname" class="form-label">Full name <span class="mandatory">*</span></label>
-                                                <input type="text" class="form-control" id="exampleInputname" >
+                                                <input type="text" class="form-control" id="exampleInputname" name="name" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mb-32">
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1" class="form-label">Email id </label>
-                                                <input type="email" class="form-control" id="exampleInputEmail1" >
+                                                <input type="email" class="form-control" id="exampleInputEmail1" name="email">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mb-32">
                                             <div class="form-group">
                                                 <label for="" class="form-label">Phone no  <span class="mandatory">*</span></label>
-                                                <input type="text" class="form-control" id="" >
+                                                <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required pattern="^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$">
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-6 col-lg-6 col-xl-4 mb-32">
                                             <div class="form-group">
                                                 <label for="" class="form-label">PIN code   <span class="mandatory">*</span></label>
-                                                <input type="text" class="form-control" id="" >
+                                                <input type="text" class="form-control" id="pinCode" name="pinCode" required>
                                             </div>
                                         </div>
                                         <div class="col-12 col-sm-12 col-lg-12 col-xl-4 mb-32">
                                             <div class="form-group">
                                                 <label for="" class="form-label">Query/Suggestion type   <span class="mandatory">*</span></label>
-                                                <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity">
-                                                    <option selected></option>
-                                                    <option>two</option>
-                                                </select>
+                                                <div class="select-wrap position-relative">
+                                                    <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity" name="queryType" required>
+                                                        <option selected disabled></option>
+                                                        <option value="Suggestion">Suggestion</option>
+                                                        <option value="Complaint">Complaint</option>
+                                                        <option value="Query">Query</option>
+                                                        <option value="Feedback">Feedback</option>
+                                                    </select>
+                                                </div>    
                                             </div>
                                         </div>
                                         <div class="col-12 mb-32">
                                             <div class="form-group">
                                                 <label for="" class="form-label">Your query/suggestion </label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="queryMessage"></textarea>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="button-holder mt-3"> 
-                                        <button class="btn sitebtn btn-arrow btn-primary">SUBMIT NOW</button>
+                                        <button class="btn sitebtn btn-arrow btn-primary" type="submit">SUBMIT NOW</button>
                                     </div>
                                 </form> 
                             </div>
@@ -539,7 +544,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+ 
     <script src="assets/js/mainframe.js"></script>
+    <script src="assets/js/feedback.js"></script>
 
 </body>
 </html>

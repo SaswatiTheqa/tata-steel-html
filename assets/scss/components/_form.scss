@@ -157,3 +157,13 @@ input[type=number]::-webkit-inner-spin-button {
 .form-control.error small{
     visibility: visible;
 }
+
+
+// .select-wrap{
+//     label.error{ position: absolute; bottom: -27px;}
+// }
+.form-group{ position: relative;
+    label.error{ position: absolute; bottom: -24px; font-size: 14px; color: #E45B27;}
+}
+
+
