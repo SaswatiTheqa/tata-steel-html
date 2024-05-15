@@ -273,26 +273,18 @@
                         <div class="enquiry-form">
                            
 
-
-
-
-                            <form action="" method="post" id="enquiry_form" novalidate="novalidate">
-                                <div class="heading-holder mb-40">
-                                <h3 class="fs-3 fw-bold text-secondary">TELL US YOUR REQUIREMENTS</h3>
-                                <p class="font-p22 line-height-13">Please fill the form below and we will provide you with all informations or assistance you require regarding Tata Kosh Galvanised Plain sheets</p>
+                            <section class="multi-step-form">
+                                
+                                <div class="steps">
+                                    <button class="active" type="button" disabled>Step One</button> | 
+                                 
+                                    <button type="button" disabled>Step two</button>
                                 </div>
-                                <ul class="nav nav-tabs" id="myTab" role="tablist">
-                                    <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="my-Requirement-tab" data-bs-toggle="tab" data-bs-target="#my-Requirement" type="button" role="tab" aria-controls="my-Requirement" aria-selected="true">My Requirement</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="my-Contact-tab" data-bs-toggle="tab" data-bs-target="#my-Contact" type="button" role="tab" aria-controls="my-Contact" aria-selected="false">My Contact</button>
-                                    </li>
-                                </ul>
-                                <div class="tab-content" id="myTabContent">
-                                    <div class="tab-pane p-45 fade show active" id="my-Requirement" role="tabpanel" aria-labelledby="my-Requirement-tab">
+                                
+                                <form action="#" method="post">
+                                    
+                                    <fieldset aria-label="Step One" id="step-1">
                                         <div class="tab-panel-inner">
-                                            <!-- <form action="" method="post" id="enquiry_form" novalidate="novalidate"> -->
                                             <div class="tab-panel-body">
                                                 <p class="mb-4 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
                                                 <ul class="enquiry-radio-list list-unstyled d-flex gap-32 mb-32 font-20 line-height-1 fw-semibold">
@@ -441,66 +433,68 @@
                                                         <p class="text-davys-gray"># You can also get to know about all <a class="fw-bold text-davys-gray" href="applications.html">Tata Kosh Applications here.</a></p>
                                                     </div>
                                                 </div>
-                                            </div>    
+                                            </div>   
                                             <div class="button-holder d-flex justify-content-end mt-40"> 
-                                                <!--  -->
-                                                <!--  -->
-                                                <button class="btn sitebtn btn-arrow btn-primary continue btn-step" type="button" data-bs-target="#my-Contact">CONTINUE</button>
+                                                <button class="btn sitebtn btn-arrow btn-primary btn-next" type="button" aria-controls="step-2">CONTINUE</button>
                                             </div>
-                                            <!-- </form> -->
                                         </div>
-                                    </div>
-                                    <div class="tab-pane p-45 fade" id="my-Contact" role="tabpanel" aria-labelledby="my-Contact-tab">
+                                    </fieldset>
+                                    
+                                    <fieldset aria-label="Step two" id="step-2">
                                         <div class="tab-panel-inner">
-                                            <!-- <form action="" method="post" id="enquiry_form" novalidate="novalidate"> -->
-                                                <div class="tab-panel-body">
-                                                    <p class="mb-4 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
-                                                    <div class="row">
-                                                        <div class="col-12 mb-20">
-                                                            <div class="form-group">
-                                                                <label for="exampleInputname" class="form-label">Full name <span class="mandatory">*</span></label>
-                                                                <input name="name" type="text" class="form-control" id="exampleInputname" name="name" required>
-                                                                <!-- <small>Error Message</small> -->
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="col-12 col-sm-6 mb-20">
-                                                            <div class="form-group">
-                                                                <label for="" class="form-label">Phone no  <span class="mandatory">*</span></label>
-                                                                <input name="phoneNumber" type="tel" class="form-control" id="" name="phoneNumber"  required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 mb-20">
-                                                            <div class="form-group">
-                                                                <label for="" class="form-label">PIN code  <span class="mandatory">*</span></label>
-                                                                <input name="pinCode" type="text" class="form-control" id="" name="pinCode" required>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-12 mb-20">
-                                                            <div class="form-group">
-                                                                <label for="InputEmail1" class="form-label">Email id </label>
-                                                                <input name="email" type="email" class="form-control" id="InputEmail1" >
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="col-12 mb-20">
-                                                            <div class="form-group">
-                                                                <label for="" class="form-label">Any remarks/instruction</label>
-                                                                <input name="instruction" type="text" class="form-control" id="" >
-                                                            </div>
+                                            <div class="tab-panel-body">
+                                                <p class="mb-4 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
+                                                <div class="row">
+                                                    <div class="col-12 mb-20">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputname" class="form-label">Full name <span class="mandatory">*</span></label>
+                                                            <input name="name" type="text" class="form-control" id="exampleInputname" name="name" required>
+                                                            <!-- <small>Error Message</small> -->
                                                         </div>
                                                     </div>
-                                                </div>    
-                                                <div class="button-holder mt-3 d-flex justify-content-between"> 
-                                                    <button class="btn sitebtn back-btn btn-arrow back btn-step" type="button" data-bs-target="#my-Requirement">BACK</button>
-                                                    <button class="btn sitebtn btn-arrow btn-primary" type="submit" >GET YOUR QUOTE</button>
+                                                    
+                                                    <div class="col-12 col-sm-6 mb-20">
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Phone no  <span class="mandatory">*</span></label>
+                                                            <input name="phoneNumber" type="tel" class="form-control" id="" name="phoneNumber"  required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 mb-20">
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">PIN code  <span class="mandatory">*</span></label>
+                                                            <input name="pinCode" type="text" class="form-control" id="" name="pinCode" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mb-20">
+                                                        <div class="form-group">
+                                                            <label for="InputEmail1" class="form-label">Email id </label>
+                                                            <input name="email" type="email" class="form-control" id="InputEmail1" >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12 mb-20">
+                                                        <div class="form-group">
+                                                            <label for="" class="form-label">Any remarks/instruction</label>
+                                                            <input name="instruction" type="text" class="form-control" id="" >
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            <!-- </form> -->
+                                            </div>    
+                                            <div class="button-holder mt-3 d-flex justify-content-between"> 
+                                                <button class="btn sitebtn back-btn btn-arrow back btn-step" type="button" aria-controls="step-1">BACK</button>
+                                                <button class="btn sitebtn btn-arrow btn-primary" type="submit" >GET YOUR QUOTE</button>
+                                            </div>
                                         </div>
-                                    </div>
-                                
-                                </div>
-                            </form>    
+
+                                    </fieldset>
+                                    
+                                </form>
+                            </section>
+
+
+                             
+
+
                         </div>
                     </div>
                     <div class="col-12 col-sm-8 col-md-5 order-1 order-md-2">
@@ -677,7 +671,7 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
 
     <script src="assets/js/mainframe.js"></script>
-    <script src="assets/js/enquiry.js"></script>
+    <script src="assets/js/enquiry-2.js"></script>
 
 
 </body>

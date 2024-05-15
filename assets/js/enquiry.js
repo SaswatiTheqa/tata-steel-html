@@ -1,6 +1,38 @@
 
 $(document).ready(function($) {
 
+  $('.continueBtn').on('click', function(){
+    if ($(".radiobtn").valid() == true || $("#quantity").valid() == true ) {
+      //make ajax called
+      // console.log("dd")
+        const target = $(this).data('bs-target');
+        $('.nav-link').removeClass('active');
+        $('button[data-bs-target="' + target + '"]').addClass('active');
+        $('.tab-pane').removeClass('show active');
+        $(target).addClass('show active');
+        // [data-bs-target=$(#enquiry_form)]
+        $('#my-Contact').addClass('show active');
+        
+   }
+  //  else {
+    
+  //     if($("#productman").valid() == true){
+  //       const target = $(this).data('bs-target');
+  //       $('.nav-link').removeClass('active');
+  //       $('button[data-bs-target="' + target + '"]').addClass('active');
+  //       $('.tab-pane').removeClass('show active');
+  //       $(target).addClass('show active');
+  //       // [data-bs-target=$(#enquiry_form)]
+  //       $('#my-Contact').addClass('show active');
+  //   }
+  // }
+ 
+
+}),
+
+
+
+
   $("#enquiry_form").validate({
         // errorPlacement: function(error, element) {
         //   error.appendTo('.errorAppend');
