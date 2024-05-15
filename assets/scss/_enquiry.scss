@@ -7,8 +7,24 @@
 
 .enquiry-form{ max-width: 613px;
     @include breakpoint('md', max) { margin-top: 70px; }
-    .form-group{ 
-        label{ margin-bottom: 12px; line-height: 1;}
+    .form-group{ position: relative;
+        label{
+            &.form-label{ margin-bottom: 12px; line-height: 1;  }
+        }
+        label , span{ 
+            &.error{ position: absolute; bottom: -24px; left: 0;}
+        }
+        .custom-form-select{
+            &.error{
+                ~ .select2-container{ margin-bottom: 10px; }
+                ~ span {
+                    &.error{
+                        bottom: -14px;
+                    }
+                }
+            }
+        }
+        
     }
 }
 

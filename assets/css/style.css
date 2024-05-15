@@ -10635,8 +10635,8 @@ a:hover {
   position: absolute;
   left: -9999px;
 }
-.check-box [type=radio]:checked + label,
-.check-box [type=radio]:not(:checked) + label {
+.check-box [type=radio]:checked ~ label,
+.check-box [type=radio]:not(:checked) ~ label {
   position: relative;
   cursor: pointer;
   font-size: 20px;
@@ -10649,12 +10649,12 @@ a:hover {
   background: #fff;
   margin-bottom: 0;
 }
-.check-box [type=radio]:checked + label {
+.check-box [type=radio]:checked ~ label {
   background: #106DB3;
   border-color: #106DB3;
   color: #fff;
 }
-.check-box [type=radio]:checked + label::before {
+.check-box [type=radio]:checked ~ label::before {
   background: #106DB3;
   border-color: #106DB3;
 }
@@ -10699,18 +10699,18 @@ a:hover {
   padding-right: 36px;
 }
 
-.select2-container--default .select2-selection--single {
+.select2-container--default .select2-selection {
   border-color: #5C5C5C;
   border-width: 2px;
 }
-.select2-container--default .select2-selection--single .select2-selection__arrow {
+.select2-container--default .select2-selection .select2-selection__arrow {
   top: 0;
   bottom: 0;
   margin: auto;
   width: 14px;
   right: 16px;
 }
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
+.select2-container--default .select2-selection .select2-selection__arrow b {
   position: relative;
   left: inherit;
   top: inherit;
@@ -10720,20 +10720,43 @@ a:hover {
   margin-top: inherit;
   height: 10px;
 }
-.select2-container--default .select2-selection--single .select2-selection__arrow b::before {
+.select2-container--default .select2-selection .select2-selection__arrow b::before {
   content: "\f107";
   font-family: "Font Awesome 6 Free";
   color: #5C5C5C;
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  line-height: 45px;
+.select2-container--default .select2-selection .select2-selection__rendered {
   color: #5C5C5C;
 }
-.select2-container--default.select2-container--open .select2-selection--single {
+.select2-container--default .select2-selection.select2-selection--single .select2-selection__rendered {
+  line-height: 45px;
+}
+.select2-container--default .select2-selection.select2-selection--multiple {
+  padding: 6px 10px 4px;
+}
+.select2-container--default .select2-selection.select2-selection--multiple .select2-selection__rendered {
+  padding: 0 0px;
+}
+.select2-container--default .select2-selection.select2-selection--multiple:before {
+  content: " ";
+  background: url(../images/icon/arrow-down-black.svg) no-repeat;
+  width: 18px;
+  height: 11px;
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  margin-top: -4px;
+  background-size: contain;
+  transform: scaleX(0.9);
+}
+.select2-container--default.select2-container--open .select2-selection {
   border-radius: 4px !important;
 }
-.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b::before {
+.select2-container--default.select2-container--open .select2-selection .select2-selection__arrow b::before {
   content: "\f106";
+}
+.select2-container--default.select2-container--open .select2-selection.select2-selection--multiple:before {
+  transform: rotate(180deg) scaleX(0.9);
 }
 .select2-container--default .select2-dropdown {
   border: 2px solid #5C5C5C;
@@ -10763,11 +10786,14 @@ a:hover {
   color: #F49223;
   background-color: transparent;
 }
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-width: 2px;
+}
 
-.select-black .select2-selection--single {
+.select-black .select2-selection {
   border-color: #000;
 }
-.select-black .select2-selection--single .select2-selection__arrow b:before {
+.select-black .select2-selection .select2-selection__arrow b:before {
   color: #000;
   font-size: 20px;
 }
@@ -10797,24 +10823,7 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.form-control small, .form-control .small {
-  color: var(--error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
-}
-
-.form-control.error small, .form-control.error .small {
-  visibility: visible;
-}
-
-.form-group {
-  position: relative;
-}
-.form-group label.error {
-  position: absolute;
-  bottom: -24px;
+.form-group label.error, .form-group span.error {
   font-size: 14px;
   color: #E45B27;
 }
@@ -12362,29 +12371,6 @@ h3, .h3, .fs-3 {
   }
 }
 
-.feedback-section .media {
-  padding: 60px 50px 60px 60px;
-}
-.feedback-section .media .media-img {
-  margin-right: 30px;
-}
-@media (max-width: 767.98px) {
-  .feedback-section .media .media-img {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 991.98px) {
-  .feedback-section .media {
-    padding: 30px;
-  }
-}
-@media (max-width: 575.98px) {
-  .feedback-section .media {
-    padding: 20px;
-  }
-}
-
 .nav-tabs {
   border-bottom: none;
 }
@@ -12715,9 +12701,23 @@ h3, .h3, .fs-3 {
     margin-top: 70px;
   }
 }
-.enquiry-form .form-group label {
+.enquiry-form .form-group {
+  position: relative;
+}
+.enquiry-form .form-group label.form-label {
   margin-bottom: 12px;
   line-height: 1;
+}
+.enquiry-form .form-group label.error, .enquiry-form .form-group span.error {
+  position: absolute;
+  bottom: -24px;
+  left: 0;
+}
+.enquiry-form .form-group .custom-form-select.error ~ .select2-container {
+  margin-bottom: 10px;
+}
+.enquiry-form .form-group .custom-form-select.error ~ span.error {
+  bottom: -14px;
 }
 
 .faq-section .accordion-item:first-of-type, .faq-section .accordion-item:last-of-type {
@@ -12803,6 +12803,36 @@ h3, .h3, .fs-3 {
 
 .max-w-300 {
   max-width: 270px;
+}
+
+.feedback-section .media {
+  padding: 60px 50px 60px 60px;
+}
+.feedback-section .media .media-img {
+  margin-right: 30px;
+}
+@media (max-width: 767.98px) {
+  .feedback-section .media .media-img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 991.98px) {
+  .feedback-section .media {
+    padding: 30px;
+  }
+}
+@media (max-width: 575.98px) {
+  .feedback-section .media {
+    padding: 20px;
+  }
+}
+.feedback-section .form-group {
+  position: relative;
+}
+.feedback-section .form-group label.error, .feedback-section .form-group span.error {
+  position: absolute;
+  bottom: -24px;
 }
 
 /*# sourceMappingURL=style.css.map */

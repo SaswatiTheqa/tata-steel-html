@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -270,7 +271,7 @@
                 <div class="row">
                     <div class="col-12 col-xl-6 col-md-7 order-2 order-md-1 offset-xl-1">
                         <div class="enquiry-form">
-                            <!-- <form novalidate="novalidate" name="f1" id="enquiry_form"> -->
+                            <!-- <form action="" method="post" id="enquiry_form" novalidate="novalidate"> -->
                                 <div class="heading-holder mb-40">
                                 <h3 class="fs-3 fw-bold text-secondary">TELL US YOUR REQUIREMENTS</h3>
                                 <p class="font-p22 line-height-13">Please fill the form below and we will provide you with all informations or assistance you require regarding Tata Kosh Galvanised Plain sheets</p>
@@ -286,6 +287,7 @@
                                 <div class="tab-content" id="myTabContent">
                                     <div class="tab-pane p-45 fade show active" id="my-Requirement" role="tabpanel" aria-labelledby="my-Requirement-tab">
                                         <div class="tab-panel-inner">
+                                            <form action="" method="post" id="enquiry_form" novalidate="novalidate">
                                             <div class="tab-panel-body">
                                                 <p class="mb-4 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
                                                 <ul class="enquiry-radio-list list-unstyled d-flex gap-32 mb-32 font-20 line-height-1 fw-semibold">
@@ -313,11 +315,11 @@
                                                             <div class="d-flex flex-wrap gap-3 gap-xl-4">
                                                                 <div class="check-box">
                                                                     <input type="radio" id="test1" name="thickness" required>
-                                                                    <label for="test1">O.2</label>
+                                                                    <label class="check-label" for="test1">O.2</label>
                                                                 </div>
                                                                 <div class="check-box">
                                                                     <input type="radio" id="test2" name="thickness" required>
-                                                                    <label for="test2">O.3</label>
+                                                                    <label class="check-label" for="test2">O.3</label>
                                                                 </div>
                                                                 <div class="check-box">
                                                                     <input type="radio" id="test3" name="thickness" required>
@@ -365,6 +367,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        
                                                     </div>
 
                                                     <div class="form-group mb-4">
@@ -408,7 +411,7 @@
                                                             <div class="d-flex align-items-center">
                                                                 <input type="text" class="form-control max-w-148 me-3" name="quantity" required>
                                                                 <span class="fst-italic line-height-1 font-20 text-davys-gray type-text-box sheets" style="display: block;">in Metric Ton</span>
-                                                                <span class="fst-italic line-height-1 font-20 text-davys-gray type-text-box coils">in Metric</span>
+                                                                <span class="fst-italic line-height-1 font-20 text-davys-gray type-text-box coils">in Coils</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -422,47 +425,50 @@
                                                     <div class="col-12 mb-2">
                                                         <div class="form-group select-black">
                                                             <label for="exampleInputname" class="font-20 fw-semibold">I want to make <span class="mandatory">*</span></label>
-                                                            <select class="select2 custom-form-select" data-width="100%" data-minimum-results-for-search="Infinity" required>
-                                                                <option selected>Please select the products you want to make</option>
-                                                                <option>two</option>
+                                                            <select class="select2 custom-form-select" multiple placeholder="Please select the products you want to make"  data-width="100%"  name="productsSelect" required>
+                                                                <option value="Products1">Products 1</option>
+                                                                <option value="Products2">Products 2</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     <div class="mb-40 pt-1">
                                                         <p class="text-davys-gray mb-2"># You can select multiple products.</p>
-                                                        <p class="text-davys-gray"># You can also get to know about all <a class="fw-bold text-davys-gray" href="">Tata Kosh Applications here.</a></p>
+                                                        <p class="text-davys-gray"># You can also get to know about all <a class="fw-bold text-davys-gray" href="applications.html">Tata Kosh Applications here.</a></p>
                                                     </div>
                                                 </div>
                                             </div>    
                                             <div class="button-holder d-flex justify-content-end mt-40"> 
-                                                <button class="btn sitebtn btn-arrow btn-primary continue btn-step" type="button" data-bs-target="#my-Contact">CONTINUE</button>
+                                                <!-- data-bs-target="#my-Contact" -->
+                                                <!-- continue btn-step -->
+                                                <button class="btn sitebtn btn-arrow btn-primary" type="submit" >CONTINUE</button>
                                             </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="tab-pane p-45 fade" id="my-Contact" role="tabpanel" aria-labelledby="my-Contact-tab">
                                         <div class="tab-panel-inner">
-                                            <form novalidate="novalidate" name="f1" id="enquiry_form">
+                                            <!-- <form action="" method="post" id="enquiry_form" novalidate="novalidate"> -->
                                                 <div class="tab-panel-body">
                                                     <p class="mb-4 line-height-13">Fields marked with <span class="mandatory">*</span> are mandatory</p>
                                                     <div class="row">
                                                         <div class="col-12 mb-20">
                                                             <div class="form-group">
                                                                 <label for="exampleInputname" class="form-label">Full name <span class="mandatory">*</span></label>
-                                                                <input name="name" type="text" class="form-control" id="exampleInputname"  required>
-                                                                <small>Error Message</small>
+                                                                <input name="name" type="text" class="form-control" id="exampleInputname" name="name" required>
+                                                                <!-- <small>Error Message</small> -->
                                                             </div>
                                                         </div>
                                                         
                                                         <div class="col-12 col-sm-6 mb-20">
                                                             <div class="form-group">
                                                                 <label for="" class="form-label">Phone no  <span class="mandatory">*</span></label>
-                                                                <input name="phoneNumber" type="number" class="form-control" id=""  required>
+                                                                <input name="phoneNumber" type="tel" class="form-control" id="" name="phoneNumber"  required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 mb-20">
                                                             <div class="form-group">
-                                                                <label for="" class="form-label">PIN code   <span class="mandatory">*</span></label>
-                                                                <input name="pinCode" type="number" class="form-control" id="" required>
+                                                                <label for="" class="form-label">PIN code  <span class="mandatory">*</span></label>
+                                                                <input name="pinCode" type="text" class="form-control" id="" name="pinCode" required>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 mb-20">
@@ -482,14 +488,14 @@
                                                 </div>    
                                                 <div class="button-holder mt-3 d-flex justify-content-between"> 
                                                     <button class="btn sitebtn back-btn btn-arrow back btn-step" type="button" data-bs-target="#my-Requirement">BACK</button>
-                                                    <button class="btn sitebtn btn-arrow btn-primary" type="button" id="enquiry_submit">GET YOUR QUOTE</button>
+                                                    <button class="btn sitebtn btn-arrow btn-primary" type="submit" >GET YOUR QUOTE</button>
                                                 </div>
-                                            </form>
+                                            <!-- </form> -->
                                         </div>
                                     </div>
                                 
                                 </div>
-                            <!-- </form>     -->
+                            </form>    
                         </div>
                     </div>
                     <div class="col-12 col-sm-8 col-md-5 order-1 order-md-2">
@@ -662,6 +668,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+
     <script src="assets/js/mainframe.js"></script>
     <script src="assets/js/enquiry.js"></script>
 

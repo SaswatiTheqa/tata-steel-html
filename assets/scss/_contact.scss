@@ -4,3 +4,19 @@
   }
 }
 .max-w-300{ max-width: 270px;}
+
+// ========================== feedback-section
+.feedback-section{
+  .media{ padding: 60px 50px 60px 60px; 
+      .media-img{ margin-right: 30px;
+         @include breakpoint('md', max) { width: 100%; margin-bottom: 30px;  } 
+      }
+      @include breakpoint('lg', max) { padding: 30px;  }
+      @include breakpoint('sm', max) { padding: 20px;  }
+   }
+   .form-group{ position: relative;
+      label , span{ 
+        &.error{ position: absolute; bottom: -24px; }
+      }
+   }  
+}

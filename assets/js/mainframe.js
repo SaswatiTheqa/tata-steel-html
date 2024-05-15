@@ -52,8 +52,17 @@ $(document).ready(function () {
 
   // select2
     if ($('.select2').length > 0) {
-      $(".select2").select2();
-      
+      // $(".select2").select2({
+      //   placeholder: $(this).attr('placeholder'),
+      //   // placeholder: "Select a state",
+      //   // allowClear: Boolean($(this).data('allow-clear')),
+      // });
+      $('select').each(function () {
+        $(this).select2({
+          placeholder: $(this).attr('placeholder'),
+          allowClear: Boolean($(this).data('allow-clear')),
+        });
+      });
     }
 
     // enquiry-radio-list
