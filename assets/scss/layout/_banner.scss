@@ -14,7 +14,7 @@
         @include breakpoint('lg', max) {
            @include customLinearGradient(347deg, $body_color 0%, $primary 100%);
            border-radius: 0 0 14px 14px;
-           margin-top: -30px;
+           margin-top: 0px;
         }
     }
     &-text{ padding: 20px 60px 20px 60px; 
@@ -70,6 +70,11 @@
     .banner{
         &-text-wrap{
             @include breakpoint('xl', min) {min-height: 550px;}
+            @include breakpoint('lg', max) {
+               
+                border-radius: 0 0 14px 14px;
+                margin-top: -30px;
+             }
         }
         .element {
             @include breakpoint('lg', min) {

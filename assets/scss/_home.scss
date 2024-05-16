@@ -199,12 +199,14 @@
             @include breakpoint('xl', max) { max-width: 41%; }
             @include breakpoint('sm', max) { margin-left: auto; 
                 // max-width: 100%; right: 0%; bottom: 0%; text-align: right; 
-                // &:before{content: ""; background: url(../images/path4.svg) no-repeat ;           width: 280px;
+                // &:before{content: ""; background: url(../images/path4.svg) no-repeat ;           
+                //     width: 280px;
                 //     position: absolute;
                 //     height: 280px;
                 //     transform: rotate(90deg);
                 //     left: 0px;
                 //     bottom: 0px;
+                //     background-size: contain;
                 //     background-position: bottom left;}
                 //     img{ max-width: 41%;}
             

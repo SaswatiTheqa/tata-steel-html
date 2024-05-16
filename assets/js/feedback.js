@@ -1,7 +1,8 @@
 
 $(document).ready(function($) {
 
-  $("#feedbackform").validate({
+   $("#feedbackform").validate({
+          ignore: [], 
           rules: {
               name: {
                 required: true,
@@ -18,9 +19,11 @@ $(document).ready(function($) {
               pinCode: {
                 required: true,
                 number :true,
-                minlength: 5
+                minlength: 5,
               },
-              queryType: "required",
+              queryType: {
+                required: true,
+              },
               queryMessage:{
                 minlength: 20,
                 maxlength: 1024,
@@ -39,14 +42,24 @@ $(document).ready(function($) {
                   text: "Form has been successfully submitted!", 
                   icon: "success", 
                   iconColor: '#BDD9E8',
-                  buttonsStyling: !1, 
+                  buttonsStyling: false,
+                  timer: 4000,
                   confirmButtonText: "Ok, got it!", 
                   customClass: { confirmButton: "btn btn-primary sitebtn" },
                 });
-                $(".swal2-container.in").css('background-color', 'rgba(43, 165, 137, 0.45)');
                 // form.submit();
             }, 1000)
           }
           
       });
+    
+      
 });
+
+$(document).on("change", "#queryType", function() {
+  $(this).valid();
+    // if ($("#queryType").valid() == true) {
+    //   $(this).valid();
+    // }
+});
+

@@ -191,3 +191,9 @@ const app = {
 };
 
 app.init();
+
+
+$(document).on("change", "#productsSelect", function() {
+  $(this).valid();
+  // if ($("#productsSelect").valid() == true) {}
+});
