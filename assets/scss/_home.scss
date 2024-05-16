@@ -189,6 +189,7 @@
       .box-wrapper-img-wrap{ position: absolute; max-width: 46%; 
         @include breakpoint('xl', max) { max-width: 40%; }
         @include breakpoint('sm', max) { position: relative}
+        
       }
       .text-wrap-max-w{ 
         @include breakpoint('sm', max) {padding: 25px 20px 15px; }
@@ -196,7 +197,20 @@
       &-left{ 
         .box-wrapper-img-wrap{ max-width: 47%; right: -4%; bottom: -5%; 
             @include breakpoint('xl', max) { max-width: 41%; }
-            @include breakpoint('sm', max) { margin-left: auto;}
+            @include breakpoint('sm', max) { margin-left: auto; 
+                // max-width: 100%; right: 0%; bottom: 0%; text-align: right; 
+                // &:before{content: ""; background: url(../images/path4.svg) no-repeat ;           width: 280px;
+                //     position: absolute;
+                //     height: 280px;
+                //     transform: rotate(90deg);
+                //     left: 0px;
+                //     bottom: 0px;
+                //     background-position: bottom left;}
+                //     img{ max-width: 41%;}
+            
+            
+            }
+            
         }
         @include breakpoint('xl', min) {
             .text-wrap-max-w{ max-width: 303px; 

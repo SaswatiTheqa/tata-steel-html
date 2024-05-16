@@ -10667,29 +10667,6 @@ a:hover {
   text-align: center;
 }
 
-.form-control {
-  border: 2px solid black;
-  border-radius: 6px;
-  padding: 0.65rem 0.75rem;
-}
-
-.form-group .form-label {
-  font-size: clamp(16px, 1vw + 0.6rem, 22px);
-  font-weight: 600;
-  line-height: 1;
-}
-
-.mandatory {
-  color: #E45B27;
-}
-
-.form-select {
-  color: #5C5C5C;
-  border-color: #5C5C5C;
-  border-width: 2px;
-  height: 48px;
-}
-
 .select2-container .select2-selection--single {
   height: 48px;
 }
@@ -10790,6 +10767,12 @@ a:hover {
   border-width: 2px;
 }
 
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  background: #BDD9E8;
+  color: #092A49;
+  border-color: #BDD9E8;
+}
+
 .select-black .select2-selection {
   border-color: #000;
 }
@@ -10821,6 +10804,30 @@ a:hover {
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+.form-control {
+  border: 2px solid black;
+  color: #5C5C5C;
+  border-radius: 6px;
+  padding: 0.65rem 0.75rem;
+}
+
+.form-group .form-label {
+  font-size: clamp(16px, 1vw + 0.6rem, 22px);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.mandatory {
+  color: #E45B27;
+}
+
+.form-select {
+  color: #5C5C5C;
+  border-color: #5C5C5C;
+  border-width: 2px;
+  height: 48px;
 }
 
 .form-group label.error, .form-group span.error {
@@ -10902,6 +10909,29 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .swiper-pagination-bullet-active {
   background-color: #106DB3;
+}
+
+.swal2-container.swal2-center.swal2-backdrop-show {
+  background-color: rgba(9, 42, 73, 0.6) !important;
+}
+
+.swal2-popup {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+  padding-bottom: 40px;
+  border-radius: 8px;
+}
+.swal2-popup .swal2-content {
+  color: #092A49;
+}
+.swal2-popup .swal2-actions .btn.swal2-confirm:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg) {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2) !important;
+}
+.swal2-popup .swal2-icon.swal2-error {
+  color: #E45B27;
+  border-color: #E45B27;
+}
+.swal2-popup .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+  background-color: #E45B27;
 }
 
 @media (max-width: 575.98px) {
@@ -12710,7 +12740,7 @@ h3, .h3, .fs-3 {
 }
 .enquiry-form .form-group label.error, .enquiry-form .form-group span.error {
   position: absolute;
-  bottom: -24px;
+  bottom: -21px;
   left: 0;
 }
 .enquiry-form .form-group .custom-form-select.error ~ .select2-container {
@@ -12720,30 +12750,13 @@ h3, .h3, .fs-3 {
   bottom: -14px;
 }
 
-.form-section {
-  padding-left: 15px;
-  border-left: 2px solid #FF851B;
-  display: none;
-}
-
-.form-section.current {
-  display: inherit;
-}
-
-.no-js .multi-step-form fieldset button, .no-js .multi-step-form h2, .no-js .multi-step-form .h2, .multi-step-form.edit-form fieldset button, .multi-step-form.edit-form h2, .multi-step-form.edit-form .h2 {
-  display: none !important;
-}
-.no-js .multi-step-form fieldset, .multi-step-form.edit-form fieldset {
-  display: block !important;
-}
-.no-js .multi-step-form [type=submit], .no-js .multi-step-form [type=reset], .multi-step-form.edit-form [type=submit], .multi-step-form.edit-form [type=reset] {
-  display: inline-block !important;
-}
-.no-js .multi-step-form .steps, .multi-step-form.edit-form .steps {
-  display: none;
-}
 .multi-step-form fieldset {
+  background-color: #F2F2F2;
+  border-radius: 10px;
   display: none;
+}
+.multi-step-form fieldset:first-child {
+  border-top-left-radius: 0;
 }
 .multi-step-form fieldset:first-of-type {
   display: block;
@@ -12755,13 +12768,23 @@ h3, .h3, .fs-3 {
   display: block;
 }
 .multi-step-form .steps button {
+  font-size: clamp(16px, 1vw + 0.5rem, 22px);
+  color: #092A49;
+  padding: 18px 30px;
+  line-height: 1;
   border: 0;
+  background-color: transparent;
 }
-.multi-step-form .steps [disabled] {
-  background: none;
+.multi-step-form .steps button.active[disabled] {
+  background-color: #F2F2F2;
+  font-weight: 600;
+  color: #092A49;
+  border-color: #F2F2F2 #F2F2F2 transparent;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
-.multi-step-form .steps .active {
-  background: #eee;
+.multi-step-form .steps button:hover {
+  border-color: transparent;
 }
 
 .faq-section .accordion-item:first-of-type, .faq-section .accordion-item:last-of-type {

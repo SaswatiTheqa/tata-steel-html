@@ -52,17 +52,13 @@ $(document).ready(function () {
 
   // select2
     if ($('.select2').length > 0) {
-      // $(".select2").select2({
-      //   placeholder: $(this).attr('placeholder'),
-      //   // placeholder: "Select a state",
-      //   // allowClear: Boolean($(this).data('allow-clear')),
+      $(".select2").select2();
+      // $('select').each(function () {
+      //   $(this).select2({
+      //     placeholder: $(this).attr('placeholder'),
+      //     allowClear: Boolean($(this).data('allow-clear')),
+      //   });
       // });
-      $('select').each(function () {
-        $(this).select2({
-          placeholder: $(this).attr('placeholder'),
-          allowClear: Boolean($(this).data('allow-clear')),
-        });
-      });
     }
 
     // enquiry-radio-list
@@ -139,7 +135,7 @@ $(document).ready(function () {
       let documentHeight = document.body.clientHeight;
       // Calculate the bottom position
       let bottomPosition = documentHeight - windowHeight - y;
-      if (bottomPosition < 5) {
+      if (bottomPosition < 2) {
         phoneCall.className = "phone-call show";
       } 
       else {

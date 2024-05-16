@@ -38,10 +38,12 @@ $(document).ready(function($) {
                 Swal.fire({
                   text: "Form has been successfully submitted!", 
                   icon: "success", 
+                  iconColor: '#BDD9E8',
                   buttonsStyling: !1, 
                   confirmButtonText: "Ok, got it!", 
                   customClass: { confirmButton: "btn btn-primary sitebtn" },
                 });
+                $(".swal2-container.in").css('background-color', 'rgba(43, 165, 137, 0.45)');
                 // form.submit();
             }, 1000)
           }
