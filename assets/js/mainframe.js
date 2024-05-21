@@ -83,45 +83,20 @@ $(document).ready(function () {
     }
 
 
+     
 
+  //   $('#newsSelect').on('change', function(){
+  //       const $this = $(this);
+  //       $('.event-item').hide();
+  //       $('.'+$this.val()).show();
+        
+  //   });
 
-    
-      // pagination-container
-      // var items = $(".event-list .event-item");
-      // var numItems = items.length;
-      // var perPage = 6;
-      // items.slice(perPage).hide();
-      // if ($('.event-list').length > 0) {
-      //   $('#pagination-container').pagination({
-      //       items: numItems,
-      //       itemsOnPage: perPage,
-      //       prevText: "<i class='fa-solid fa-chevron-left'></i>",
-      //       nextText: "<i class='fa-solid fa-chevron-right'></i>",
-      //       onPageClick: function (pageNumber) {
-      //           var showFrom = perPage * (pageNumber - 1);
-      //           var showTo = showFrom + perPage;
-      //           items.hide().slice(showFrom, showTo).show();
-      //       }
-      //   });
-      // }
-      
-    // pagination-container end
-   
-
-
-    $('#newsSelect').on('change', function(){
-        const $this = $(this);
-        $('.event-item').hide();
-        $('.'+$this.val()).show();
-    });
-
-    
-
-   $('#recentSelect').on('change', function(){
-        const  $this = $(this);
-        $('.event-item').hide();
-        $('.'+$this.val()).show();
-    });
+  //  $('#recentSelect').on('change', function(){
+  //       const  $this = $(this);
+  //       $('.event-item').hide();
+  //       $('.'+$this.val()).show();
+  //   });
 
    
   // documentReady end
@@ -156,3 +131,6 @@ $(document).ready(function () {
       $(target).addClass('show active');
   });
 });
+
+
+

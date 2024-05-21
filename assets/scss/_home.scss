@@ -169,8 +169,18 @@
 
 .event-list{ 
     .cards{
-        &-body{ padding: 20px 20px;}
-        &-footer{ padding-left: 20px;}
+        &-body{ padding: 20px 20px;
+            .fs-6{  
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                overflow: hidden;
+               }
+        }
+        &-footer{ padding-left: 20px;
+           
+        }
         &-img{
           figure{ padding-top: 62.3%;}
         }
